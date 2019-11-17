@@ -3,42 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <div class="container">
 
-        <a class="header__logo logo" href="index.html"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"</a>
+        <a class="header__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
         <nav class="main-navigation">
           <button class="main-navigation__open" type="button"><span class="visually-hidden">Меню</span></button>
 
           <div class="main-navigation__wrapper">
-            <h2 class="main-navigation__title">О сервисе направления попутчики</h2>
-            <a class="main-navigation__btn button" href="#">Авторизация</a>
-            <div class="main-navigation__contacts contacts">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="index.html">О сервисе</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="form.html">Направления</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="#">Попутчики</a>
+              </li>
+            </ul>
+            <div class="log-in">
+              <a class="log-in__btn button" href="#">Авторизация</a>
+            </div>
+            <div class="contacts">
               <a class="contacts__item contacts__item--tel" href="tel:88005558628">8 800 555-86-28</a>
               <a class="contacts__item contacts__item--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </div>
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--white social__link--fb"><span class="visually-hidden">Facebook</span></a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--white social__link--vk"><span class="visually-hidden">Vkontakte</span></a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--white social__link--insta"><span class="visually-hidden">Instagram</span></a>
+                </li>
+              </ul>
+            </div>
 
-            <ul class="social ul-reset">
-              <li>
-                <a class="social__btn social__btn--white social__btn--fb"><span class="visually-hidden">Facebook</span></a>
-              </li>
-              <li>
-                <a class="social__btn social__btn--white social__btn--vk"><span class="visually-hidden">Vkontakte</span></a>
-              </li>
-              <li>
-                <a class="social__btn social__btn--white social__btn--insta"><span class="visually-hidden">Instagram</span></a>
-              </li>
-            </ul>
           </div>
         </nav>
 
       </div>
     </header>
 
-    <main class="main">
+    <main class="main inner-page">
       <div class="container">
 
         <h1 class="inner-page__title">Попутчики</h1>
@@ -52,176 +67,187 @@
 -->
 
         <section class="users">
-          <ul class="users__list ul-reset">
+          <ul class="users__list">
             <li class="users__card">
-              <img src="https://via.placeholder.com/150x150" width="70" height="70">
+              <img src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
               <h3 class="users__name">Таня Фирсова</h3>
               <span class="users__likes">1,5м</span>
-              <ul class="users__hashtags hashtags__list ul-reset">
-                <li><a class="hashtags__item">#ЗОЖ</a></li>
-                <li><a class="hashtags__item">#ПП</a></li>
-                <li><a class="hashtags__item">#Фитнес</a></li>
-                <li><a class="hashtags__item">#пляж</a></li>
-                <li><a class="hashtags__item">#авокадо</a></li>
-                <li><a class="hashtags__item">#смузи</a></li>
+              <ul class="users__hashtags-list">
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#ЗОЖ</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#ПП</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#Фитнес</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#пляж</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#авокадо</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#смузи</a></li>
               </ul>
               <h4 class="users__title">хочет посетить:</h4>
-              <ul class="users__visits visits__list ul-reset">
-                <li class="visits__item visits__item--Sri-Lanka">Шри-Ланка</li>
-                <li class="visits__item visits__item--Thailand">Таиланд</li>
-                <li class="visits__item visits__item--Seychells">Сейшелы</li>
+              <ul class="users__visits-list">
+                <li class="users__visits-item users__visits-item--Sri-Lanka">Шри-Ланка</li>
+                <li class="users__visits-item users__visits-item--Thailand">Таиланд</li>
+                <li class="users__visits-item users__visits-item--Seychells">Сейшелы</li>
               </ul>
               <h4 class="users__title">транспорт:</h4>
-              <ul class="users__transports transports__list ul-reset">
-                <li class="transports__item transports__item--plane transports__item--active tooltip">
-                  <span class="tooltip__text">Авиаперелет</span>
-                </li>
-                <li class="transports__item transports__item--bus tooltip">
-                  <span class="tooltip__text">Автотранспорт</span>
-                </li>
-                <li class="transports__item transports__item--bycicle tooltip">
-                  <span class="tooltip__text">Велосипед</span>
-                </li>
-                <li class="transports__item transports__item--on-foot tooltip">
-                  <span class="tooltip__text">Пешком</span>
-                </li>
-              </ul>
-              <div class="users__level level">
+              <div class="users__transports transports">
+                <ul class="transports__list">
+                  <li class="transports__item transports__item--plane transports__item--active">
+                    <span class="transports__text">Авиаперелет</span>
+                  </li>
+                  <li class="transports__item transports__item--bus">
+                    <span class="transports__text">Автотранспорт</span>
+                  </li>
+                  <li class="transports__item transports__item--bycicle">
+                    <span class="transports__text">Велосипед</span>
+                  </li>
+                  <li class="transports__item transports__item--on-foot">
+                    <span class="transports__text">Пешком</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="users__level">
                 <span class="users__title">левел:</span>
-                <span class="level__number">99</span>
+                <span class="users__level-quantity">99</span>
               </div>
               <a class="users__btn button" href="#">Позвать</a>
             </li>
 
             <li class="users__card">
-              <img src="https://via.placeholder.com/150x150" width="70" height="70">
+              <img src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
               <h3 class="users__name">Петя Демин</h3>
               <span class="users__likes">150</span>
-              <ul class="users__hashtags hashtags__list ul-reset">
-                <li><a class="hashtags__item">#бургер</a></li>
-                <li><a class="hashtags__item">#бар</a></li>
-                <li><a class="hashtags__item">#футбол</a></li>
-                <li><a class="hashtags__item">#концерт</a></li>
-                <li><a class="hashtags__item">#крафт</a></li>
+              <ul class="users__hashtags-list">
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#бургер</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#бар</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#футбол</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#концерт</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#крафт</a></li>
               </ul>
               <h4 class="users__title">хочет посетить:</h4>
-              <ul class="users__visits visits__list ul-reset">
-                <li class="visits__item visits__item--Belgium">
+              <ul class="users__visits-list">
+                <li class="users__visits-item users__visits-item--Belgium">
                   Бельгия
                 </li>
-                <li class="visits__item visits__item--Czech">
+                <li class="users__visits-item users__visits-item--Czech">
                   Чехия
                 </li>
               </ul>
               <h4 class="users__title">транспорт:</h4>
-              <ul class="users__transports transports__list ul-reset">
-                <li class="transports__item transports__item--plane transports__item--active tooltip">
-                  <span class="tooltip__text">Авиаперелет</span>
-                </li>
-                <li class="transports__item transports__item--bus transports__item--active tooltip">
-                  <span class="tooltip__text">Автотранспорт</span>
-                </li>
-                <li class="transports__item transports__item--bycicle tooltip">
-                  <span class="tooltip__text">Велосипед</span>
-                </li>
-                <li class="transports__item transports__item--on-foot transports__item--active tooltip">
-                  <span class="tooltip__text">Пешком</span>
-                </li>
-              </ul>
-              <div class="users__level level">
+              <div class="users__transports transports">
+                <ul class="transports__list">
+                  <li class="transports__item transports__item--plane transports__item--active">
+                    <span class="transports__text">Авиаперелет</span>
+                  </li>
+                  <li class="transports__item transports__item--bus transports__item--active">
+                    <span class="transports__text">Автотранспорт</span>
+                  </li>
+                  <li class="transports__item transports__item--bycicle">
+                    <span class="transports__text">Велосипед</span>
+                  </li>
+                  <li class="transports__item transports__item--on-foot transports__item--active">
+                    <span class="transports__text">Пешком</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="users__level">
                 <span class="users__title">левел:</span>
-                <span class="level__number">80</span>
+                <span class="users__level-quantity">80</span>
               </div>
               <a class="users__btn button" href="#">Позвать</a>
             </li>
 
             <li class="users__card">
-              <img src="https://via.placeholder.com/150x150" width="70" height="70">
+              <img src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
               <h3 class="users__name">Марк Смолов</h3>
               <span class="users__likes">1700</span>
-              <ul class="users__hashtags hashtags ul-reset">
-                <li><a class="hashtags__item">#рэп</a></li>
-                <li><a class="hashtags__item">#тату</a></li>
-                <li><a class="hashtags__item">#хайпбист</a></li>
-                <li><a class="hashtags__item">#кроссовки</a></li>
-                <li><a class="hashtags__item">#суприм</a></li>
+              <ul class="users__hashtags-list">
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#рэп</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#тату</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#хайпбист</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#кроссовки</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#суприм</a></li>
               </ul>
               <h4 class="users__title">хочет посетить:</h4>
-              <ul class="users__visits visits__list ul-reset">
-                <li class="visits__item visits__item--USA">
+              <ul class="users__visits-list">
+                <li class="users__visits-item users__visits-item--USA">
                   США
                 </li>
-                <li class="visits__item visits__item--Australia">
+                <li class="users__visits-item users__visits-item--Australia">
                   Австралия
                 </li>
-                <li class="visits__item visits__item--Dominican">
+                <li class="users__visits-item users__visits-item--Dominican">
                   Доминикана
                 </li>
               </ul>
               <h4 class="users__title">транспорт:</h4>
-              <ul class="users__transports transports__list ul-reset">
-                <li class="transports__item transports__item--plane transports__item--active tooltip">
-                  <span class="tooltip__text">Авиаперелет</span>
-                </li>
-                <li class="transports__item transports__item--bus tooltip">
-                  <span class="tooltip__text">Автотранспорт</span>
-                </li>
-                <li class="transports__item transports__item--bycicle transports__item--active tooltip">
-                  <span class="tooltip__text">Велосипед</span>
-                </li>
-                <li class="transports__item transports__item--on-foot tooltip">
-                  <span class="tooltip__text">Пешком</span>
-                </li>
-              </ul>
-              <div class="users__level level">
+              <div class="users__transports transports">
+                <ul class="transports__list">
+                  <li class="transports__item transports__item--plane transports__item--active">
+                    <span class="transports__text">Авиаперелет</span>
+                  </li>
+                  <li class="transports__item transports__item--bus">
+                    <span class="transports__text">Автотранспорт</span>
+                  </li>
+                  <li class="transports__item transports__item--bycicle transports__item--active">
+                    <span class="transports__text">Велосипед</span>
+                  </li>
+                  <li class="transports__item transports__item--on-foot">
+                    <span class="transports__text">Пешком</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="users__level">
                 <span class="users__title">левел:</span>
-                <span class="level__number">25</span>
+                <span class="users__level-quantity">25</span>
               </div>
               <a class="users__btn button" href="#">Позвать</a>
             </li>
 
             <li class="users__card">
-              <img src="https://via.placeholder.com/150x150" width="70" height="70">
+              <img src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
               <h3 class="users__name">Лариса Рогова</h3>
               <span class="users__likes">23</span>
-              <ul class="users__hashtags hashtags__list ul-reset">
-                <li><a class="hashtags__item">#образование</a></li>
-                <li><a class="hashtags__item">#карьера</a></li>
-                <li><a class="hashtags__item">#учеба</a></li>
-                <li><a class="hashtags__item">#линкедин</a></li>
+              <ul class="users__hashtags-list">
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#образование</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#карьера</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#учеба</a></li>
+                <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#линкедин</a></li>
               </ul>
               <h4 class="users__title">хочет посетить:</h4>
-              <ul class="users__visits visits__list ul-reset">
-                <li class="visits__item visits__item--Great-Britain">
+              <ul class="users__visits-list">
+                <li class="users__visits-item users__visits-item--Great-Britain">
                   Великобритания
                 </li>
-                <li class="visits__item visits__item--Germany">
+                <li class="users__visits-item users__visits-item--Germany">
                   Германия
                 </li>
               </ul>
               <h4 class="users__title">транспорт:</h4>
-              <ul class="users__transports transports__list ul-reset">
-                <li class="transports__item transports__item--plane transports__item--active tooltip">
-                  <span class="tooltip__text">Авиаперелет</span>
-                </li>
-                <li class="transports__item transports__item--bus transports__item--active tooltip">
-                  <span class="tooltip__text">Автотранспорт</span>
-                </li>
-                <li class="transports__item transports__item--bycicle tooltip">
-                  <span class="tooltip__text">Велосипед</span>
-                </li>
-                <li class="transports__item transports__item--on-foot tooltip">
-                  <span class="tooltip__text">Пешком</span>
-                </li>
-              </ul>
-              <div class="users__level level">
-                <span class="users__title">левел:</span>
-                <span class="level__number">50</span>
+              <div class="users__transports transports">
+                <ul class="transports__list">
+                  <li class="transports__item transports__item--plane transports__item--active">
+                    <span class="transports__text">Авиаперелет</span>
+                  </li>
+                  <li class="transports__item transports__item--bus transports__item--active">
+                    <span class="transports__text">Автотранспорт</span>
+                  </li>
+                  <li class="transports__item transports__item--bycicle">
+                    <span class="transports__text">Велосипед</span>
+                  </li>
+                  <li class="transports__item transports__item--on-foot">
+                    <span class="transports__text">Пешком</span>
+                  </li>
+                </ul>
               </div>
-              <a class="users__btn" href="#">Позвать</a>
+
+              <div class="users__level">
+                <span class="users__title">левел:</span>
+                <span class="users__level-quantity">50</span>
+              </div>
+              <a class="users__btn button" href="#">Позвать</a>
             </li>
           </ul>
-          <button class="users__btn no-borders" type="button">Показать еще</button>
+          <button class="users__btn users__btn--no-borders" type="button">Показать еще</button>
           <div class="paginator">
             <a class="paginator__page paginator__page--prev " href="#"><span class="visually-hidden">Предыдущая</span></a>
             <a class="paginator__page paginator__page--next " href="#"><span class="visually-hidden">Следующая</span></a>
@@ -234,27 +260,29 @@
     <footer class="footer">
       <div class="container">
 
-        <a class="footer__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"</a>
+        <a class="footer__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
-        <ul class="social ul-reset">
-          <li>
-            <a class="social__btn social__btn--yellow social__btn--fb"><span class="visually-hidden">Facebook</span></a>
-          </li>
-          <li>
-            <a class="social__btn social__btn--yellow social__btn--vk"><span class="visually-hidden">Vkontakte</span></a>
-          </li>
-          <li>
-            <a class="social__btn social__btn--yellow social__btn--insta"><span class="visually-hidden">Instagram</span></a>
-          </li>
-        </ul>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--yellow social__link--fb"><span class="visually-hidden">Facebook</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yellow social__link--vk"><span class="visually-hidden">Vkontakte</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yellow social__link--insta"><span class="visually-hidden">Instagram</span></a>
+            </li>
+          </ul>
+        </div>
 
         <div class="copyright">
-          <span>Разработано</span>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" width="27" height="34"></a>
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" width="27" height="34" alt="Логотип HTMLAcademy"></a>
         </div>
 
       </div>
     </footer>
 
   </body>
- </html>
+</html>
