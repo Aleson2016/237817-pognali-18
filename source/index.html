@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
     <header class="header">
       <div class="container">
 
-        <a class="header__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"</a>
+        <a class="header__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
         <nav class="main-navigation">
           <button class="main-navigation__open" type="button"><span class="visually-hidden">Меню</span></button>
@@ -22,24 +22,27 @@
               <a class="contacts__item contacts__item--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </div>
 
-            <ul class="social ul-reset">
-              <li>
-                <a class="social__btn social__btn--white social__btn--fb"><span class="visually-hidden">Facebook</span></a>
-              </li>
-              <li>
-                <a class="social__btn social__btn--white social__btn--vk"><span class="visually-hidden">Vkontakte</span></a>
-              </li>
-              <li>
-                <a class="social__btn social__btn--white social__btn--insta"><span class="visually-hidden">Instagram</span></a>
-              </li>
-            </ul>
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--white social__link--fb"><span class="visually-hidden">Facebook</span></a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--white social__link--vk"><span class="visually-hidden">Vkontakte</span></a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--white social__link--insta"><span class="visually-hidden">Instagram</span></a>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </nav>
 
       </div>
     </header>
 
-    <main class="main">
+    <main class="main main-page">
       <div class="container">
         <h1 class="visually-hidden">Сервис "Погнали?"</h1>
         <b class="main-page__title">В путешествие с крутыми попутчиками!</b>
@@ -60,7 +63,7 @@
         <section class="instructions">
           <h2 class="visually-hidden">Как пользоваться сервисом</h2>
 
-          <ol class="instructions__list ul-reset">
+          <ol class="instructions__list">
             <li class="instructions__item instructions__item--1">
               Выберите направление
             </li>
@@ -76,178 +79,189 @@
           </ol>
         </section>
 
-        <section class="section service">
+        <section class="section section--service">
           <h2 class="section__title">О сервисе</h2>
           <p class="section__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <p class="section__description--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+          <p class="section__description section__description--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
         </section>
 
-        <section class="section countries">
+        <section class="section section--countries">
           <h2 class="section__title">Направления</h2>
           <p class="section__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
-          <ul class="countries__list ul-reset">
-            <li class="countries__card">
-              <img src="https://via.placeholder.com/150x150" width="270" height="110" alt="Фото из Таиланда">
-              <div class="countries__description">
-                <h3 class="countries__name countries__name--Thailand">Таиланд</h3>
-                <span class="countries__visitors">18321</span>
-                <p class="countries__comment">
-                  Джунгли зовут!
-                </p>
-              </div>
-            </li>
+          <div class="countries">
+            <ul class="countries__list">
+              <li class="countries__card">
+                <img src="https://via.placeholder.com/150x150" width="270" height="110" alt="Фото из Таиланда">
+                <div class="countries__description">
+                  <h3 class="countries__name countries__name--Thailand">Таиланд</h3>
+                  <span class="countries__visitors">18321</span>
+                  <p class="countries__comment">
+                    Джунгли зовут!
+                  </p>
+                </div>
+              </li>
 
-            <li class="countries__card">
-              <img src="https://via.placeholder.com/150x150" width="270" height="110" alt="Фото из Франции">
-              <div class="countries__description">
-                <h3 class="countries__name countries__name--France">Франция</h3>
-                <span class="countries__visitors">12518</span>
-                <p class="countries__comment">
-                  Трэ бьен, манифик!
-                </p>
-              </div>
+              <li class="countries__card">
+                <img src="https://via.placeholder.com/150x150" width="270" height="110" alt="Фото из Франции">
+                <div class="countries__description">
+                  <h3 class="countries__name countries__name--France">Франция</h3>
+                  <span class="countries__visitors">12518</span>
+                  <p class="countries__comment">
+                    Трэ бьен, манифик!
+                  </p>
+                </div>
 
-            </li>
-            <li class="countries__card">
-              <img src="https://via.placeholder.com/150x150" width="270" height="110" alt="Фото из Чехии">
-              <div class="countries__description">
-                <h3 class="countries__name countries__name--Czech">Чехия</h3>
-                <span class="countries__visitors">5326</span>
-                <p class="countries__comment">
-                  Закоулки старой Европы
-                </p>
-              </div>
-            </li>
-          </ul>
+              </li>
+              <li class="countries__card">
+                <img src="https://via.placeholder.com/150x150" width="270" height="110" alt="Фото из Чехии">
+                <div class="countries__description">
+                  <h3 class="countries__name countries__name--Czech">Чехия</h3>
+                  <span class="countries__visitors">5326</span>
+                  <p class="countries__comment">
+                    Закоулки старой Европы
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
           <a class="section__btn" href="form.html">Показать все</a>
         </section>
 
-        <section class="section tourists">
+        <section class="section section--tourists">
           <h2 class="section__title">Попутчики</h2>
           <p class="section__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="section__description--bold">Теперь можно легко найти единомышленников!</p>
-          <ul class="tourists__list ul-reset">
-            <li class="tourists__card">
-              <img src="https://via.placeholder.com/150x150" width="270" height="270" alt="Фото попутчика">
-              <h3 class="tourists__name">Таня Фирсова</h3>
-              <ul class="tourists__hashtags hashtags__list ul-reset">
-                <li><a class="hashtags__item">#ЗОЖ</a></li>
-                <li><a class="hashtags__item">#ПП</a></li>
-                <li><a class="hashtags__item">#Фитнес</a></li>
-                <li><a class="hashtags__item">#пляж</a></li>
-                <li><a class="hashtags__item">#авокадо</a></li>
-                <li><a class="hashtags__item">#смузи</a></li>
-              </ul>
-              <ul class="tourists__transports transports__list ul-reset">
-                <li class="transports__item transports__item--plane transports__item--active tooltip">
-                  <span class="tooltip__text">Авиаперелет</span>
-                </li>
-                <li class="transports__item transports__item--bus tooltip">
-                  <span class="tooltip__text">Автотранспорт</span>
-                </li>
-                <li class="transports__item transports__item--bycicle tooltip">
-                  <span class="tooltip__text">Велосипед</span>
-                </li>
-                <li class="transports__item transports__item--on-foot tooltip">
-                  <span class="tooltip__text">Пешком</span>
-                </li>
-              </ul>
-              <div class="tourists__level level">
-                <span class="level__quantity">99</span>
-                <span class="level__title">level</span>
-              </div>
-              <ul class="tourists__visits visits__list ul-reset">
-                <li class="visits__item visits__item--Sri-Lanka tooltip">
-                  <span class="tooltip__text">Шри-Ланка</span>
-                </li>
-                <li class="visits__item visits__item--Thailand tooltip">
-                  <span class="tooltip__text">Таиланд</span>
-                </li>
-                <li class="visits__item visits__item--Seychells tooltip">
-                  <span class="tooltip__text">Сейшелы</span>
-                </li>
-              </ul>
-            </li>
-            <li class="tourists__card">
-              <img src="https://via.placeholder.com/150x150" width="270" height="270" alt="Фото попутчика">
-              <h3 class="tourists__name">Петя Демин</h3>
-              <ul class="tourists__hashtags hashtags__list ul-reset">
-                <li><a class="hashtags__item">#бургер</a></li>
-                <li><a class="hashtags__item">#бар</a></li>
-                <li><a class="hashtags__item">#футбол</a></li>
-                <li><a class="hashtags__item">#концерт</a></li>
-                <li><a class="hashtags__item">#крафт</a></li>
-              </ul>
-              <ul class="tourists__transports transports__list ul-reset">
-                <li class="transports__item transports__item--plane transports__item--active tooltip">
-                  <span class="tooltip__text">Самолет</span>
-                </li>
-                <li class="transports__item transports__item--bus transports__item--active tooltip">
-                  <span class="tooltip__text">Автобус</span>
-                </li>
-                <li class="transports__item transports__item--bycicle tooltip">
-                  <span class="tooltip__text">Велосипед</span>
-                </li>
-                <li class="transports__item transports__item--on-foot transports__item--active tooltip">
-                  <span class="tooltip__text">Пешком</span>
-                </li>
-              </ul>
-              <div class="tourists__level level">
-                <span class="level__quantity">80</span>
-                <span class="level__title">level</span>
-              </div>
-              <ul class="tourists__visits visits__list">
-                <li class="visits__item visits__item--Belgium tooltip">
-                  <span class="tooltip__text">Бельгия</span>
-                </li>
-                <li class="visits__item visits__item--Czech tooltip">
-                  <span class="tooltip__text">Чехия</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <p class="section__description section__description--bold">Теперь можно легко найти единомышленников!</p>
+          <div class="tourists">
+            <ul class="tourists__list">
+              <li class="tourists__card">
+                <img src="https://via.placeholder.com/150x150" width="270" height="270" alt="Фото попутчика">
+                <h3 class="tourists__name">Таня Фирсова</h3>
+                <ul class="tourists__hashtags-list">
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#ЗОЖ</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#ПП</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#Фитнес</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#пляж</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#авокадо</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#смузи</a></li>
+                </ul>
+                <div class="tourists__transports transports">
+                  <ul class="transports__list">
+                    <li class="transports__item transports__item--plane transports__item--active">
+                      <span class="transports__text">Авиаперелет</span>
+                    </li>
+                    <li class="transports__item transports__item--bus">
+                      <span class="transports__text">Автотранспорт</span>
+                    </li>
+                    <li class="transports__item transports__item--bycicle">
+                      <span class="transports__text">Велосипед</span>
+                    </li>
+                    <li class="transports__item transports__item--on-foot">
+                      <span class="transports__text">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tourists__level">
+                  <span class="tourists__level__quantity">99</span>
+                  <span class="tourists__level__title">level</span>
+                </div>
+                <ul class="tourists__visits-list">
+                  <li class="tourists__visits-item tourists__visits-item--Sri-Lanka">
+                    <span class="tourists__visits-text">Шри-Ланка</span>
+                  </li>
+                  <li class="tourists__visits-item tourists__visits-item--Thailand">
+                    <span class="tourists__visits-text">Таиланд</span>
+                  </li>
+                  <li class="tourists__visits-item tourists__visits-item--Seychells">
+                    <span class="tourists__visits-text">Сейшелы</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="tourists__card">
+                <img src="https://via.placeholder.com/150x150" width="270" height="270" alt="Фото попутчика">
+                <h3 class="tourists__name">Петя Демин</h3>
+                <ul class="tourists__hashtags-list">
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#бургер</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#бар</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#футбол</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#концерт</a></li>
+                  <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#крафт</a></li>
+                </ul>
+                <div class="tourists__transports transports">
+                  <ul class="transports__list">
+                    <li class="transports__item transports__item--plane transports__item--active">
+                      <span class="transports__text">Самолет</span>
+                    </li>
+                    <li class="transports__item transports__item--bus transports__item--active">
+                      <span class="transports__text">Автобус</span>
+                    </li>
+                    <li class="transports__item transports__item--bycicle">
+                      <span class="transports__text">Велосипед</span>
+                    </li>
+                    <li class="transports__item transports__item--on-foot transports__item--active">
+                      <span class="transports__text">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="tourists__level level">
+                  <span class="level__quantity">80</span>
+                  <span class="level__title">level</span>
+                </div>
+                <ul class="tourists__visits-list">
+                  <li class="tourists__visits-item tourists__visits-item--Belgium">
+                    <span class="tourists__visits-text">Бельгия</span>
+                  </li>
+                  <li class="tourists__visits-item tourists__visits-item--Czech">
+                    <span class="tourists__visits-text">Чехия</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
           <a class="section__btn" href="catalog.html">Показать всех</a>
         </section>
 
 
-        <section class="section price-list">
+        <section class="section section--price-list price-list">
           <b class="section__title">Добавьте свой профиль</b>
-          <table class="price-list__table">
-            <tr>
+          <table class="price-list__table price-list__table--profile">
+            <tr class="price-list__line">
               <td class="price-list__position">Базовое размещение</td>
               <td class="price-list__price">Бесплатно</td>
             </tr>
-            <tr>
+            <tr class="price-list__line">
               <td class="price-list__position">Вывод на первых позициях</td>
               <td class="price-list__price">99 руб./мес.</td>
             </tr>
-            <tr>
+            <tr class="price-list__line">
               <td class="price-list__position">Кастомный цвет карточки</td>
               <td class="price-list__price">59 руб./мес</td>
             </tr>
           </table>
-          <button type="button">Показать тарифы для бизнеса</button>
-          <div>
+          <button class="price-list__btn price-list__btn--no-borders" type="button">Показать тарифы для бизнеса</button>
+          <div class="section__popup">
             <h2 class="section__title">Бизнес-тарифы</h2>
-            <table>
-              <tr>
+            <table class="price-list__table price-list__table--business">
+              <tr class="price-list__line">
                 <td class="price-list__position">Реклама у блоггера</td>
                 <td class="price-list__price">300 000 руб./пост</td>
               </tr>
-              <tr>
+              <tr class="price-list__line">
                 <td class="price-list__position">Накрутка подписчиков</td>
                 <td class="price-list__price">от 1 руб./шт.</td>
               </tr>
-              <tr>
+              <tr class="price-list__line">
                 <td class="price-list__position">Лайки от ботов</td>
                 <td class="price-list__price">от 20 коп./лайк</td>
               </tr>
-              <tr>
+              <tr class="price-list__line">
                 <td class="price-list__position">Ваш продакт-плейсмент</td>
                 <td class="price-list__price">Индивидуально</td>
               </tr>
             </table>
-            <button class="" type="button">Закрыть окно</button>
+            <button class="price-list__close" type="button">Закрыть окно</button>
           </div>
         </section>
 
@@ -284,23 +298,25 @@
 
     <footer class="footer">
       <div class="container">
-        <a class="footer__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"</a>
+        <a class="footer__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
-        <ul class="social ul-reset">
-          <li>
-            <a class="social__btn social__btn--yellow social__btn--fb"><span class="visually-hidden">Facebook</span></a>
-          </li>
-          <li>
-            <a class="social__btn social__btn--yellow social__btn--vk"><span class="visually-hidden">Vkontakte</span></a>
-          </li>
-          <li>
-            <a class="social__btn social__btn--yellow social__btn--insta"><span class="visually-hidden">Instagram</span></a>
-          </li>
-        </ul>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--yellow social__link--fb"><span class="visually-hidden">Facebook</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yellow social__link--vk"><span class="visually-hidden">Vkontakte</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--yellow social__link--insta"><span class="visually-hidden">Instagram</span></a>
+            </li>
+          </ul>
+        </div>
 
         <div class="copyright">
-          <span>Разработано</span>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" width="27" height="34"></a>
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" width="27" height="34" alt="Логотип HTMLAcademy"></a>
         </div>
 
       </div>
