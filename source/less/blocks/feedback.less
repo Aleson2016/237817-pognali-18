@@ -1,17 +1,63 @@
 .feedback {
+  width: 100%;
+  box-sizing: border-box;
   margin: 0;
 
-  font-size: 16px;
-  line-height: 22px;
   color: @white;
   background-color: @dark-blue;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .feedback__comment {
+  width: 200px;
+  padding: @mobile-gap;
+  margin: 0 auto;
+
   font-weight: normal;
 }
 
 .feedback__author {
+  display: block;
+  width: 200px;
+  padding: @mobile-gap;
+  margin: 0 auto;
+
   font-weight: bold;
   font-style: normal;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    width: @tablet-width;
+    margin: 0 auto;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    background-color: transparent;
+  }
+
+  .feedback__comment {
+    width: 300px;
+    margin-left: @tablet-gap;
+  }
+
+  .feedback__author {
+    width: 300px;
+    margin-left: @tablet-gap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-page__intro {
+    width:  @desktop-width;
+    margin: 0 auto;
+  }
+
+  .feedback {
+    width: 350px;
+    padding: 0;
+    margin-right: @desktop-gap;
+  }
 }

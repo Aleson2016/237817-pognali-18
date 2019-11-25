@@ -7,33 +7,34 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="header__container">
 
-        <a class="header__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
+        <nav class="main-navigation main-navigation--inner-page">
+          <a class="main-navigation__logo logo" href="index.html"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
-        <nav class="main-navigation">
           <button class="main-navigation__open" type="button"><span class="visually-hidden">Меню</span></button>
 
-          <div class="main-navigation__wrapper">
-            <ul class="main-navigation__list">
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="index.html">О сервисе</a>
+          <div class="main-navigation__menu">
+            <ul class="main-navigation__menu-list">
+              <li class="main-navigation__menu-item">
+                <a class="main-navigation__menu-link" href="index.html">О сервисе</a>
               </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="#">Направления</a>
+              <li class="main-navigation__menu-item">
+                <a class="main-navigation__menu-link" href="#">Направления</a>
               </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="catalog.html">Попутчики</a>
+              <li class="main-navigation__menu-item">
+                <a class="main-navigation__menu-link" href="catalog.html">Попутчики</a>
               </li>
             </ul>
-            <div class="log-in">
-              <a class="log-in__btn button" href="#">Авторизация</a>
+
+            <div class="main-navigation__log-in">
+              <a class="main-navigation__log-in-btn button" href="#">Авторизация</a>
             </div>
-            <div class="contacts">
-              <a class="contacts__item contacts__item--tel" href="tel:88005558628">8 800 555-86-28</a>
-              <a class="contacts__item contacts__item--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <div class="main-navigation__contacts contacts">
+              <a class="contacts__link contacts__link--tel" href="tel:88005558628">8 800 555-86-28</a>
+              <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </div>
-            <div class="social">
+            <div class="main-navigation__social social">
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--white social__link--fb"><span class="visually-hidden">Facebook</span></a>
@@ -46,8 +47,14 @@
                 </li>
               </ul>
             </div>
-
           </div>
+
+          <div class="main-navigation__user-block contacts">
+            <a class="main-navigation__user-block-link contacts__link contacts__link--tel" href="tel:88005558628"><span class="visually-hidden">8 800 555-86-28</span></a>
+            <a class="main-navigation__user-block-link contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">mail@htmlacademy.ru</span></a>
+            <a class="main-navigation__user-block-btn contacts__btn button" href="#">Авторизация</a>
+          </div>
+
         </nav>
 
       </div>
@@ -141,9 +148,9 @@
     </main>
   -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container">
 
-        <a class="footer__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
+        <a class="footer__logo logo" href="index.html"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
         <div class="social">
           <ul class="social__list">

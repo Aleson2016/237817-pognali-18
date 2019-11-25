@@ -3,6 +3,10 @@
 }
 
 .tourists__card {
+  width: 270px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
   background-color: @white;
 }
 
@@ -47,6 +51,49 @@
   .ul-reset();
 }
 
+.tourists__visits-item {
+  position: relative;
+
+  width: 35px; //временно
+  height: 24px;
+  border: 2px solid red;
+}
+
 .tourists__visits-text {
-  .tooltip();
+  position: absolute;
+  left: 30px;
+  top: 20px;
+
+  display: none;
+
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 18px;
+  color:@white;
+
+  background-color: @blue2;
+
+  z-index: 5;
+}
+
+.tourists__visits-item:hover .tourists__visits-text {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .tourists__list {
+    display: flex;
+  }
+
+  .tourists__card {
+    width: 285px;
+    margin-bottom: @tablet-gap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tourists__card {
+    margin-left: 2 * @desktop-gap;
+  }
 }

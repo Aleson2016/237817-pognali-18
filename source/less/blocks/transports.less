@@ -1,7 +1,48 @@
 .transports__list {
   .ul-reset();
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.transports__item {
+  position: relative;
+
+  width: 30px; //временно
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid red;
 }
 
 .transports__text {
-  .tooltip();
+  position: absolute;
+  left: 25px;
+  top: 25px;
+
+  display: none;
+
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 18px;
+  color:@white;
+
+  background-color: @blue2;
+
+  z-index: 5;
+}
+
+.transports__item:hover .transports__text {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .transports__list {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .transports__list {
+    display: flex;
+  }
 }
