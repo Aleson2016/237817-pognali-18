@@ -1,5 +1,5 @@
 .users {
-  padding: 25px;
+  padding: @mobile-gap;
 }
 
 .users__list {
@@ -7,7 +7,15 @@
 }
 
 .users__card {
-  padding: 18px;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  width: 230px;
+  padding: 20px;
+  margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 20px;
 
@@ -15,42 +23,68 @@
 }
 
 .users__name {
+  margin: 0;
+  margin-left: 10px;
+
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 20px;
   color: @blue;
 }
 
 .users__likes {
+  position: absolute;
+  left: 100px;
+  top: 70px;
+
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 21px;
   color: @dark-blue;
 }
 
 .users__hashtags-list {
   .ul-reset();
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 10px 0;
 }
 
 .users__hashtags-link {
+  .link-reset();
+  padding: 5px;
+
   font-size: 15px;
   line-height: 18px;
   color: @dark-grey;
-  .link-reset();
 }
 
 .users__title {
+  display: block;
+  padding: 5px;
+  margin: 0;
+
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 18px;
   color: @dark-grey;
+
+  &--visits {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .users__visits-list {
   .ul-reset();
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .users__visits-item {
+  padding: 5px;
+
   font-size: 15px;
   font-weight: 500;
   line-height: 18px;
@@ -58,9 +92,213 @@
   color: @blue;
 }
 
+.users__level {
+  margin-left: 10px;
+}
+
 .users__level-quantity {
+  display: block;
+  padding: 5px;
+
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   color: @blue;
+}
+
+.users__btn {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  &--no-borders {
+    color: @blue;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .users {
+    padding: @tablet-gap;
+  }
+
+  .users__card {
+    width: 618px;
+    padding: 35px;
+    margin-bottom: @tablet-gap;
+  }
+
+  .users__photo {
+    width: 190px;
+    height: 190px;
+
+    order: -1;
+  }
+
+  .users__name {
+    margin-left: 30px;
+    flex-grow: 1;
+
+    font-size: 30px;
+    line-height: 30px;
+
+    order: 0;
+  }
+
+  .users__likes {
+    position: absolute;
+    left: 453px;
+    top: 190px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .users__hashtags-list {
+    position: absolute;
+    left: 250px;
+    top: 90px;
+
+    width: 250px;
+
+  }
+
+  .users__hashtags-link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .users__title {
+    display: none;
+
+    &--visits {
+      display: block;
+
+      padding-left: 50px;
+
+      order: 2;
+    }
+  }
+
+  .users__visits-list {
+    display: flex;
+    flex-wrap: wrap;
+    order: 3;
+  }
+
+  .users__visits-item {
+    padding-left: 48px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .users__transports {
+    display: block;
+    margin-right: 10px;
+
+    order: 1;
+  }
+
+  .users__level {
+    position: absolute;
+    right: 45px;
+    bottom: 100px;
+  }
+
+  .users__btn {
+    position: absolute;
+    left: 255px;
+    top: 170px;
+
+    width: 148px;
+    padding: 17px 32px;;
+
+    border-radius: 25px;
+
+    font-size: 20px;
+
+    &--no-borders {
+      position: static;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users {
+    padding: @desktop-gap;
+  }
+
+  .users__card {
+    width: 950px;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .users__photo {
+    width: 285px;
+    height: 285px;
+
+    order: -1;
+  }
+
+  .users__name {
+    flex-grow: 0;
+
+    padding: 30px;
+    margin: 30px;
+    margin-right: 60px;
+
+    order: 0;
+  }
+
+  .users__likes {
+    left: 550px;
+    top: 215px;
+  }
+
+  .users__hashtags-list {
+    left: 340px;
+    top: 100px;
+  }
+
+  .users__title {
+    display: none;
+  }
+
+  .users__visits-list {
+    display: block;
+    width: 250px;
+    padding: 30px;
+    margin: 30px;
+
+    order: 1;
+  }
+
+  .users__transports {
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+
+    display: flex;
+  }
+
+  .users__level {
+    position: absolute;
+    right: 45px;
+    bottom: 35px;
+  }
+
+  .users__btn {
+    position: absolute;
+    left: 345px;
+    top: 200px;
+
+    &--no-borders {
+      position: static;
+      width: 100%;
+    }
+  }
 }

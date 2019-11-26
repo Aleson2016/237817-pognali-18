@@ -1,7 +1,7 @@
 .section {
-  padding: 25px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  padding: @mobile-gap;
+  border-bottom-left-radius: @mobile-gap;
+  border-bottom-right-radius: @mobile-gap;
 
   font-size: 16px;
   font-weight: 300;
@@ -25,37 +25,159 @@
   }
 }
 
-.section__title {
-  margin-left: 25px;
+.section__wrapper {
+  position: relative;
 
+  width: 220px;
+  padding: @mobile-gap;
+  margin: 0 auto;
+}
+
+.section__title {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   color: @dark-orange;
 }
 
 .section__description {
-  margin-left: 25px;
-
   &--bold {
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 
 .section__btn {
+  display: block;
+  width: 222px;
   padding: 24px;
+  margin: @mobile-gap auto;
+  text-align: left;
 
-  font-family: inherit;
-  text-align: center;
   font-size: 18px;
-  font-weight: bold;
   line-height: 18px;
+  text-transform: none;
   color: @blue;
-
-  .link-reset();
 
   border-radius: 10px;
 
-  background-color: @yellow;
-  cursor: pointer;
+  &--service {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .section {
+    padding: 20px 2 * @tablet-gap;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .section__wrapper {
+    width: 608px;
+    padding: @tablet-gap;
+  }
+
+  .section__title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .section__description {
+    &--service {
+      width: 315px;
+    }
+    &--countries {
+      width: 340px;
+    }
+    &--tourists {
+      width: 470px;
+    }
+  }
+
+  .section__btn {
+    width: 618px;
+    box-sizing: border-box;
+    padding: 30px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+
+    &--service {
+      display: block;
+      width: 214px;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 4 * @desktop-gap;
+
+    &--countries {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .section__wrapper {
+    width: auto;
+    padding: 0 2 * @desktop-gap;
+    margin: 0  2 * @desktop-gap;
+
+    &--service {
+      width: 1200px;
+    }
+    &--tourists {
+      //width: 510px;
+      //надо разобраться
+    }
+    &--price-list {
+      width: 1200px;
+    }
+  }
+
+  .section__title {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .section__description {
+    &--service {
+      width: 620px;
+    }
+    &--countries {
+      width: 340px;
+    }
+    &--tourists {
+      width: 510px;
+    }
+  }
+
+  .section__btn {
+    position: absolute;
+
+    width: 274px;
+    padding: @desktop-gap;
+
+
+    &--countries {
+      bottom: 130px;
+      left: 50%;
+      margin-left: 193px;
+    }
+    &--tourists {
+      bottom: 130px;
+      left: 50%;
+      margin-left: -600px;
+    }
+  }
 }

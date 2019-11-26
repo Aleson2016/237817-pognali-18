@@ -1,20 +1,52 @@
 .main-page {
+  color: @white;
+  background-color: @dark-blue;
+}
 
+.main-page__intro {
+  width: 100%;
+  box-sizing: border-box;
+  padding: @mobile-gap 0;
+
+  background-image: url("../../img/traveller-illustration-mobile@1x.png"), url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 170px, center -50px;
+  background-color: @dark-blue;
 }
 
 .main-page__title {
   display: block;
-  padding-bottom: 265px;
+  width: 270px;
+  padding-bottom: 270px;
+  margin: 0 auto;
   text-align: center;
 
   font-size: 36px;
   font-weight: bold;
   line-height: 40px;
   color: @white;
+}
 
+@media (min-width: @tablet-width) {
+  .main-page__title {
+    width: 450px;
+    padding-bottom: 100px;
 
-  background-image: url("../../img/traveller-illustration-mobile@1x.png"), url("../../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50px 100px, 0 -100px;
-  background-color: @dark-blue;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-page__intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main-page__title {
+    text-align: left;
+    padding-left: @desktop-gap;
+    margin-left: @desktop-gap;
+  }
 }
