@@ -3,9 +3,14 @@
 }
 
 .tourists__card {
+  position: relative;
+
   width: 270px;
+  padding-bottom: 10px;
   margin: 0 auto;
   margin-bottom: 10px;
+
+  border-radius: 10px;
 
   background-color: @white;
 }
@@ -21,27 +26,57 @@
 
 .tourists__hashtags-list {
   .ul-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
 }
 
 .tourists__hashtags-link {
+  .link-reset();
+  margin-left: 5px;
+
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey;
-  .link-reset();
+}
+
+.tourists__transports {
+  justify-content: center;
+  margin: @mobile-gap;
 }
 
 .tourists__level {
+  position: absolute;
+  top: @mobile-gap;
+  left: @mobile-gap;
+
+  padding: 0 5px;
+
+  text-align: center;
+  border-radius: 50%;
   border: 3px solid @dark-orange;
 
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .tourists__level__title {
+  display: block;
+  padding: 0;
+  padding-top: 3px;
+  margin: 5px;
+  margin-top: 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 14px;
   line-height: 14px;
 }
 
 .tourists__level__quantity {
+  display: block;
+  margin: 10px;
+  margin-bottom: 0;
+
   font-size: 24px;
   font-weight: bold;
   line-height: 24px;
@@ -49,13 +84,23 @@
 
 .tourists__visits-list {
   .ul-reset();
+  position: absolute;
+  top: 256px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tourists__visits-item {
   position: relative;
 
-  width: 35px; //временно
+  width: 31px; //временно
   height: 24px;
+  margin: 0 6px;
   border: 2px solid red;
 }
 

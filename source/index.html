@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -168,8 +169,8 @@
                   <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#авокадо</a></li>
                   <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#смузи</a></li>
                 </ul>
-                <div class="tourists__transports transports">
-                  <ul class="transports__list">
+                <div class="transports">
+                  <ul class="tourists__transports transports__list">
                     <li class="transports__item transports__item--plane transports__item--active">
                       <span class="transports__text">Авиаперелет</span>
                     </li>
@@ -210,8 +211,8 @@
                   <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#концерт</a></li>
                   <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#крафт</a></li>
                 </ul>
-                <div class="tourists__transports transports">
-                  <ul class="transports__list">
+                <div class="transports">
+                  <ul class="tourists__transports transports__list">
                     <li class="transports__item transports__item--plane transports__item--active">
                       <span class="transports__text">Самолет</span>
                     </li>
@@ -227,9 +228,9 @@
                   </ul>
                 </div>
 
-                <div class="tourists__level level">
-                  <span class="level__quantity">80</span>
-                  <span class="level__title">level</span>
+                <div class="tourists__level">
+                  <span class="tourists__level__quantity">80</span>
+                  <span class="tourists__level__title">level</span>
                 </div>
                 <ul class="tourists__visits-list">
                   <li class="tourists__visits-item tourists__visits-item--Belgium">
@@ -248,44 +249,44 @@
 
 
         <section class="section section--price-list price-list">
-          <div class="section__wrapper">
-            <b class="section__title section__title--price-list">Добавьте свой профиль</b>
-            <table class="price-list__table price-list__table--profile">
-              <tr class="price-list__line">
-                <td class="price-list__position">Базовое размещение</td>
-                <td class="price-list__price">Бесплатно</td>
-              </tr>
-              <tr class="price-list__line">
-                <td class="price-list__position">Вывод на первых позициях</td>
-                <td class="price-list__price">99 руб./мес.</td>
-              </tr>
-              <tr class="price-list__line">
-                <td class="price-list__position">Кастомный цвет карточки</td>
-                <td class="price-list__price">59 руб./мес</td>
-              </tr>
-            </table>
-            <button class="price-list__btn price-list__btn--no-borders" type="button">Показать тарифы для бизнеса</button>
-            <div class="section__popup">
-              <h2 class="section__title">Бизнес-тарифы</h2>
-              <table class="price-list__table price-list__table--business">
-                <tr class="price-list__line">
-                  <td class="price-list__position">Реклама у блоггера</td>
-                  <td class="price-list__price">300 000 руб./пост</td>
-                </tr>
-                <tr class="price-list__line">
-                  <td class="price-list__position">Накрутка подписчиков</td>
-                  <td class="price-list__price">от 1 руб./шт.</td>
-                </tr>
-                <tr class="price-list__line">
-                  <td class="price-list__position">Лайки от ботов</td>
-                  <td class="price-list__price">от 20 коп./лайк</td>
-                </tr>
-                <tr class="price-list__line">
-                  <td class="price-list__position">Ваш продакт-плейсмент</td>
-                  <td class="price-list__price">Индивидуально</td>
-                </tr>
-              </table>
-              <button class="price-list__close" type="button">Закрыть окно</button>
+          <div class="section__wrapper section__wrapper--price-list">
+            <b class="section__title price-list__title">Добавьте свой профиль</b>
+            <div class="price-list__table price-list__table--profile">
+              <div class="price-list__line">
+                <div class="price-list__position">Базовое размещение</div>
+                <div class="price-list__position price-list__position--price">Бесплатно</div>
+              </div>
+              <div class="price-list__line">
+                <div class="price-list__position">Вывод на первых позициях</div>
+                <div class="price-list__position price-list__position--price">99 руб./мес.</div>
+              </div>
+              <div class="price-list__line price-list__line--last">
+                <div class="price-list__position">Кастомный цвет карточки</div>
+                <div class="price-list__position price-list__position--price">59 руб./мес</div>
+              </div>
+            </div>
+            <button class="price-list__btn" type="button">Показать тарифы для бизнеса</button>
+            <div class="price-list__popup">
+              <h2 class="section__title price-list__title price-list__title--business">Бизнес-тарифы</h2>
+              <div class="price-list__table price-list__table--business">
+                <div class="price-list__line">
+                  <div class="price-list__position">Реклама у блоггера</div>
+                  <div class="price-list__position price-list__position--price">300 000 руб./пост</div>
+                </div>
+                <div class="price-list__line">
+                  <div class="price-list__position">Накрутка подписчиков</div>
+                  <div class="price-list__position price-list__position--price">от 1 руб./шт.</div>
+                </div>
+                <div class="price-list__line">
+                  <div class="price-list__position">Лайки от ботов</div>
+                  <div class="price-list__position price-list__position--price">от 20 коп./лайк</div>
+                </div>
+                <div class="price-list__line price-list__line--last">
+                  <div class="price-list__position">Ваш продакт-плейсмент</div>
+                  <div class="price-list__position price-list__position--price">Индивидуально</div>
+                </div>
+              </div>
+              <button class="price-list__btn price-list__btn--close" type="button">Закрыть окно</button>
             </div>
           </div>
         </section>

@@ -26,6 +26,8 @@
 }
 
 .section__wrapper {
+  position: relative;
+
   width: 220px;
   padding: @mobile-gap;
   margin: 0 auto;
@@ -36,13 +38,6 @@
   font-weight: 700;
   line-height: 24px;
   color: @dark-orange;
-
-  &--price-list {
-    display: block;
-    width: 100px;
-
-    margin: 30px 0;
-  }
 }
 
 .section__description {
@@ -56,9 +51,11 @@
   width: 222px;
   padding: 24px;
   margin: @mobile-gap auto;
+  text-align: left;
 
   font-size: 18px;
   line-height: 18px;
+  text-transform: none;
   color: @blue;
 
   border-radius: 10px;
@@ -140,7 +137,11 @@
       width: 1200px;
     }
     &--tourists {
-      width: 570px;
+      //width: 510px;
+      //надо разобраться
+    }
+    &--price-list {
+      width: 1200px;
     }
   }
 
@@ -157,7 +158,7 @@
       width: 340px;
     }
     &--tourists {
-      width: 430px;
+      width: 510px;
     }
   }
 
@@ -175,8 +176,8 @@
     }
     &--tourists {
       bottom: 130px;
-      right: 50%;
-      margin-right: 350px;
+      left: 50%;
+      margin-left: -600px;
     }
   }
 }
