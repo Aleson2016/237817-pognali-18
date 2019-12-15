@@ -10,10 +10,10 @@
     <header class="header">
       <div class="header__container">
 
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--closed main-navigation--no-js">
           <a class="main-navigation__logo logo"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
-          <button class="main-navigation__open" type="button"><span class="visually-hidden">Меню</span></button>
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
 
           <div class="main-navigation__menu">
             <ul class="main-navigation__menu-list">
@@ -160,7 +160,7 @@
             <ul class="tourists__list">
               <li class="tourists__card">
                 <img src="https://via.placeholder.com/150x150" width="270" height="270" alt="Фото попутчика">
-                <h3 class="tourists__name">Таня Фирсова</h3>
+                <a class="tourists__name" href="">Таня Фирсова</a>
                 <ul class="tourists__hashtags-list">
                   <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#ЗОЖ</a></li>
                   <li class="tourists__hashtags-item"><a class="tourists__hashtags-link" href="">#ПП</a></li>
@@ -251,43 +251,44 @@
         <section class="section section--price-list price-list">
           <div class="section__wrapper section__wrapper--price-list">
             <b class="section__title price-list__title">Добавьте свой профиль</b>
-            <div class="price-list__table price-list__table--profile">
-              <div class="price-list__line">
-                <div class="price-list__position">Базовое размещение</div>
-                <div class="price-list__position price-list__position--price">Бесплатно</div>
-              </div>
-              <div class="price-list__line">
-                <div class="price-list__position">Вывод на первых позициях</div>
-                <div class="price-list__position price-list__position--price">99 руб./мес.</div>
-              </div>
-              <div class="price-list__line price-list__line--last">
-                <div class="price-list__position">Кастомный цвет карточки</div>
-                <div class="price-list__position price-list__position--price">59 руб./мес</div>
-              </div>
-            </div>
-            <button class="price-list__btn" type="button">Показать тарифы для бизнеса</button>
-            <div class="price-list__popup">
-              <h2 class="section__title price-list__title price-list__title--business">Бизнес-тарифы</h2>
-              <div class="price-list__table price-list__table--business">
-                <div class="price-list__line">
-                  <div class="price-list__position">Реклама у блоггера</div>
-                  <div class="price-list__position price-list__position--price">300 000 руб./пост</div>
-                </div>
-                <div class="price-list__line">
-                  <div class="price-list__position">Накрутка подписчиков</div>
-                  <div class="price-list__position price-list__position--price">от 1 руб./шт.</div>
-                </div>
-                <div class="price-list__line">
-                  <div class="price-list__position">Лайки от ботов</div>
-                  <div class="price-list__position price-list__position--price">от 20 коп./лайк</div>
-                </div>
-                <div class="price-list__line price-list__line--last">
-                  <div class="price-list__position">Ваш продакт-плейсмент</div>
-                  <div class="price-list__position price-list__position--price">Индивидуально</div>
-                </div>
-              </div>
-              <button class="price-list__btn price-list__btn--close" type="button">Закрыть окно</button>
-            </div>
+            <table class="price-list__table">
+              <tr class="price-list__line">
+                <td class="price-list__position">Базовое размещение</td>
+                <td class="price-list__price">Бесплатно</td>
+              </tr>
+              <tr class="price-list__line">
+                <td class="price-list__position">Вывод на первых позициях</td>
+                <td class="price-list__price">99 руб./мес</td>
+              </tr>
+              <tr class="price-list__line">
+                <td class="price-list__position">Кастомный цвет карточки</td>
+                <td class="price-list__price">59 руб./мес</td>
+              </tr>
+            </table>
+            <button class="price-list__btn price-list__btn--open" type="button">Показать тарифы для бизнеса</button>
+          </div>
+
+          <div class="price-list__popup price-list__popup--closed">
+            <h2 class="section__title price-list__title price-list__title--popup">Бизнес-тарифы</h2>
+            <table class="price-list__table price-list__table--popup">
+              <tr class="price-list__line price-list__line--popup">
+                <td class="price-list__position">Реклама у блоггера</td>
+                <td class="price-list__price">300 000 руб./пост</td>
+              </tr>
+              <tr class="price-list__line price-list__line--popup">
+                <td class="price-list__position">Накрутка подписчиков</td>
+                <td class="price-list__price">от 1 руб./шт.</td>
+              </tr>
+              <tr class="price-list__line price-list__line--popup">
+                <td class="price-list__position">Лайки от ботов</td>
+                <td class="price-list__price">от 20 коп./лайк</td>
+              </tr>
+              <tr class="price-list__line price-list__line--popup">
+                <td class="price-list__position">Ваш продакт-плейсмент</td>
+                <td class="price-list__price">Индивидуально</td>
+              </tr>
+            </table>
+            <button class="price-list__btn price-list__btn--popup" type="button">Закрыть окно</button>
           </div>
         </section>
 
@@ -347,6 +348,9 @@
 
       </div>
     </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/price-list.js"></script>
 
   </body>
 </html>
