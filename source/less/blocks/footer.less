@@ -1,8 +1,4 @@
 .footer {
-  background-color: @light-grey;
-}
-
-.footer__container {
   padding: @mobile-gap;
   padding-bottom: 15px;
 
@@ -31,11 +27,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 688px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer {
     padding: @desktop-gap;
+  }
+
+  .footer__container {
+    width: 1320px;
   }
 }

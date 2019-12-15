@@ -16,12 +16,23 @@
 }
 
 .tourists__name {
+  .link-reset();
+  display: block;
+  margin-top: @mobile-gap;
   text-align: center;
 
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
   color: @blue;
+
+  &:hover {
+    color: rgba(29, 46, 91, 0.7);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .tourists__hashtags-list {
@@ -129,6 +140,10 @@
 @media (min-width: @tablet-width) {
   .tourists__list {
     display: flex;
+    justify-content: space-around;
+
+    width: 688px;
+    margin: 0 auto;
   }
 
   .tourists__card {

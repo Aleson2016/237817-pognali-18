@@ -23,6 +23,7 @@
 }
 
 .users__name {
+  .link-reset();
   margin: 0;
   margin-left: 10px;
 
@@ -30,6 +31,14 @@
   font-weight: 700;
   line-height: 20px;
   color: @blue;
+
+  &:hover {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .users__likes {
@@ -115,6 +124,16 @@
   &--no-borders {
     color: @blue;
     background-color: transparent;
+
+    &:hover {
+      color: rgba(29, 46, 91, 0.6);
+      background-color: transparent;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+      background-color: transparent;
+    }
   }
 }
 

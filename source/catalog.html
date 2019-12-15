@@ -10,10 +10,10 @@
     <header class="header">
       <div class="header__container">
 
-        <nav class="main-navigation main-navigation--inner-page">
+        <nav class="main-navigation main-navigation--closed main-navigation--no-js main-navigation--inner-page">
           <a class="main-navigation__logo logo" href="index.html"><img src="https://via.placeholder.com/150x150" width="100" height="19" alt="Логотип Погнали?"></a>
 
-          <button class="main-navigation__open" type="button"><span class="visually-hidden">Меню</span></button>
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
 
           <div class="main-navigation__menu">
             <ul class="main-navigation__menu-list">
@@ -62,23 +62,29 @@
     </header>
 
     <main class="main inner-page">
-      <div class="container">
 
-        <h1 class="inner-page__title">Попутчики</h1>
+      <div class="inner-page__wrapper">
+        <div class="inner-page__intro">
+          <h1 class="inner-page__title">Попутчики</h1>
+          <a class="inner-page__link" href="index.html">На главную</a>
+        </div>
+      </div>
+
+
 
 <!--фильтр
-        <section class="filters">
-          <form action="http://echo.htmlacademy.ru" method="get">
+      <section class="filters">
+        <form action="http://echo.htmlacademy.ru" method="get">
 
-          </form>
-        </section>
+        </form>
+      </section>
 -->
 
-        <section class="users">
+      <section class="users">
           <ul class="users__list">
             <li class="users__card">
               <img class="users__photo" src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
-              <h3 class="users__name">Таня Фирсова</h3>
+              <a class="users__name" href="#">Таня Фирсова</a>
               <span class="users__likes">1,5м</span>
               <ul class="users__hashtags-list">
                 <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#ЗОЖ</a></li>
@@ -121,7 +127,7 @@
 
             <li class="users__card">
               <img class="users__photo" src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
-              <h3 class="users__name">Петя Демин</h3>
+              <a class="users__name" href="#">Петя Демин</a>
               <span class="users__likes">150</span>
               <ul class="users__hashtags-list">
                 <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#бургер</a></li>
@@ -166,7 +172,7 @@
 
             <li class="users__card">
               <img class="users__photo" src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
-              <h3 class="users__name">Марк Смолов</h3>
+              <a class="users__name" href="#">Марк Смолов</a>
               <span class="users__likes">1700</span>
               <ul class="users__hashtags-list">
                 <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#рэп</a></li>
@@ -214,7 +220,7 @@
 
             <li class="users__card">
               <img class="users__photo" src="https://via.placeholder.com/150x150" width="70" height="70" alt="Фото попутчика">
-              <h3 class="users__name">Лариса Рогова</h3>
+              <a class="users__name" href="#">Лариса Рогова</a>
               <span class="users__likes">23</span>
               <ul class="users__hashtags-list">
                 <li class="users__hashtags-item"><a class="users__hashtags-link" href="">#образование</a></li>
@@ -271,7 +277,6 @@
           </div>
         </section>
 
-      </div>
     </main>
 
     <footer class="footer">
@@ -300,6 +305,8 @@
 
       </div>
     </footer>
+
+    <script src="js/menu.js"></script>
 
   </body>
 </html>

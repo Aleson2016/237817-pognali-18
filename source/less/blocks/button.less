@@ -1,4 +1,6 @@
 .button {
+  .link-reset();
+
   padding: 5px;
 
   font-family: inherit;
@@ -10,13 +12,20 @@
   text-transform: uppercase;
   color: @dark-blue;
 
-  .link-reset;
-
   border: none;
   border-radius: 20px;
 
   background-color: @yellow;
   cursor: pointer;
+
+  &:hover {
+    background-color: @dark-yellow;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+    background-color: @dark-yellow;
+  }
 }
 
 @media (min-width: @tablet-width) {
