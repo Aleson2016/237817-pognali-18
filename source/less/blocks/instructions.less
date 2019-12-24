@@ -1,7 +1,7 @@
 .instructions {
   width: 100%;
   box-sizing: border-box;
-  padding: 25px;
+  padding: 20px @mobile-gap;
   padding-bottom: 40px;
 
   background-color: @light-blue;
@@ -11,10 +11,12 @@
   .ul-reset;
   width: 270px;
   margin: 0 auto;
+  margin-top: -115px;
 }
 
 .instructions__item {
-  padding: 25px;
+  padding-top: 20px;
+  padding-left: 25px;
   padding-right: 100px;
   padding-bottom: 33px;
   margin-top: -10px;
@@ -26,6 +28,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   &--1 {
+    padding-top: 25px;
     background-color: @dark-orange;
   }
   &--2 {
@@ -44,19 +47,27 @@
 }
 
 @media (min-width: @tablet-width) {
+  .instructions {
+    padding: 20px 0;
+    background-color: transparent;
+  }
+
   .instructions__list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 
-    width: 688px;
-    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 0; //в мобильной был -115px
   }
 
   .instructions__item {
     width: 230px;
     padding: 30px;
     padding-right: 84px;
+    padding-bottom: 60px;
     margin-top: 0;
 
     font-size: 24px;
@@ -64,10 +75,12 @@
 
     &--1 {
       padding-right: 94px;
+      border-top-left-radius: 20px;
       border-top-right-radius: 0;
     }
     &--2 {
       margin-left: -10px;
+      border-top-right-radius: 20px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -75,44 +88,46 @@
       padding-right: 94px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-bottom-left-radius: 10px;
+      border-bottom-left-radius: 20px;
     }
     &--4 {
       margin-left: -10px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      border-bottom-right-radius: 20px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .instructions {
-    padding: @desktop-gap;
+    padding: 0;
+    margin-bottom: 95px;
+
     background-color: transparent;
   }
 
-  .instructions__list {
-    width: 1320px;
-  }
-
   .instructions__item {
-    padding-right: 60px;
+    padding: 30px 35px;
+    padding-right: 85px;
+    margin-left: -20px;
 
     &--1 {
-      border-bottom-left-radius: 10px;
+      margin-left: 0;
+      padding-right: 65px;
+      border-bottom-left-radius: 20px;
     }
     &--2 {
       border-top-right-radius: 0;
-      border-bottom-left-radius: 10px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
       border-bottom-right-radius: 0px;
     }
     &--3 {
-      margin-left: -10px;
-      border-top-left-radius: 10px;
+      border-top-left-radius: 20px;
     }
     &--4 {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-radius: 20px;
     }
   }
 }

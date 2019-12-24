@@ -1,25 +1,50 @@
 .section {
   padding: @mobile-gap;
-  border-bottom-left-radius: @mobile-gap;
-  border-bottom-right-radius: @mobile-gap;
-
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
+  padding-top: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   &--service {
+    padding-bottom: 40px;
+    margin-top: -25px;
     color: @white;
-    background-color: @dark-blue;
+    background: url("../../img/about-mobile@1x.png") no-repeat;
+    background-position: center;
+    background-color: @light-blue;
+
+    @media (min-resolution: @retina-dppx) {
+      background: url("../../img/about-mobile@2x.png") no-repeat;
+      background-position: center;
+      background-color: @light-blue;
+      background-size: 292px;
+    }
   }
+
   &--countries {
+    padding-top: 50px;
+    padding-bottom: 5px;
     color: @dark-grey;
     background-color: @light-grey;
   }
+
   &--tourists {
+    padding-top: 45px;
+    padding-bottom: 15px;
     color: @white;
-    background-color: @dark-blue;
+    background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 63px) 35px, calc(50% - 135px) 310px;
+    background-color: @light-blue;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../../img/smolov-back-desktop@2x.png"),  url("../../img/rogovaya-back-mobile@2x.png");
+      background-size: 143px, 71px;
+    }
   }
+
   &--price-list {
+    padding-top: 25px;
+    padding-bottom: 0;
     color: @dark-grey;
     background-color: @light-grey;
   }
@@ -34,6 +59,7 @@
 }
 
 .section__title {
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
@@ -41,7 +67,12 @@
 }
 
 .section__description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+
   &--bold {
+    padding-top: 10px;
     font-weight: 700;
   }
 }
@@ -69,29 +100,79 @@
   .section {
     padding: 20px 2 * @tablet-gap;
 
-    font-size: 28px;
-    line-height: 33px;
+    &--service {
+      padding-top: 75px;
+
+      background: url("../../img/about-tablet@1x.png") no-repeat;
+      background-position: calc(50% + 190px) 125px;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../../img/about-tablet@2x.png");
+        background-size: 376px;
+      }
+    }
+
+    &--countries {
+      padding-top: 30px;
+      background: url("../../img/flags-back@1x.png") no-repeat;
+      background-position: calc(50% + 200px) 80px;
+      background-color: @light-grey;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../../img/flags-back@2x.png");
+        background-size: 289px;
+      }
+    }
+
+    &--tourists {
+      padding-top: 95px;
+
+      background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-position: calc(50% - 273px) 425px, calc(50% + 170px) 80px;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../../img/smolov-back-desktop@2x.png"),  url("../../img/rogovaya-back-desktop@2x.png");
+        background-size: 143px, 285px;
+      }
+    }
   }
 
   .section__wrapper {
-    width: 608px;
-    padding: @tablet-gap;
+    width: 618px;
+    padding: 35px;
   }
 
   .section__title {
+    padding-top: 10px;
+    margin-bottom: 40px;
     font-size: 45px;
     line-height: 45px;
   }
 
   .section__description {
+    font-size: 28px;
+    line-height: 33px;
+
+    &--bold {
+      padding-top: 0;
+      padding-bottom: 20px;
+
+      font-size: 21px;
+      line-height: 25px;
+    }
     &--service {
-      width: 315px;
+      width: 300px;
+      margin-bottom: 30px;
     }
     &--countries {
       width: 340px;
+      margin-top: 55px;
+      margin-bottom: 55px;
     }
     &--tourists {
       width: 470px;
+      margin-top: 55px;
     }
   }
 
@@ -100,6 +181,7 @@
     box-sizing: border-box;
     padding: 30px;
 
+
     font-size: 24px;
     line-height: 24px;
 
@@ -107,8 +189,18 @@
 
     &--service {
       display: block;
-      width: 214px;
-      margin: 0;
+      width: 274px;
+      margin:0;
+      margin-bottom: 30px;
+    }
+
+    &--countries {
+      margin-top: 45px;
+      margin-bottom: 55px;
+    }
+
+    &--tourists {
+      margin-bottom: 65px;
     }
   }
 }
@@ -121,46 +213,84 @@
     justify-content: center;
     align-items: flex-start;
 
-    padding: 4 * @desktop-gap;
+    &--service {
+      padding-top: 155px;
+      padding-bottom: 115px;
+
+      background: url("../../img/about-desktop@1x.png") no-repeat;
+      background-position: calc(50% + 345px) 110px;
+      @media (min-resolution: @retina-dppx) {
+        background: url("../../img/about-desktop@2x.png") no-repeat;
+      }
+    }
 
     &--countries {
+      padding-top: 155px;
+      padding-bottom: 120px;
+
       flex-direction: row-reverse;
+
+      background-position: calc(50% + 520px) 90px;
+      background-color: @light-grey;
+    }
+
+    &--tourists {
+      padding-top: 135px;
+      padding-bottom: 55px;
+
+      background-position: calc(50% - 100px) 140px, calc(50% - 385px) 390px;
+    }
+
+    &--price-list {
+      padding-top: 65px;
+      padding-bottom: 130px;
     }
   }
 
   .section__wrapper {
-    width: auto;
-    padding: 0 2 * @desktop-gap;
-    margin: 0  2 * @desktop-gap;
 
     &--service {
-      width: 1200px;
+      width: 1180px;
+      padding: 0 65px;
+      padding-bottom: 150px;
+      margin: 0 auto;
     }
-    &--tourists {
-      width: 510px;
+
+    &--countries {
+      width: 360px;
+      padding: 10px 50px;
+      padding-right: 85px;
       margin: 0;
-      padding: 0;
+      margin-left: 60px;
+    }
+
+    &--tourists {
+      width: 490px;
+      padding: 0 70px;
+      margin: 0;
+
     }
     &--price-list {
       width: 1200px;
+      margin: 0 auto;
     }
   }
 
   .section__title {
     padding-top: 0;
     margin-top: 0;
+    margin-bottom: 60px;
   }
 
   .section__description {
     &--service {
       width: 620px;
+      margin-bottom: 40px;
     }
+
     &--countries {
       width: 340px;
     }
-    // &--tourists {
-    //   width: 510px;
-    // }
   }
 
   .section__btn {
@@ -169,16 +299,21 @@
     width: 274px;
     padding: @desktop-gap;
 
+    &--service {
+      bottom: 15px;
+    }
 
     &--countries {
-      bottom: 130px;
+      bottom: 80px;
       left: 50%;
-      margin-left: 193px;
+      margin-left: 143px;
     }
     &--tourists {
-      bottom: 130px;
+      bottom: 70px;
       left: 50%;
-      margin-left: -600px;
+
+      width: 280px;
+      margin-left: -590px;
     }
   }
 }

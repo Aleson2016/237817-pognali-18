@@ -10,8 +10,13 @@
 
   background-image: url("../../img/traveller-illustration-mobile@1x.png"), url("../../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center 170px, center -50px;
+  background-position: calc(50% + 15px) 160px, center -60px;
   background-color: @dark-blue;
+
+  @media(min-resolution: @retina-dppx) {
+    background-image: url("../../img/traveller-illustration-mobile@2x.png"), url("../../img/globe-back-mobile@2x.jpg");
+    background-size: 192px, 320px;
+  }
 }
 
 .main-page__title {
@@ -22,15 +27,38 @@
   text-align: center;
 
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 40px;
   color: @white;
 }
 
 @media (min-width: @tablet-width) {
+  .main-page {
+    background-color: @bg-blue;
+  }
+
+  .main-page__intro {
+    padding-top: 25px;
+
+    background-image: url("../../img/traveller-illustration-tablet@1x.png"), url("../../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 90px) 270px, center 250px;
+    background-color: @bg-blue;
+
+    @media(min-resolution: @retina-dppx) {
+      background-image: url("../../img/traveller-illustration-tablet@2x.png"), url("../../img/globe-back-tablet@2x.jpg");
+      background-size: 372px, 1479px;
+    }
+  }
+
+  .main-page__intro-wrapper {
+    width: 688px;
+    margin: 0 auto;
+  }
+
   .main-page__title {
     width: 450px;
-    padding-bottom: 100px;
+    padding-bottom: 45px;
 
     font-size: 60px;
     line-height: 70px;
@@ -39,14 +67,28 @@
 
 @media (min-width: @desktop-width) {
   .main-page__intro {
+    padding-top: 90px;
+
+    background-image: url("../../img/traveller-illustration-desktop@1x.png"), url("../../img/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 100px) -5px, center -110px;
+
+    @media(min-resolution: @retina-dppx) {
+      background-image: url("../../img/traveller-illustration-desktop@2x.png"), url("../../img/globe-back-desktop@2x.jpg");
+      background-size: 431px, 1800px;
+    }
+  }
+
+  .main-page__intro-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+
+    width:  1320px;
   }
 
   .main-page__title {
+    margin-left: 70px;
     text-align: left;
-    padding-left: @desktop-gap;
-    margin-left: @desktop-gap;
   }
 }

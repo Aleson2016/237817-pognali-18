@@ -1,11 +1,21 @@
 .contacts__link {
+  .link-reset();
   display: block;
+  margin-bottom: 25px;
 
   font-family: inherit;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 22px;
+  text-transform: uppercase;
   color: @dark-blue;
+}
 
-  .link-reset();
+@media (min-width: @tablet-width) {
+  .contacts__link {
+    margin-bottom: 35px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }

@@ -13,8 +13,8 @@
   flex-wrap: wrap;
   align-items: flex-start;
 
-  width: 230px;
-  padding: 20px;
+  width: 234px;
+  padding: 16px 18px 22px;
   margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 20px;
@@ -22,10 +22,16 @@
   background-color: @white;
 }
 
+.users__photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
 .users__name {
   .link-reset();
-  margin: 0;
-  margin-left: 10px;
+  width: 90px;
+  margin: 0 15px;
 
   font-size: 20px;
   font-weight: 700;
@@ -43,8 +49,8 @@
 
 .users__likes {
   position: absolute;
-  left: 100px;
-  top: 70px;
+  left: 105px;
+  top: 60px;
 
   font-size: 14px;
   font-weight: 700;
@@ -57,7 +63,8 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin: 10px 0;
+  width: 200px;
+  margin: 10px 0 5px;
 }
 
 .users__hashtags-link {
@@ -89,6 +96,7 @@
   .ul-reset();
   width: 100%;
   box-sizing: border-box;
+  margin-top: 10px;
 }
 
 .users__visits-item {
@@ -101,13 +109,20 @@
   color: @blue;
 }
 
+.users__transports {
+  margin-top: 10px;
+}
+
 .users__level {
-  margin-left: 10px;
+  margin-left: 45px;
 }
 
 .users__level-quantity {
   display: block;
-  padding: 5px;
+  padding: 10px 5px;
+  text-align: center;
+  border: 2px solid @dark-orange;
+  border-radius: 50%;
 
   font-size: 24px;
   font-weight: 700;
@@ -120,8 +135,10 @@
 
   width: 100%;
   box-sizing: border-box;
+  margin-top: 15px;
 
   &--no-borders {
+    margin-bottom: 20px;
     color: @blue;
     background-color: transparent;
 
@@ -137,6 +154,11 @@
   }
 }
 
+.users__paginator {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .users {
     padding: @tablet-gap;
@@ -145,6 +167,7 @@
   .users__card {
     width: 618px;
     padding: 35px;
+    padding-bottom: 15px;
     margin-bottom: @tablet-gap;
   }
 
@@ -152,11 +175,13 @@
     width: 190px;
     height: 190px;
 
+    border-radius: 15px;
+
     order: -1;
   }
 
   .users__name {
-    margin-left: 30px;
+    margin-left: 35px;
     flex-grow: 1;
 
     font-size: 30px;
@@ -167,8 +192,8 @@
 
   .users__likes {
     position: absolute;
-    left: 453px;
-    top: 190px;
+    left: 465px;
+    top: 180px;
 
     font-size: 20px;
     line-height: 30px;
@@ -176,8 +201,8 @@
 
   .users__hashtags-list {
     position: absolute;
-    left: 250px;
-    top: 90px;
+    left: 255px;
+    top: 70px;
 
     width: 250px;
 
@@ -195,6 +220,7 @@
       display: block;
 
       padding-left: 50px;
+      margin-top: 10px;
 
       order: 2;
     }
@@ -215,24 +241,25 @@
 
   .users__transports {
     display: block;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-top: 0;
 
     order: 1;
   }
 
   .users__level {
     position: absolute;
-    right: 45px;
-    bottom: 100px;
+    right: 35px;
+    bottom: 130px;
   }
 
   .users__btn {
     position: absolute;
     left: 255px;
-    top: 170px;
+    top: 160px;
 
     width: 148px;
-    padding: 17px 32px;;
+    padding: 10px 32px;;
 
     border-radius: 25px;
 
@@ -241,6 +268,8 @@
     &--no-borders {
       position: static;
       width: 100%;
+      padding-top: 5px;
+      margin-bottom: 35px;
     }
   }
 }
@@ -257,8 +286,11 @@
   }
 
   .users__photo {
+    display: block;
     width: 285px;
     height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 
     order: -1;
   }
@@ -266,21 +298,22 @@
   .users__name {
     flex-grow: 0;
 
+    width: 200px;
     padding: 30px;
+    padding-top: 15px;
     margin: 30px;
-    margin-right: 60px;
 
     order: 0;
   }
 
   .users__likes {
     left: 550px;
-    top: 215px;
+    top: 200px;
   }
 
   .users__hashtags-list {
     left: 340px;
-    top: 100px;
+    top: 85px;
   }
 
   .users__title {
@@ -291,6 +324,7 @@
     display: block;
     width: 250px;
     padding: 30px;
+    padding-top: 10px;
     margin: 30px;
 
     order: 1;
@@ -298,26 +332,28 @@
 
   .users__transports {
     position: absolute;
-    right: 150px;
-    bottom: 20px;
+    right: 140px;
+    bottom: 60px;
 
     display: flex;
   }
 
   .users__level {
     position: absolute;
-    right: 45px;
-    bottom: 35px;
+    right: 55px;
+    bottom: 55px;
   }
 
   .users__btn {
     position: absolute;
-    left: 345px;
-    top: 200px;
+    left: 340px;
+    top: 175px;
 
     &--no-borders {
       position: static;
       width: 100%;
+      margin-top: 60px;
+      margin-bottom: 55px;
     }
   }
 }
