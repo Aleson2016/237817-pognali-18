@@ -1,6 +1,7 @@
 .feedback {
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 100px;
   margin: 0;
 
   color: @white;
@@ -12,7 +13,8 @@
 .feedback__comment {
   width: 200px;
   padding: @mobile-gap;
-  margin: 0 auto;
+  padding-bottom: 0;
+  margin: 20px auto;
 
   font-weight: normal;
 }
@@ -21,43 +23,56 @@
   display: block;
   width: 200px;
   padding: @mobile-gap;
+  padding-top: 0;
   margin: 0 auto;
 
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
 @media (min-width: @tablet-width) {
   .feedback {
-    width: @tablet-width;
-    margin: 0 auto;
-
-    font-size: 28px;
-    line-height: 33px;
+    width: 300px;
+    padding: 35px;
+    padding-right: 0;
+    margin-top: 10px;
+    margin-bottom: 155px;
 
     background-color: transparent;
   }
 
   .feedback__comment {
-    width: 300px;
-    margin-left: @tablet-gap;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 45px;
+
+    font-size: 28px;
+    line-height: 33px;
   }
 
   .feedback__author {
-    width: 300px;
-    margin-left: @tablet-gap;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 21px;
+    line-height: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-page__intro {
-    width:  @desktop-width;
-    margin: 0 auto;
+  .feedback {
+    padding-top: 0;
+    padding-left: 20px;
+    margin-bottom: 85px;
   }
 
-  .feedback {
-    width: 350px;
-    padding: 0;
-    margin-right: @desktop-gap;
+  .feedback__comment {
+    padding-top: 0;
   }
 }
