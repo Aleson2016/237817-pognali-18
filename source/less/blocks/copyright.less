@@ -1,9 +1,31 @@
 .copyright {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .copyright__text {
   font-size: 16px;
   line-height: 22px;
   color: @dark-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: center;
+    width: auto;
+    margin: 0;
+  }
+
+  .copyright__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .copyright__logo {
+    margin-left: 25px;
+  }
 }

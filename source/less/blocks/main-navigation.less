@@ -112,13 +112,14 @@
 .main-navigation__contacts {
   width: 270px;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 10px;
   margin: 0 auto;
   margin-bottom: 35px;
 }
 
 .main-navigation__social {
   justify-content: center;
+  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -146,7 +147,14 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid white;
+
+  &--tel {
+    background-color: @dark-orange;
+  }
+
+  &--mail {
+    background-color: @dark-yellow;
+  }
 }
 
 .main-navigation__user-block-btn {
@@ -191,13 +199,15 @@
   }
 
   .main-navigation__contacts {
+    width: 400px;
+    padding-top:0;
     margin: 0;
     margin-bottom: 140px;
   }
 
   .main-navigation__social {
     justify-content: flex-start;
-    margin-left: 15px;
+    margin-left: 0;
     margin-bottom: 55px;
   }
 
@@ -352,6 +362,8 @@
 
   .main-navigation__user-block-link {
     display: block;
+    width: 50px;
+    height: 50px;
     margin: 0;
   }
 

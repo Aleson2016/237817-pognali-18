@@ -6,10 +6,29 @@
 .transports__item {
   position: relative;
 
-  width: 30px; //временно
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid red;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+
+  fill: rgba(0, 0, 0, 0.15);
+
+  &--bg {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+
+    border-radius: 50%;
+
+    background-color: @light-grey;
+  }
+
+  &--active {
+    fill: @blue;
+  }
+}
+
+.transports__icon {
+  margin-top: 8px;
 }
 
 .transports__text {
@@ -32,4 +51,32 @@
 
 .transports__item:hover .transports__text {
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .transports__item {
+    &--bg {
+      height: 33px;
+      background-color: transparent;
+    }
+  }
+
+  .transports__icon {
+    &--plane {
+      width: 19px;
+      height: 21px;
+    }
+    &--bus {
+      width: 17px;
+      height: 21px;
+    }
+    &--bike {
+      width: 24px;
+      height: 21px;
+    }
+    &--on-foot {
+      width: 20px;
+      height: 21px;
+    }
+  }
 }
