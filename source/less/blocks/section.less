@@ -7,6 +7,7 @@
   &--service {
     padding-bottom: 40px;
     margin-top: -25px;
+
     color: @white;
     background: url("../../img/about-mobile@1x.png") no-repeat;
     background-position: center;
@@ -23,6 +24,7 @@
   &--countries {
     padding-top: 50px;
     padding-bottom: 5px;
+
     color: @dark-grey;
     background-color: @light-grey;
   }
@@ -30,6 +32,7 @@
   &--tourists {
     padding-top: 45px;
     padding-bottom: 15px;
+
     color: @white;
     background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-mobile@1x.png");
     background-repeat: no-repeat;
@@ -45,8 +48,17 @@
   &--price-list {
     padding-top: 25px;
     padding-bottom: 0;
+
     color: @dark-grey;
+
+    background: url("../../img/rates@1x.png") no-repeat;
+    background-position: calc(50% + 85px) 35px;
+    background-size: 99px;
     background-color: @light-grey;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../../img/rates@2x.png");
+    }
   }
 }
 
@@ -78,7 +90,10 @@
 }
 
 .section__btn {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   width: 222px;
   padding: 24px;
   margin: @mobile-gap auto;
@@ -136,6 +151,10 @@
         background-size: 143px, 285px;
       }
     }
+
+    &--price-list {
+      background-position: calc(50% + 250px) 410px;
+    }
   }
 
   .section__wrapper {
@@ -188,7 +207,7 @@
     border-radius: 20px;
 
     &--service {
-      display: block;
+      display: flex;
       width: 274px;
       margin:0;
       margin-bottom: 30px;
@@ -221,6 +240,8 @@
       background-position: calc(50% + 345px) 110px;
       @media (min-resolution: @retina-dppx) {
         background: url("../../img/about-desktop@2x.png") no-repeat;
+        background-position: calc(50% + 345px) 110px;
+        background-size: 630px;
       }
     }
 
@@ -244,6 +265,9 @@
     &--price-list {
       padding-top: 65px;
       padding-bottom: 130px;
+
+      background-position: calc(50% + 490px) 280px;
+      background-size: 198px;
     }
   }
 
@@ -304,12 +328,12 @@
     }
 
     &--countries {
-      bottom: 80px;
+      bottom: 65px;
       left: 50%;
       margin-left: 143px;
     }
     &--tourists {
-      bottom: 70px;
+      bottom: 65px;
       left: 50%;
 
       width: 280px;
