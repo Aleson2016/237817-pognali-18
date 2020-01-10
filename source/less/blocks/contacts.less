@@ -17,6 +17,7 @@
 
 .contacts__link--yellow::before {
   content: "";
+  display: block;
 
   width: 45px;
   height: 45px;
@@ -34,6 +35,13 @@
     top: 14px;
 
     fill: @yellow;
+  }
+
+  &--location {
+    top: 50%;
+    margin-top: -11px;
+    right: 50%;
+    margin-right: -7px;
   }
 
   &--blue {
@@ -63,5 +71,38 @@
     height: 27px;
     top: 20px;
     left: 20px;
+  }
+
+  .contacts__icon--location {
+    top: 50%;
+    right: 50%;
+    width: 21px;
+    height: 32px;
+    margin-top: -16px;
+    margin-right: -10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__link--yellow::before {
+    width: 90px;
+    height: 90px;
+    margin-right: 25px;
+  }
+
+  .contacts__icon--yellow {
+    width: 36px;
+    height: 36px;
+    top: 27px;
+    left: 27px;
+  }
+
+  .contacts__icon--location {
+    top: 50%;
+    right: 50%;
+    width: 28px;
+    height: 43px;
+    margin-top: -21px;
+    margin-right: -14px;
   }
 }

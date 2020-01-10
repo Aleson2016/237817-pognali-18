@@ -8,17 +8,19 @@
 }
 
 .instructions__list {
-  .ul-reset;
+  counter-reset: myCounter;
   width: 270px;
   margin: 0 auto;
   margin-top: -115px;
 }
 
 .instructions__item {
-  padding-top: 20px;
-  padding-left: 25px;
-  padding-right: 100px;
-  padding-bottom: 33px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 20px 25px 33px;
   margin-top: -10px;
 
   font-size: 18px;
@@ -46,6 +48,16 @@
   }
 }
 
+.instructions__item::after {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+
+  width: 70px;
+  text-align: right;
+
+  color: @white;
+}
+
 @media (min-width: @tablet-width) {
   .instructions {
     padding: 20px 0;
@@ -60,42 +72,55 @@
     width: 100%;
     box-sizing: border-box;
 
+    padding: 0;
     margin-top: 0; //в мобильной был -115px
   }
 
   .instructions__item {
+    flex-wrap: wrap;
+
     width: 230px;
-    padding: 30px;
-    padding-right: 84px;
-    padding-bottom: 60px;
+    padding: 34px;
+    padding-right: 80px;
+    padding-bottom: 20px;
     margin-top: 0;
 
     font-size: 24px;
     line-height: 24px;
 
     &--1 {
-      padding-right: 94px;
+      padding-right: 100px;
       border-top-left-radius: 20px;
       border-top-right-radius: 0;
     }
     &--2 {
-      margin-left: -10px;
+      margin-left: -20px;
+      border-top-left-radius: 20px;
       border-top-right-radius: 20px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
     &--3 {
-      padding-right: 94px;
+      padding-right: 100px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: 20px;
     }
     &--4 {
-      margin-left: -10px;
+      margin-left: -20px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
     }
+  }
+
+  .instructions__item::after {
+    margin-top: 10px;
+    text-align: left;
+
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
@@ -108,26 +133,44 @@
   }
 
   .instructions__item {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
     padding: 30px 35px;
-    padding-right: 85px;
+    padding-right: 55px;
     margin-left: -20px;
 
     &--1 {
       margin-left: 0;
-      padding-right: 65px;
+
       border-bottom-left-radius: 20px;
     }
     &--2 {
+      flex-grow: 1;
+
       border-top-right-radius: 0;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 0px;
     }
     &--3 {
+      flex-grow: 1;
+
       border-top-left-radius: 20px;
     }
     &--4 {
+      width: 200px;
+      padding-right: 35px;
       border-radius: 20px;
+    }
+
+    &::after {
+      width: auto;
+      margin-top: 0;
+      margin-left: 20px;
+
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 }

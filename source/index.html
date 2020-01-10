@@ -364,15 +364,15 @@
             </b>
             <table class="price-list__table">
               <tr class="price-list__line">
-                <td class="price-list__position">Базовое размещение</td>
+                <td class="price-list__position price-list__position--1">Базовое размещение</td>
                 <td class="price-list__price">Бесплатно</td>
               </tr>
               <tr class="price-list__line">
-                <td class="price-list__position">Вывод на первых позициях</td>
+                <td class="price-list__position price-list__position--2">Вывод на первых позициях</td>
                 <td class="price-list__price">99 руб./мес</td>
               </tr>
               <tr class="price-list__line">
-                <td class="price-list__position">Кастомный цвет карточки</td>
+                <td class="price-list__position price-list__position--3">Кастомный цвет карточки</td>
                 <td class="price-list__price">59 руб./мес</td>
               </tr>
             </table>
@@ -406,36 +406,57 @@
           </div>
         </section>
 
-  <!--
-        <section class="section log-in">
-          <b class="section__title">Заинтересовались?</b>
-          <form action="http://echo.htmlacademy.ru" method="post">
-            <label class="section__description" for="log-in__email">Зарегистрируйтесь, это быстро и бесплатно!Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</label>
-            <input class="log-in__field field" type="email" id="log-in__email" name="lod-in_-email" placeholder="E-mail" required>
-            <button class="log-in__btn section__btn" type="submit"><span class="visually-hidden">Регистрация</span></button>
-          </form>
-        </section>
 
-        <section class="section contacts">
-          <p class="section__description">
-            Остались вопросы?<br>
-            Мы с радостью на них ответим!
-          </p>
-          <a class="contacts__link contacts__link--tel" href="tel:88005558628">8 800 555-86-28</a>
-          <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          <div class="contacts__address">
-            <span class="contacts__link contacts__link--address">ул. Большая Конюшенная, 19/8</span>
-            <a class="section__btn contacts__btn" href="https://www.google.ru/maps/dir/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3//@59.9342615,30.264888,12z/data=!4m9!4m8!1m5!1m1!1s0x4696378cc74a65ed:0x6dc7673fab848eff!2m2!1d30.3350986!2d59.9342802!1m0!3e0?hl=ru">Проложить маршрут</a>
+        <section class="section for-users">
+          <div class="for-users__wrapper">
+            <b class="section__title for-users__title">Заинтересовались?</b>
+            <div class="for-users__log-in">
+              <form class="for-users__form" action="http://echo.htmlacademy.ru" method="post">
+                <label class="for-users__label" for="log-in__email">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="for-users__link" href="#">авторизуйтесь</a>.</label>
+                <input class="for-users__field" type="email" id="log-in__email" name="lod-in_-email" placeholder="E-mail" required>
+                <button class="for-users__btn section__btn button" type="submit">
+                  <span class="for-users__btn-name">Регистрация</span>
+                  <svg class="section__btn-icon" width="10" height="14"><use xlink:href="img/sprite.svg#triangle-arrow-right-icon"></use></svg>
+                </button>
+              </form>
+            </div>
+
+            <p class="section__description for-users__description">
+              Остались вопросы?
+              Мы с радостью на них ответим!
+            </p>
+            <div class="for-users__contacts contacts">
+              <a class="for-users__link for-users__link--contacts contacts__link contacts__link--yellow" href="tel:88005558628">
+                <svg class="contacts__icon contacts__icon--yellow" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-phone-icon"></use></svg>
+                8 800 555-86-28
+              </a>
+              <a class="for-users__link for-users__link--contacts contacts__link contacts__link--yellow" href="mailto:mail@htmlacademy.ru">
+                <svg class="contacts__icon contacts__icon--yellow" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-mail-icon"></use></svg>
+                mail@htmlacademy.ru
+              </a>
+            </div>
           </div>
         </section>
-  -->
 
+        <div class="section section--address contacts">
+          <div class="section__wrapper section__wrapper--address">
+            <span class="contacts__link contacts__link--yellow">
+              <svg class="contacts__icon contacts__icon--yellow contacts__icon--location" width="14" height="22"><use xlink:href="img/sprite.svg#contacts-location-icon"></use></svg>
+              ул. Большая Конюшенная, 19/8
+            </span>
+            <a class="section__btn section__btn--address" href="https://www.google.ru/maps/dir/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3//@59.9342615,30.264888,12z/data=!4m9!4m8!1m5!1m1!1s0x4696378cc74a65ed:0x6dc7673fab848eff!2m2!1d30.3350986!2d59.9342802!1m0!3e0?hl=ru">
+              Проложить маршрут
+              <svg class="section__btn-icon" width="10" height="14"><use xlink:href="img/sprite.svg#triangle-arrow-right-icon"></use></svg>
+            </a>
+          </div>
+
+        </div>
       </div>
     </main>
 
-  <!--
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.7673461038225!2d30.319535953212757!3d59.93600262208818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f89dee259%3A0x8d84fd36314da235!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDIw0LssINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573230050771!5m2!1sru!2sru" height="546" style="border:0;" allowfullscreen=""></iframe>
-  -->
+
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.7673461038225!2d30.319535953212757!3d59.93600262208818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f89dee259%3A0x8d84fd36314da235!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDIw0LssINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573230050771!5m2!1sru!2sru" style="border:0;" allowfullscreen=""></iframe>
+
 
     <footer class="footer">
       <div class="footer__container">
