@@ -106,19 +106,304 @@
       <div class="inner-page__wrapper">
         <div class="inner-page__intro">
           <h1 class="inner-page__title">Попутчики</h1>
-          <a class="inner-page__link" href="index.html">На главную</a>
+          <a class="inner-page__link" href="index.html">
+            На главную
+            <svg class="inner__link-icon" width="32" height="16"><use xlink:href="img/sprite.svg#return-icon"></use></svg>
+          </a>
         </div>
       </div>
 
-
-
-<!--фильтр
       <section class="filters">
-        <form action="http://echo.htmlacademy.ru" method="get">
+        <form class="filters__form" action="http://echo.htmlacademy.ru" method="get">
+
+          <div class="filters__location">
+            <fieldset class="filters__item filters__item--location">
+              <div class="filters__item-wrapper filters__item-wrapper--location">
+                <legend class="filters__title filters__title--location">
+                  <svg class="filters__icon filters__icon--filter" width="15" height="10"><use xlink:href="img/sprite.svg#filter-icon"></use></svg>
+                  Фильтрация по странам
+                </legend>
+                <button class="filters__open-btn" type="button">
+                  <span class="filters__btn-text">Показать все</span>
+                  <svg class="filters__btn-icon" width="17" height="3"><use xlink:href="img/sprite.svg#dots-icon"></use></svg>
+                </button>
+
+                <div class="filters__popup states">
+                  <ul class="states__continents-list">
+                    <li class="states__continents-item">
+                      <input type="radio" id="Europe" name="continents" value="Europe" checked>
+                      <label for="Europe" class="states__radio">Европа</label>
+                    </li>
+                    <li class="states__continents-item">
+                      <input type="radio" id="Asia" name="continents" value="Asia">
+                      <label for="Asia" class="states__radio">Азия</label>
+                    </li>
+                    <li class="states__continents-item">
+                      <input type="radio" id="America" name="continents" value="America">
+                      <label for="America" class="states__radio">Америка</label>
+                    </li>
+                    <li class="states__continents-item">
+                      <input type="radio" id="islands" name="continents" value="islands">
+                      <label for="islands" class="states__radio">острова</label>
+                    </li>
+                  </ul>
+                  <ol class="states__letters-list">
+                    <div class="states__letters-row">
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn states__letters-btn--active">А</button>
+                        <ol class="states__countries-list">
+                          <li class="states__countries-item"><a class="states__countries-link" href="#">Австрия</a></li>
+                          <li class="states__countries-item"><a class="states__countries-link" href="#">Албания</a></li>
+                          <li class="states__countries-item"><a class="states__countries-link" href="#">Ангола</a></li>
+                          <li class="states__countries-item"><a class="states__countries-link" href="#">Андорра</a></li>
+                        </ol>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Б</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">В</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Г</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Д</button>
+                      </li>
+                    </div>
+                    <div class="states__letters-row">
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Е</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">З</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">И</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">К</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Л</button>
+                      </li>
+                    </div>
+                    <div class="states__letters-row">
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">М</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Н</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">О</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">П</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Р</button>
+                      </li>
+                    </div>
+                    <div class="states__letters-row">
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">С</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Т</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">У</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Ф</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Х</button>
+                      </li>
+                    </div>
+                    <div class="states__letters-row">
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Ч</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Ш</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Э</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Ю</button>
+                      </li>
+                      <li class="states__letters-item">
+                        <button class="states__letters-btn">Я</button>
+                      </li>
+                    </div>
+                  </ol>
+
+                  <button class="filters__btn-close">
+                    <svg class="filters__btn-icon" width="12" height="12"><use xlink:href="img/sprite.svg#filter-close-icon"></use></svg>
+                    Свернуть
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="filters__preferences">
+            <b class="filters__preferences-text">Подберите идеального попутчика</b>
+
+            <fieldset class="filters__item">
+              <div class="filters__item-wrapper">
+                <legend class="filters__title">
+                  Хобби:
+                </legend>
+                <button class="filters__open-btn">
+                  <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
+                </button>
+              </div>
+
+              <ul class="filters__options-list">
+                <li class="filters__options-item">
+                  <input type="checkbox" name="hobby" id="hobby-gym" value="gym" checked>
+                  <label for="hobby-gym" class="filters__checkbox">Спортзал</label>
+                </li>
+                <li class="filters__options-item">
+                  <input type="checkbox" name="hobby" id="hobby-hookah" value="hookah">
+                  <label for="hobby-hookah" class="filters__checkbox">Кальян</label>
+                </li>
+                <li class="filters__options-item">
+                  <input type="checkbox" name="hobby" id="hobby-sofa" value="sofa">
+                  <label for="hobby-sofa" class="filters__checkbox">Диван</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__item">
+              <div class="filters__item-wrapper">
+                <legend class="filters__title">
+                  Музыка:
+                </legend>
+                <button class="filters__open-btn">
+                  <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
+                </button>
+              </div>
+              <ul class="filters__options-list">
+                <li class="filters__options-item">
+                  <input type="checkbox" name="music" id="music-rock" value="rock" checked>
+                  <label for="music-rock" class="filters__checkbox">Тяжелый рок</label>
+                </li>
+                <li class="filters__options-item">
+                  <input type="checkbox" name="music" id="music-rap" value="rap">
+                  <label for="music-rap" class="filters__checkbox">Русский рэп</label>
+                </li>
+                <li class="filters__options-item">
+                  <input type="checkbox" name="music" id="music-dance" value="dance">
+                  <label for="music-dance" class="filters__checkbox">Евроденс</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__item">
+              <div class="filters__item-wrapper">
+                <legend class="filters__title">
+                  Еда:
+                </legend>
+                <button class="filters__open-btn">
+                  <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
+                </button>
+              </div>
+              <ul class="filters__options-list">
+                <li class="filters__options-item">
+                  <input type="checkbox" name="food" id="food-meat" value="meat" checked>
+                  <label for="food-meat" class="filters__checkbox">Мясоед</label>
+                </li>
+                <li class="filters__options-item">
+                  <input type="checkbox" name="food" id="food-healthy" value="healthy">
+                  <label for="food-healthy" class="filters__checkbox">Сидит на ПП</label>
+                </li>
+                <li class="filters__options-item">
+                  <input type="checkbox" name="food" id="food-vegetarian" value="vegetarian">
+                  <label for="food-vegetarian" class="filters__checkbox">Веган-сыроед</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__item">
+              <div class="filters__item-wrapper">
+                <legend class="filters__title">
+                  Транспорт:
+                </legend>
+                <button class="filters__open-btn">
+                  <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
+                </button>
+              </div>
+              <ul class="filters__options-list filters__options-list--transport">
+                <li class="filters__options-item filters__options-item--transport">
+                  <input type="checkbox" name="transport" id="transport-plane" value="plane" checked>
+                  <label for="transport-plane" class="filters__checkbox-transport">
+                    <span class="visually-hidden">Самолет</span>
+                    <svg class="filters__transport-icon filters__transport-icon--plane" width="14" height="16"><use xlink:href="img/sprite.svg#plane-icon"></use></svg>
+                  </label>
+                </li>
+                <li class="filters__options-item filters__options-item--transport">
+                  <input type="checkbox" name="transport" id="transport-bus" value="bus" checked>
+                  <label for="transport-bus" class="filters__checkbox-transport">
+                    <span class="visually-hidden">Автобус</span>
+                    <svg class="filters__transport-icon filters__transport-icon--bus" width="13" height="16"><use xlink:href="img/sprite.svg#bus-icon"></use></svg>
+                  </label>
+                </li>
+                <li class="filters__options-item filters__options-item--transport">
+                  <input type="checkbox" name="transport" id="transport-bike" value="bike">
+                  <label for="transport-bike" class="filters__checkbox-transport">
+                    <span class="visually-hidden">Велосипед</span>
+                    <svg class="filters__transport-icon filters__transport-icon--bike" width="19" height="17"><use xlink:href="img/sprite.svg#bike-icon"></use></svg>
+                  </label>
+                </li>
+                <li class="filters__options-item filters__options-item--transport">
+                  <input type="checkbox" name="transport" id="transport-on-foot" value="on-foot" checked>
+                  <label for="transport-on-foot" class="filters__checkbox-transport">
+                    <span class="visually-hidden">Пешком</span>
+                    <svg class="filters__transport-icon filters__transport-icon--on-foot" width="15" height="17"><use xlink:href="img/sprite.svg#run-icon"></use></svg>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters__item">
+              <div class="filters__item-wrapper">
+                <legend class="filters__title">
+                  Левел:
+                </legend>
+                <button class="filters__open-btn">
+                  <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
+                </button>
+              </div>
+              <div class="range">
+                <div class="range__level-wrapper">
+                  <input class="range__level range__level--min" id="min-level" type="text" name="min-level" value="30">
+                  <label for="min-level" class="visually-hidden">30</label>
+
+                  <input class="range__level range__level--max" id="max-level" type="text" name="max-level" value="100">
+                  <label for="max-level" class="visually-hidden">100</label>
+                </div>
+                <div class="range__controls">
+                  <div class="range__scale">
+                    <div class="range__bar"></div>
+                  </div>
+                  <div class="range__toggle range__toggle--min"></div>
+                  <div class="range__toggle range__toggle--max"></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="filters__btn" type="submit">Показать</button>
 
         </form>
+
       </section>
--->
+
 
       <section class="users">
           <ul class="users__list">

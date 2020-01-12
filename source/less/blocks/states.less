@@ -1,0 +1,98 @@
+.states__continents-list {
+  .ul-reset();
+  margin-bottom: 25px;
+}
+
+.states__continents-item input[type="radio"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.states__radio {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: @light-blue;
+  opacity: 0.3;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.states__radio:hover {
+  opacity: 0.6;
+}
+
+.states__continents-item input[type="radio"]:checked + .states__radio {
+  opacity: 1;
+}
+
+.states__letters-list {
+  .ul-reset();
+
+  display: table;
+
+  width: 220px;
+  margin-bottom: 200px;
+
+  border-collapse: collapse;
+  border: 0.5px solid @grey-lilac;
+}
+
+.states__letters-row {
+  display: table-row;
+}
+
+.states__letters-item {
+  display: table-cell;
+}
+
+.states__letters-btn {
+  position: relative;
+
+  width: 44px;
+  height: 42px;
+
+  border: 0.5px solid @grey-lilac;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: @blue;
+  background-color: @white;
+
+  &--active {
+    color: @white;
+    background-color: @blue;
+    border-color: @blue;
+  }
+}
+
+.states__countries-list {
+  .ul-reset();
+  display: block;
+
+  position: absolute;
+  bottom: 100px;
+}
+
+.states__countries-link {
+  .link-reset();
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: @dark-grey;
+}
