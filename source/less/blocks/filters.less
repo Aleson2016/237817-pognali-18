@@ -3,121 +3,20 @@
 }
 
 .filters__location {
-  position: relative;
-
   padding-top: 20px;
   margin-bottom: 25px;
   border-bottom-left-radius:@mobile-gap;
   border-bottom-right-radius: @mobile-gap;
-
-  background-color: @dark-lilac;
-}
-
-.filters__item {
-  width: 220px;
-  margin: 0 auto;
-  border: none;
-  &--location {
-    width: 270px;
-    padding: 25px;
-  }
-}
-
-.filters__item-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%;
-  box-sizing: border-box;
-  padding-top: 13px;
-  margin-bottom: 13px;
-  border-top: 1px solid @dark-gold;
-
-  &--location {
-    padding-top: 0;
-    margin-bottom: 0;
-    border-top: none;
-  }
-}
-
-.filters__title {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  color: @blue;
-  text-transform: uppercase;
-
-  &--location {
-    line-height: 22px;
-    color: @light-blue;
-  }
-}
-
-.filters__icon--filter {
-  margin-right: 15px;
-}
-
-.filters__open-btn {
-  border: none;
-  background-color: transparent;
-
-  cursor: pointer;
-}
-
-.filters__open-icon {
-  color: @light-blue;
-}
-
-.filters__btn-text {
-  display: none;
-}
-
-.filters__popup {
-  // display: none;
-
-  position: absolute;
-  top: 80px;
-  right: 50%;
-  margin-right: -160px;
-  width: 270px;
-  padding: 25px;
-
-  border-bottom-left-radius:@mobile-gap;
-  border-bottom-right-radius: @mobile-gap;
-  background-color: @dark-lilac;
-
-  z-index: 5;
-}
-
-.filters__btn-close {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 14px;
-  border: none;
-  border-radius: 20px;
-
-  font-family: inherit;
-  font-size: 16.5px;
-  font-weight: 700;
-  line-height: 29.5px;
-  color: @dark-blue;
-  text-transform: uppercase;
-
-  background-color: @violet-lilac;
-}
-
-.filters__btn-icon {
-  margin-right: 10px;
 }
 
 .filters__preferences {
-  width: 270px;
-  padding-top: 25px;
-  padding-bottom: 22px;
+  width: 220px;
+  padding: 25px;
+  padding-bottom: 80px;
   margin: 0 auto;
   border-radius: 20px;
 
+  color: @blue;
   background-color: @yellow-gold;
 }
 
@@ -125,18 +24,48 @@
   display: block;
 
   width: 200px;
-  margin-left: 25px;
   margin-bottom: 20px;
 
   font-size: 22.5px;
   font-weight: 700;
   line-height: 22.5px;
-  color: @blue;
+
+}
+
+.filters__item {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.filters__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 13px;
+  margin-bottom: 13px;
+  border-top: 1px solid @dark-gold;
+}
+
+.filters__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+
+  text-transform: uppercase;
+}
+
+.filters__open-btn {
+  .btn-reset();
 }
 
 .filters__options-list {
   .ul-reset();
-  display: none;
+  // display: none;
 
   &--transport {
     display: flex;
@@ -144,6 +73,7 @@
 }
 
 .filters__options-item {
+  position: relative;
   margin-bottom: 10px;
 
   &--transport {
@@ -170,7 +100,14 @@
   overflow: hidden;
 }
 
-.filters__checkbox {
+.filters__input-icon {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.filters__label {
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
@@ -179,7 +116,7 @@
   cursor: pointer;
 }
 
-.filters__checkbox::before {
+.filters__label::before {
   content: "";
 
   display: inline-block;
@@ -192,22 +129,19 @@
   background-color: @white;
 }
 
-.filters__checkbox:hover {
+.filters__label:hover {
   opacity: 0.6;
 }
 
-.filters__checkbox:active {
+.filters__label:active {
   opacity: 0.3;
 }
 
-.filters__options-item input[type="checkbox"]:checked + .filters__checkbox::before {
-  background: url(../../img/tick.svg) no-repeat;
-  background-size: 9px 9px;
-  background-position: center;
-  background-color: @white;
+.filters__options-item input[type="checkbox"]:checked + .filters__input-icon {
+  display: block;
 }
 
-.filters__checkbox-transport {
+.filters__label-transport {
   display: block;
   padding-top: 8px;
   text-align: center;
@@ -217,19 +151,15 @@
   cursor: pointer;
 }
 
-.filters__transport-icon {
-  color: @blue;
-}
-
-.filters__checkbox-transport:hover {
+.filters__label-transport:hover {
   opacity: 0.6;
 }
 
-.filters__checkbox-transport:active {
+.filters__label-transport:active {
   opacity: 0.3;
 }
 
-.filters__options-item input[type="checkbox"]:checked + .filters__checkbox-transport {
+.filters__options-item input[type="checkbox"]:checked + .filters__label-transport {
   opacity: 1;
 }
 
@@ -264,12 +194,36 @@
 }
 
 @media(min-width: @tablet-width) {
-  .filters__item {
+  .filters__preferences {
+    width: 618px;
+    padding: 35px;
+    padding-bottom: 125px;
+  }
+
+  .filters__preferences-text {
     width: 100%;
     box-sizing: border-box;
+    padding-bottom: 35px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid @dark-gold;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .filters__item:last-child {
+    padding-bottom: 35px;
+    border-bottom: 1px solid @dark-gold;
+
   }
 
   .filters__item-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .filters__item-header {
+    width: 120px;
     border-top: none;
   }
 
@@ -282,28 +236,13 @@
     display: none;
   }
 
-  .filters__preferences {
-    width: 618px;
-    padding: 35px;
-  }
-
-  .filters__preferences-text {
-    width: 100%;
-    box-sizing: border-box;
-    padding-bottom: 35px;
-    margin: 0;
-    border-bottom: 1px solid @dark-gold;
-
-    font-size: 30px;
-    line-height: 30px;
-  }
-
   .filters__options-list {
     display: flex;
   }
 
   .filters__options-item {
     width: 166px;
+    margin-bottom: 0;
 
     &--transport {
       width: 43px;
@@ -311,7 +250,14 @@
     }
   }
 
-  .filters__checkbox {
+  .filters__input-icon {
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .filters__label {
     font-size: 20px;
     line-height: 20px;
 
@@ -321,11 +267,7 @@
     }
   }
 
-  .filters__options-item input[type="checkbox"]:checked + .filters__checkbox::before {
-    background-size: 12px 12px;
-  }
-
-  .filters__checkbox-transport {
+  .filters__label-transport {
     padding-top: 10px;
   }
 
@@ -361,5 +303,81 @@
 
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .filters__preferences {
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    margin-left: 375px;
+    width: 189px;
+    padding: 48px;
+    padding-bottom: 97px;
+  }
+
+  .filters__preferences-text {
+    padding-bottom: 0;
+    margin-bottom: 35px;
+    border-bottom: none;
+  }
+
+  .filters__item:last-child {
+    border-bottom: none;
+  }
+
+  .filters__item-wrapper {
+    display: block;
+  }
+
+  .filters__item-header {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .filters__open-btn {
+    display: block;
+  }
+
+  .filters__open-icon {
+    width: 10px;
+    height: 5px;
+  }
+
+  .filters__options-list {
+    display: block;
+
+    &--transport {
+      display: flex;
+    }
+  }
+
+  .filters__options-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0;
+
+    &--transport {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  .filters__input-icon {
+    top: 14px;
+  }
+
+  .filters__label-transport {
+    padding-top: 5px;
+  }
+
+  .filters__btn {
+    bottom: -1085px;
+    left: 50%;
+    margin-left: 420px;
+
+    width: 196px;
+    z-index: 5;
   }
 }

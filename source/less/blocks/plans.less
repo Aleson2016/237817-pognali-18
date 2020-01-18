@@ -1,0 +1,168 @@
+.plans {
+  background-color: @lilac-btn;
+}
+
+.plans__title {
+  padding: 0;
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.plans__list {
+  .ul-reset();
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.plans__item {
+  padding: 25px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: @white;
+}
+
+.plans__item-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.plans__item-number {
+  padding-right: 5px;
+}
+
+.plans__details-item {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.plans__link {
+  .link-reset();
+  display: block;
+  margin-top: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .plans__title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .plans__list {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  .plans__item {
+    padding: 35px 0 0;
+  }
+
+  .plans__item-title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 35px 30px;
+    margin: 0;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  .plans__item-number {
+    padding-right: 0;
+  }
+
+  .plans__details {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 35px;
+  }
+
+  .plans__details-item {
+    margin-bottom: 0;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+
+  .plans__link {
+    margin-top: 0;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .plans__title {
+    margin-left: 60px;
+  }
+
+  .plans__list {
+    margin-left: 60px;
+  }
+
+  .plans__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 42px;
+    margin-bottom: 15px;
+  }
+
+  .plans__item-title {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .plans__item-number {
+    padding-right: 35px;
+  }
+
+  .plans__details {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .plans__details-item {
+    min-width: 180px;
+    margin-bottom: 0;
+  }
+
+  .plans__link {
+    margin-top: 0;
+    margin-left: 125px;
+  }
+}
