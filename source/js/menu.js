@@ -2,6 +2,7 @@
 
 var navMenu = document.querySelector(".main-navigation");
 var navToggle = navMenu.querySelector(".main-navigation__toggle");
+// var fixed = navMenu.offsetTop;
 
 navMenu.classList.remove("main-navigation--no-js");
 
@@ -26,3 +27,11 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
+
+// window.addEventListener("scroll", function() {
+//   if (window.pageYOffset > fixed) {
+//     navMenu.classList.add("main-navigation--scroll");
+//   } else {
+//     navMenu.classList.remove("main-navigation--scroll");
+//   }
+// });

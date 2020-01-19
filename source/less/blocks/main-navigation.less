@@ -85,6 +85,28 @@
   display: none;
 }
 
+// .main-navigation--scroll {
+//   position: sticky;
+//   top: 0;
+//   background-color: @white;
+// }
+//
+// .main-navigation--scroll .main-navigation__logo {
+//   &--white {
+//   display: none;
+//   }
+//   &--blue {
+//     display: block;
+//   }
+// }
+//
+// .main-navigation--scroll .main-navigation__toggle {
+//   &::before,
+//   &::after {
+//     background-color: @grey-c;
+//   }
+// }
+
 .main-navigation__menu-list {
   .ul-reset();
   margin-bottom: 50px;
@@ -152,11 +174,21 @@
 
   &--tel {
     background-color: @dark-orange;
+    &:hover {
+      background-color: @orange-ter;
+    }
   }
 
   &--mail {
     background-color: @dark-yellow;
+    &:hover {
+      background-color: @dark-orange;
+    }
   }
+}
+
+.main-navigation__user-block-link:active .main-navigation__user-block-icon {
+  opacity: 0.3;
 }
 
 .main-navigation__user-block-btn {

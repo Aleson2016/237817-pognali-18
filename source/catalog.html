@@ -118,14 +118,20 @@
 
           <div class="filters__location location">
             <fieldset class="location__fieldset">
-              <div class="location__wrapper">
+              <div class="location__wrapper location__wrapper--closed-popup">
                 <legend class="location__title">
-                  <svg class="location__icon location__icon--filter" width="15" height="10"><use xlink:href="img/sprite.svg#filter-icon"></use></svg>
+                  <svg class="location__icon-filter" width="15" height="10"><use xlink:href="img/sprite.svg#filter-icon"></use></svg>
                   Фильтрация по странам<span class="location__mark">:</span>
                 </legend>
                 <button class="location__popup-btn" type="button">
-                  <span class="location__btn-text">Показать все</span>
-                  <svg class="location__icon location__icon--btn" width="17" height="3"><use xlink:href="img/sprite.svg#dots-icon"></use></svg>
+                  <div class="location__btn-title location__btn-title--closed">
+                    <span class="location__btn-text">Показать все</span>
+                    <svg class="location__icon-btn" width="17" height="3"><use xlink:href="img/sprite.svg#dots-icon"></use></svg>
+                  </div>
+                  <div class="location__btn-title location__btn-title--opened">
+                    <span class="location__btn-text">Свернуть</span>
+                    <svg class="location__icon-close location__icon-close--up" width="12" height="12"><use xlink:href="img/sprite.svg#filter-close-icon"></use></svg>
+                  </div>
                 </button>
                 <ul class="location__continents-list">
                   <li class="location__continents-item">
@@ -448,8 +454,8 @@
                     </div>
                   </ol>
 
-                  <button class="location__popup-close">
-                    <svg class="location__icon location__icon--close" width="12" height="12"><use xlink:href="img/sprite.svg#filter-close-icon"></use></svg>
+                  <button class="location__popup-close" type="button">
+                    <svg class="location__icon-close location__icon-close--down" width="12" height="12"><use xlink:href="img/sprite.svg#filter-close-icon"></use></svg>
                     Свернуть
                   </button>
                 </div>
@@ -461,12 +467,12 @@
             <b class="filters__preferences-text">Подберите идеального попутчика</b>
 
             <fieldset class="filters__item">
-              <div class="filters__item-wrapper">
+              <div class="filters__item-wrapper filters__item-wrapper--closed">
                 <div class="filters__item-header">
                   <legend class="filters__title">
                     Хобби:
                   </legend>
-                  <button class="filters__open-btn">
+                  <button class="filters__open-btn" type="button">
                     <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
                   </button>
                 </div>
@@ -492,12 +498,12 @@
             </fieldset>
 
             <fieldset class="filters__item">
-              <div class="filters__item-wrapper">
+              <div class="filters__item-wrapper filters__item-wrapper--closed">
                 <div class="filters__item-header">
                   <legend class="filters__title">
                     Музыка:
                   </legend>
-                  <button class="filters__open-btn">
+                  <button class="filters__open-btn" type="button">
                     <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
                   </button>
                 </div>
@@ -522,12 +528,12 @@
             </fieldset>
 
             <fieldset class="filters__item">
-              <div class="filters__item-wrapper">
+              <div class="filters__item-wrapper filters__item-wrapper--closed">
                 <div class="filters__item-header">
                   <legend class="filters__title">
                     Еда:
                   </legend>
-                  <button class="filters__open-btn">
+                  <button class="filters__open-btn" type="button">
                     <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
                   </button>
                 </div>
@@ -552,12 +558,12 @@
             </fieldset>
 
             <fieldset class="filters__item">
-              <div class="filters__item-wrapper">
+              <div class="filters__item-wrapper filters__item-wrapper--closed">
                 <div class="filters__item-header">
                   <legend class="filters__title">
                     Транспорт:
                   </legend>
-                  <button class="filters__open-btn">
+                  <button class="filters__open-btn" type="button">
                     <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
                   </button>
                 </div>
@@ -595,16 +601,16 @@
             </fieldset>
 
             <fieldset class="filters__item">
-              <div class="filters__item-wrapper">
+              <div class="filters__item-wrapper filters__item-wrapper--closed">
                 <div class="filters__item-header">
                   <legend class="filters__title">
                     Левел:
                   </legend>
-                  <button class="filters__open-btn">
+                  <button class="filters__open-btn" type="button">
                     <svg class="filters__open-icon" width="8" height="4"><use xlink:href="img/sprite.svg#dropdown-icon"></use></svg>
                   </button>
                 </div>
-                <div class="range">
+                <div class="filters__range range">
                   <div class="range__level-wrapper">
                     <input class="range__level range__level--min" id="min-level" type="text" name="min-level" value="30">
                     <label for="min-level" class="visually-hidden">30</label>
@@ -933,7 +939,7 @@
     <footer class="footer">
       <div class="footer__container">
 
-        <a class="footer__logo-link">
+        <a class="footer__logo-link" href="index.html">
           <picture>
             <source type= "image/webp" media="(min-width: 1380px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type= "image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -979,6 +985,7 @@
     </footer>
 
     <script src="js/menu.js"></script>
-
+    <script src="js/location__filter.js"></script>
+    <script src="js/filters__item.js"></script>
   </body>
 </html>
