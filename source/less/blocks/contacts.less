@@ -1,48 +1,45 @@
 .contacts__link {
   .link-reset();
   position: relative;
+  display: flex;
+  align-items: center;
 
-  &--yellow {
-    display: flex;
-    align-items: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
 
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 22px;
-    text-transform: uppercase;
+  &--blue {
     color: @dark-blue;
   }
-}
+  &--yellow {
+    color: @yellow-gold;
+  }
 
-.contacts__link--yellow::before {
-  content: "";
+  &::before {
+    content: "";
+    display: block;
 
-  width: 45px;
-  height: 45px;
-  margin-right: 15px;
-  border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 50%;
 
-  background-color: @blue-icon;
+    background-color: @blue-icon;
+  }
 }
 
 .contacts__icon {
   position: absolute;
+  top: 13px;
+  left: 13px;
 
-  &--yellow {
-    left: 13px;
-    top: 14px;
+  fill: @yellow;
 
-    fill: @yellow;
-  }
-
-  &--blue {
-    top: 50%;
-    margin-top: -9px;
-    right: 50%;
-    margin-right: -9px;
-
-    fill: @dark-blue;
+  &--location {
+    top: 11px;
+    left: 14px;
   }
 }
 
@@ -50,18 +47,47 @@
   .contacts__link {
     font-size: 28px;
     line-height: 28px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      margin-right: 25px;
+    }
   }
 
-  .contacts__link--yellow::before {
-    width: 67px;
-    height: 67px;
-    margin-right: 25px;
-  }
-
-  .contacts__icon--yellow {
+  .contacts__icon {
     width: 27px;
     height: 27px;
     top: 20px;
     left: 20px;
+
+    &--location {
+      top: 17px;
+      left: 23px;
+      width: 21px;
+      height: 32px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__link::before {
+    width: 90px;
+    height: 90px;
+    margin-right: 25px;
+  }
+
+  .contacts__icon {
+    width: 36px;
+    height: 36px;
+    top: 27px;
+    left: 27px;
+
+    &--location {
+      top: 23px;
+      left: 31px;
+      width: 28px;
+      height: 43px;
+    }
   }
 }

@@ -1,5 +1,7 @@
 .users {
+  width: @mobile-wrapper;
   padding: @mobile-gap;
+  margin: 0 auto;
 }
 
 .users__list {
@@ -10,12 +12,12 @@
   position: relative;
 
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
+  flex-wrap: wrap;
 
-  width: 234px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 16px 18px 22px;
-  margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 20px;
 
@@ -26,17 +28,39 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
-.users__name {
+.users__img {
+  display: block;
+  width: 100%;
+}
+
+.users__name-link {
   .link-reset();
-  width: 90px;
-  margin: 0 15px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 15px;
 
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
   color: @blue;
+
+  &::after {
+    content:"";
+
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @coral;
+  }
+  &--active::after {
+    background-color: @green;
+  }
 
   &:hover {
     color: rgba(29, 46, 91, 0.6);
@@ -47,7 +71,13 @@
   }
 }
 
+.users__name-title {
+  display: block;
+  width: 90px;
+}
+
 .users__likes {
+  .btn-reset();
   position: absolute;
   left: 65px;
   top: 55px;
@@ -71,20 +101,43 @@
 
     background-color: @light-grey;
   }
-}
 
-.users__likes--active::before {
-  background-color: @pink;
+  &:hover::before {
+    background-color: @dark-lilac;
+  }
+
+  &--active::before {
+    background-color: @pink;
+  }
+  &--active:hover::before {
+    background-color: @pink-hover;
+  }
 }
 
 .users__likes-icon {
   position: absolute;
   margin-left: 10px;
 
-  fill: rgba(25, 33, 68, 0.3);
+  fill: @light-blue;
+  opacity: 0.3;
+
+  .users__likes:hover & {
+    opacity: 0.5;
+  }
+  .users__likes:active & {
+    opacity: 0.1;
+  }
 
   &--active {
     fill: @red;
+    opacity: 1;
+
+    .users__likes--active:hover & {
+      opacity: 1;
+    }
+    .users__likes--active:active & {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -107,26 +160,49 @@
 }
 
 .users__title {
-  display: block;
-  padding: 5px;
+  position: relative;
+
+  display: inline-block;
+  width: auto;
+  padding: 5px 10px;
   margin: 0;
 
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   color: @dark-grey;
+  background-color: @white;
 
-  &--visits {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  z-index: 5;
 }
 
 .users__visits-list {
   .ul-reset();
+  position: relative;
+
   width: 100%;
   box-sizing: border-box;
   margin-top: 7px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: -18px;//.users__card - padding
+    content: "";
+
+    width: @mobile-wrapper;
+    height: 1px;
+
+    background-color: @light-grey;
+  }
+
+  &::before {
+    top: -20px;
+  }
+
+  &::after {
+    bottom: -15px;
+  }
 }
 
 .users__visits-item {
@@ -152,19 +228,20 @@
 }
 
 .users__level-wrapper {
-  margin-left: 45px;
+  margin-left: 35px;
 }
 
 .users__level {
-  border: 2px solid @dark-orange;
-  border-radius: 50%;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
 }
 
 .users__level-quantity {
   display: block;
   padding: 10px 5px;
   text-align: center;
-
 
   font-size: 24px;
   font-weight: 700;
@@ -174,6 +251,17 @@
 
 .users__level-text {
   display: none;
+}
+
+.users__level-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: rotate(-90deg);
+  stroke: @dark-orange;
+  fill: none;
 }
 
 .users__btn {
@@ -187,7 +275,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 270px;
+    margin: 0 auto;
     margin-bottom: 20px;
+
     color: @blue;
     background-color: transparent;
 
@@ -205,23 +297,24 @@
 
 .users__btn-plus-icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .users__paginator {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 @media (min-width: @tablet-width) {
   .users {
-    padding: @tablet-gap;
+    width: @tablet-wrapper;
+    padding: 40px;
   }
 
   .users__card {
-    width: 618px;
     padding: 35px;
     padding-bottom: 15px;
-    margin-bottom: @tablet-gap;
+    margin-bottom: 40px;
   }
 
   .users__photo {
@@ -233,14 +326,21 @@
     order: -1;
   }
 
-  .users__name {
+  .users__name-link {
+    justify-content: flex-start;
+    align-items: center;
+
     margin-left: 35px;
-    flex-grow: 1;
 
     font-size: 30px;
     line-height: 30px;
 
     order: 0;
+  }
+
+  .users__name-title {
+    width: auto;
+    margin-right: 23px;
   }
 
   .users__likes {
@@ -281,9 +381,11 @@
 
     &--visits {
       display: block;
-
-      padding-left: 50px;
+      padding-left: 12px;
+      padding-right: 12px;
       margin-top: 10px;
+      margin-left: 35px;
+      margin-right: 35px;
 
       order: 2;
     }
@@ -293,6 +395,15 @@
     display: flex;
     flex-wrap: wrap;
     order: 3;
+
+    &::before {
+      left: -35px;
+      width: @tablet-wrapper;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .users__visits-item {
@@ -309,38 +420,45 @@
 
   .users__transports {
     display: block;
-    margin-top: 0;
-    margin-right: 7px;
+    padding: 0 13px;
+    margin: 0;
 
     order: 1;
   }
 
   .users__level-wrapper {
     position: absolute;
-    right: 25px;
-    bottom: 100px;
+    right: 35px;
+    bottom: 90px;
+    margin: 0;
   }
 
   .users__level {
-    padding: 0 10px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
   }
 
   .users__level-quantity {
-    padding: 5px;
-    padding-bottom: 0;
+    display: inline-block;
+    padding: 0;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .users__level-text {
     display: block;
-    text-align: center;
-    padding: 5px 0;
-
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 3px;
 
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
     color: rgba(68, 68, 68, 0.4);
+  }
+
+  .users__level-icon {
+    width: 60px;
+    height: 60px;
   }
 
   .users__btn {
@@ -357,7 +475,7 @@
 
     &--no-borders {
       position: static;
-      width: 100%;
+      width: 688px;
       padding-top: 5px;
       margin-bottom: 35px;
     }
@@ -368,21 +486,44 @@
     height: 27px;
     margin-right: 25px;
   }
+
+  .users__paginator {
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .users {
-    padding: @desktop-gap;
+    width: 950px;
+    padding: 60px;
+    padding-top: 0;
+    padding-right: 430px;
   }
 
   .users__card {
+    position: relative;
+
     width: 950px;
     padding: 0;
+    padding-right: 45px;
     margin-bottom: 30px;
+
+    &::after {
+      position: absolute;
+      top: 50px;
+      right: 320px;
+
+      content: "";
+
+      display: block;
+      width: 1px;
+      height: calc(100% - 100px);
+
+      background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+    }
   }
 
   .users__photo {
-    display: block;
     width: 285px;
     height: 285px;
     border-top-right-radius: 0;
@@ -391,15 +532,21 @@
     order: -1;
   }
 
-  .users__name {
-    flex-grow: 0;
-
-    width: 200px;
-    padding: 30px;
+  .users__name-link {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     padding-top: 15px;
-    margin: 30px;
+    margin-top: 30px;
 
     order: 0;
+
+    &::after {
+      margin-right: 18px;
+    }
+  }
+
+  .users__name-title {
+    margin: 0;
   }
 
   .users__likes {
@@ -418,13 +565,15 @@
 
   .users__visits-list {
     display: block;
-    width: 265px;
-    padding-left: 30px;
+    width: 245px;
     padding-top: 15px;
     margin-top: 30px;
-    margin-left: 35px;
 
     order: 1;
+
+    &::before {
+      display: none;
+    }
   }
 
   .users__visits-item {
@@ -438,15 +587,15 @@
   .users__transports {
     position: absolute;
     right: 140px;
-    bottom: 55px;
+    bottom: 58px;
 
     display: flex;
   }
 
-  .users__level {
-    position: absolute;
-    right: 20px;
-    bottom: -55px;
+  .users__level-wrapper {
+    right: 45px;
+    bottom: 45px;
+    margin: 0;
   }
 
   .users__btn {
@@ -456,9 +605,13 @@
 
     &--no-borders {
       position: static;
-      width: 100%;
+      width: 950px;
       margin-top: 60px;
       margin-bottom: 55px;
     }
+  }
+
+  .users__paginator {
+    margin-bottom: 75px;
   }
 }

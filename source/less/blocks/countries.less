@@ -4,14 +4,22 @@
 }
 
 .countries__card {
-  width: 270px;
+  width: 100%;
+  box-sizing: border-box;
   margin: 10px auto;
 }
 
 .countries__photo {
-  width: 270px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: @mobile-radius;
+  border-top-right-radius: @mobile-radius;
+  overflow: hidden;
+}
+
+.countries__img {
+  width: 100%;
 }
 
 .countries__description {
@@ -29,6 +37,16 @@
   color: @grey-30;
 
   background-color: @white;
+
+  .countries__card:last-child &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, @light-grey 100%);
+  }
 }
 
 .countries__name {
@@ -57,23 +75,39 @@
 }
 
 @media (min-width: @tablet-width) {
+  .countries__list {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -39px;
+      left: -35px;
+
+      content: "";
+
+      width: 141px;
+      height: 141px;
+      border-radius: @tablet-radius;
+      background-color: @dark-lilac;
+
+      z-index: -2;
+    }
+  }
+
   .countries__card {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
 
-    width: 616px;
     margin-bottom: 10px;
   }
 
   .countries__photo {
-    display: block;
-
     width: 186px;
 
     border-top-left-radius: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: @tablet-radius;
+    border-bottom-right-radius: @tablet-radius;
   }
 
   .countries__description {
@@ -81,12 +115,18 @@
     margin-top: 0;
     flex-grow: 1;
     border-top-right-radius: 0;
-    border-top-left-radius: 20px;
+    border-top-left-radius: @tablet-radius;
     border-bottom-right-radius: 0;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: @tablet-radius;
 
     font-size: 20px;
     line-height: 20px;
+
+    .countries__card:last-child &::after {
+      width: 618px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, transparent 0%, @light-grey 100%);
+    }
   }
 
   .countries__name {
@@ -115,16 +155,20 @@
 }
 
 @media (min-width: @desktop-width) {
-  .countries {
-    margin-right: 60px;
-  }
-
   .countries__list {
+    width: 630px;
+    box-sizing: border-box;
     margin-top: 0;
+    padding-left: 70px;
+
+    &::before {
+      top: -72px;
+      left: -0; //т.к. padding-left: 70px;
+    }
   }
 
   .countries__card {
-    width: 562px;
+    width: 559px;
   }
 
   .countries__description {

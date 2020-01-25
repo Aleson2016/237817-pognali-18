@@ -1,0 +1,35 @@
+.form {
+  width: @mobile-width;
+  margin: 0 auto;
+
+  font-weight: 400;
+  color: @blue;
+}
+
+.form__plans {
+  position: relative;
+
+  padding: @mobile-gap;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+@media(min-width: @tablet-width) {
+  .form {
+    width: @tablet-width;
+  }
+
+  .form__plans {
+    padding: 40px 75px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .form {
+    width: @desktop-width;
+  }
+
+  .form__plans {
+    padding: 70px 60px;
+  }
+}

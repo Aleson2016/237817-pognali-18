@@ -6,7 +6,9 @@
 .social__link {
   position: relative;
 
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 45px;
   height: 45px;
@@ -15,36 +17,22 @@
   &--yellow {
     border-radius: 50%;
     background-color: @yellow;
+    &:hover {
+      background-color: @dark-yellow;
+    }
   }
 }
 
 .social__icon {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-
-  display: block;
   &--white {
     fill: @grey-c;
   }
 
   &--blue {
     fill: @blue;
-  }
-
-  &--fb {
-    margin-top: -14px;
-    margin-right: -5px;
-  }
-
-  &--vk {
-    margin-top: -6px;
-    margin-right: -11px;
-  }
-
-  &--insta {
-    margin-top: -9px;
-    margin-right: -9px;
+    .social__link:active & {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -58,21 +46,14 @@
     &--fb {
       width: 14px;
       height: 28px;
-      margin-right: -7px;
-      margin-top: -14px;
     }
     &--vk {
       width: 31px;
       height: 16px;
-      margin-right: -15px;
-      margin-top: -8px;
     }
     &--insta {
       width: 24px;
       height: 24px;
-      margin-right: -12px;
-      margin-top: -12px;
     }
   }
-
 }

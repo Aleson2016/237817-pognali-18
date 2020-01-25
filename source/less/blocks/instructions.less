@@ -1,34 +1,37 @@
 .instructions {
   width: 100%;
   box-sizing: border-box;
-  padding: 20px @mobile-gap;
+  padding-top: 20px;
   padding-bottom: 40px;
 
   background-color: @light-blue;
 }
 
 .instructions__list {
-  .ul-reset;
-  width: 270px;
+  counter-reset: myCounter;
+  width: @mobile-wrapper;
+  padding: 0;
   margin: 0 auto;
-  margin-top: -115px;
+  margin-top: -105px;
 }
 
 .instructions__item {
-  padding-top: 20px;
-  padding-left: 25px;
-  padding-right: 100px;
-  padding-bottom: 33px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 20px @mobile-gap 33px;
   margin-top: -10px;
 
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   color: @dark-blue;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: @mobile-radius;
+  border-top-right-radius: @mobile-radius;
   &--1 {
-    padding-top: 25px;
+    padding-top: @mobile-gap;
     background-color: @dark-orange;
   }
   &--2 {
@@ -38,12 +41,22 @@
     background-color: @dark-yellow;
   }
   &--4 {
-    padding-bottom: 25px;
+    padding-bottom: @mobile-gap;;
 
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: @mobile-radius;
+    border-bottom-right-radius: @mobile-radius;
     background-color: @yellow;
   }
+}
+
+.instructions__item::after {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+
+  width: 70px;
+  text-align: right;
+
+  color: @white;
 }
 
 @media (min-width: @tablet-width) {
@@ -59,43 +72,55 @@
 
     width: 100%;
     box-sizing: border-box;
-
+    padding: 0;
     margin-top: 0; //в мобильной был -115px
   }
 
   .instructions__item {
+    flex-wrap: wrap;
+
     width: 230px;
-    padding: 30px;
-    padding-right: 84px;
-    padding-bottom: 60px;
+    padding: 34px;
+    padding-right: 80px;
+    padding-bottom: 20px;
     margin-top: 0;
 
     font-size: 24px;
     line-height: 24px;
 
     &--1 {
-      padding-right: 94px;
-      border-top-left-radius: 20px;
+      padding-right: 100px;
+      border-top-left-radius: @tablet-radius;
       border-top-right-radius: 0;
     }
     &--2 {
-      margin-left: -10px;
-      border-top-right-radius: 20px;
+      margin-left: -@tablet-radius;
+      border-top-left-radius: @tablet-radius;
+      border-top-right-radius: @tablet-radius;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
     &--3 {
-      padding-right: 94px;
+      padding-right: 100px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-bottom-left-radius: 20px;
+      border-bottom-left-radius: @tablet-radius;
     }
     &--4 {
-      margin-left: -10px;
+      margin-left: -@tablet-radius;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: @tablet-radius;
+      border-bottom-right-radius: @tablet-radius;
     }
+  }
+
+  .instructions__item::after {
+    margin-top: 10px;
+    text-align: left;
+
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
@@ -108,26 +133,44 @@
   }
 
   .instructions__item {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
     padding: 30px 35px;
-    padding-right: 85px;
-    margin-left: -20px;
+    padding-right: 55px;
+    margin-left: -@tablet-radius;
 
     &--1 {
       margin-left: 0;
-      padding-right: 65px;
-      border-bottom-left-radius: 20px;
+
+      border-bottom-left-radius: @tablet-radius;
     }
     &--2 {
+      flex-grow: 1;
+
       border-top-right-radius: 0;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+      border-top-left-radius: @tablet-radius;
+      border-bottom-left-radius: @tablet-radius;
       border-bottom-right-radius: 0px;
     }
     &--3 {
-      border-top-left-radius: 20px;
+      flex-grow: 1;
+
+      border-top-left-radius: @tablet-radius;
     }
     &--4 {
-      border-radius: 20px;
+      width: 200px;
+      padding-right: 35px;
+      border-radius: @tablet-radius;
+    }
+
+    &::after {
+      width: auto;
+      margin-top: 0;
+      margin-left: 20px;
+
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 }
