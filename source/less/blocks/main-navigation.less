@@ -218,6 +218,10 @@
     box-sizing: border-box;
     padding: 40px;
 
+    &--no-js {
+      align-items: flex-start;
+    }
+
     &--scroll {
       position: fixed;
       top: 0;
@@ -287,6 +291,13 @@
     width: auto;
     margin-right: 0; //был -135px
 
+    .main-navigation--no-js & {
+      // position: static;
+      //
+      // width: auto;
+      // margin-right: 0; //был -135px
+      top: 0;
+    }
     .main-navigation--inner-page & {
       display: block;
     }
@@ -317,9 +328,8 @@
     .main-navigation--no-js & {
       display: block;
       position: static;
-      padding-top: 2 * @mobile-gap;
-
-      order: 10;
+      padding-top: 50px;
+      margin-top: 50px;
     }
   }
 
