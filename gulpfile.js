@@ -18,11 +18,6 @@ var del = require("del");
 
 var server = require("browser-sync").create();
 
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-  .pipe(gulp.dest("build"));
-});
-
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -61,6 +56,11 @@ gulp.task("sprite", function () {
   }))
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+  .pipe(gulp.dest("build"));
 });
 
 gulp.task("clean", function () {
