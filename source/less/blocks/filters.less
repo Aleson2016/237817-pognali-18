@@ -2,17 +2,9 @@
   position: relative;
 }
 
-.filters__location {
-  padding-top: 20px;
-  margin-bottom: 25px;
-  border-bottom-left-radius:@mobile-gap;
-  border-bottom-right-radius: @mobile-gap;
-}
-
 .filters__preferences {
-  width: 220px;
-  padding: 25px;
-  padding-bottom: 80px;
+  width: 230px;
+  padding: 20px;
   margin: 0 auto;
   border-radius: 20px;
 
@@ -24,6 +16,7 @@
   display: block;
 
   width: 200px;
+  padding-left: 5px;
   margin-bottom: 20px;
 
   font-size: 22.5px;
@@ -33,9 +26,13 @@
 }
 
 .filters__item {
-  padding: 0;
+  padding: 0 5px;
   margin: 0;
   border: none;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
 }
 
 .filters__item-header {
@@ -51,6 +48,13 @@
   border-top: 1px solid @dark-gold;
 
   cursor: pointer;
+
+  &:hover {
+    color: rgba(29, 46, 91, 0.6);
+  }
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .filters__title {
@@ -63,6 +67,11 @@
 
 .filters__open-btn {
   .btn-reset();
+  color: inherit;
+}
+
+.filters__open-icon {
+  fill: currentColor;
 }
 
 .filters__options-list {
@@ -107,6 +116,7 @@
   position: absolute;
   top: 4px;
   left: 4px;
+  fill: @light-blue;
 }
 
 .filters__label {
@@ -116,27 +126,26 @@
   color: @dark-grey;
 
   cursor: pointer;
-}
 
-.filters__label::before {
-  content: "";
+  &::before {
+    content: "";
 
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  vertical-align: bottom;
-  border-radius: 4px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    border-radius: 4px;
 
-  background-color: @white;
-}
+    background-color: @white;
+  }
 
-.filters__label:hover {
-  opacity: 0.6;
-}
-
-.filters__label:active {
-  opacity: 0.3;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .filters__options-item input[type="checkbox"]:checked + .filters__input-icon {
@@ -151,14 +160,13 @@
   opacity: 0.15;
 
   cursor: pointer;
-}
 
-.filters__label-transport:hover {
-  opacity: 0.6;
-}
-
-.filters__label-transport:active {
-  opacity: 0.3;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .filters__options-item input[type="checkbox"]:checked + .filters__label-transport {
@@ -166,18 +174,14 @@
 }
 
 .filters__btn {
-  position: absolute;
-  bottom: 22px;
-  right: 50%;
-  margin-right: -115px;
-
-  width: 230px;
+  .btn-reset();
+  width: 100%;
+  box-sizing: border-box;
   padding: 6px;
+  margin: 0 auto;
 
   border-radius: 20px;
-  border: none;
 
-  font-family: inherit;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -189,9 +193,9 @@
   &:hover {
     box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.08);
   }
-
   &:active {
-    opacity: 0.3;
+    color:rgba(22, 28, 53, 0.3);
+    background-color: @dark-gold;
   }
 }
 
@@ -223,16 +227,21 @@
 }
 
 @media(min-width: @tablet-width) {
+  .filters__location {
+    .bg-border__tablet();
+    padding-top: 80px;
+  }
+
   .filters__preferences {
     width: 618px;
     padding: 35px;
-    padding-bottom: 125px;
   }
 
   .filters__preferences-text {
     width: 100%;
     box-sizing: border-box;
     padding-bottom: 35px;
+    margin:0;
     margin-bottom: 25px;
     border-bottom: 1px solid @dark-gold;
 
@@ -240,10 +249,14 @@
     line-height: 30px;
   }
 
-  .filters__item:last-child {
-    padding-bottom: 35px;
-    border-bottom: 1px solid @dark-gold;
+  .filters__item {
+    padding: 0;
 
+    &:last-of-type {
+      padding-bottom: 35px;
+      margin-bottom: 35px;
+      border-bottom: 1px solid @dark-gold;
+    }
   }
 
   .filters__item-wrapper {
@@ -321,11 +334,7 @@
   }
 
   .filters__btn {
-    bottom: 35px;
-    right: 50%;
-    margin-right: -299px;
-
-    width: 598px;
+    width: 100%;
     padding: 10px;
 
     border-radius: 25px;
@@ -338,12 +347,11 @@
 @media(min-width: @desktop-width) {
   .filters__preferences {
     position: absolute;
-    top: 190px;
+    top: 100%;
     left: 50%;
     margin-left: 375px;
     width: 189px;
     padding: 48px;
-    padding-bottom: 97px;
   }
 
   .filters__preferences-text {
@@ -352,7 +360,8 @@
     border-bottom: none;
   }
 
-  .filters__item:last-child {
+  .filters__item:last-of-type {
+    padding: 0;
     border-bottom: none;
   }
 
@@ -416,14 +425,5 @@
 
   .filters__label-transport {
     padding-top: 5px;
-  }
-
-  .filters__btn {
-    bottom: -1085px;
-    left: 50%;
-    margin-left: 420px;
-
-    width: 196px;
-    z-index: 5;
   }
 }

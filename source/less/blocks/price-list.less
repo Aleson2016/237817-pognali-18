@@ -15,9 +15,29 @@
 }
 
 .price-list__table {
+  position: relative;
   width: 200px;
 
   border-collapse: collapse;
+
+  &::before {
+    position: absolute;
+    bottom: calc(100% + 20px);
+    right: -50px;
+
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url("../../img/rates@1x.png") no-repeat;
+    background-position: center;
+    background-size: 99px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../../img/rates@2x.png");
+    }
+  }
 }
 
 .price-list__line {
@@ -148,12 +168,33 @@
   }
 
   .price-list__table {
+    position: relative;
+
     width: 565px;
     margin-left: 55px;
     margin-bottom: @tablet-gap;
 
     font-size: 28px;
     line-height: 33px;
+
+    &::before {
+      bottom: -120px;
+      right: 0;
+    }
+
+    &::after {
+      position: absolute;
+      top: -43px;
+      right: -30px;
+
+      content: "";
+      width: 198px;
+      height: 285px;
+      border-radius: @tablet-radius;
+      background-color: @dark-lilac;
+
+      z-index: -1;
+    }
   }
 
   .price-list__line {
@@ -228,10 +269,26 @@
 
   .price-list__table {
     width: 810px;
-    margin-left: 110px;
+    margin-left: 95px;
 
     &--popup {
       width: 630px;
+    }
+
+    &::before {
+      bottom: calc(50% - 99px);
+      right: -250px;
+      width: 198px;
+      height: 198px;
+      background-size: 198px;
+    }
+
+    &::after {
+      top: -50px;
+      right: -160px;
+
+      width: 444px;
+      height: 300px;
     }
   }
 
@@ -242,13 +299,13 @@
   }
 
   .price-list__btn {
-    padding-left: 110px;
+    padding-left: 95px;
     &--open::before {
-      left: 15px;
+      left: 0;
     }
   }
 
   .price-list__btn-icon {
-    left: 40px;
+    left: 25px;
   }
 }

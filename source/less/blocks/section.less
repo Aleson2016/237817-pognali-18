@@ -1,38 +1,42 @@
 .section {
-  padding: @mobile-gap;
-  padding-top: 5px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  .bg-border__mobile();
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 30px;
 
   &--service {
-    padding-bottom: 40px;
-    margin-top: -25px;
+    padding-top: 35px;
+    padding-bottom: 80px;
 
     color: @white;
-    background: url("../../img/about-mobile@1x.png") no-repeat;
-    background-position: center;
     background-color: @light-blue;
 
-    @media (min-resolution: @retina-dppx) {
-      background: url("../../img/about-mobile@2x.png") no-repeat;
-      background-position: center;
-      background-color: @light-blue;
-      background-size: 292px;
+    z-index: 25;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: calc(50% + 53px);
+
+      content: "";
+
+      width: 113px;
+      height: 132px;
+      border-radius: @tablet-radius;
+      background-color: @bg-blue2;
+
+      z-index: 0;
     }
   }
 
   &--countries {
-    padding-top: 50px;
-    padding-bottom: 5px;
-
     color: @dark-grey;
     background-color: @light-grey;
+
+    z-index: 20;
   }
 
   &--tourists {
-    padding-top: 45px;
-    padding-bottom: 15px;
-
     color: @white;
     background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-mobile@1x.png");
     background-repeat: no-repeat;
@@ -43,40 +47,68 @@
       background-image: url("../../img/smolov-back-desktop@2x.png"),  url("../../img/rogovaya-back-mobile@2x.png");
       background-size: 143px, 71px;
     }
+    z-index: 15;
   }
 
   &--price-list {
-    padding-top: 25px;
-    padding-bottom: 0;
+    padding-top: 80px;
 
     color: @dark-grey;
-
-    background: url("../../img/rates@1x.png") no-repeat;
-    background-position: calc(50% + 85px) 35px;
-    background-size: 99px;
     background-color: @light-grey;
 
-    @media (min-resolution: @retina-dppx) {
-      background-image: url("../../img/rates@2x.png");
-    }
+    z-index: 10;
   }
 
   &--address {
+    padding-top: 60px;
     color: @light-blue;
     background-color: @yellow-gold;
+
+    z-index: 1;
+  }
+}
+
+.section__container {
+  position: relative;
+  width: @mobile-wrapper;
+  box-sizing: border-box;
+  margin: 0 auto;
+  &--service {
+    padding: @mobile-gap;
+
+    background: url("../../img/about-mobile@1x.png") no-repeat;
+    background-position: center;
+
+    @media (min-resolution: @retina-dppx) {
+      background: url("../../img/about-mobile@2x.png") no-repeat;
+      background-position: center;
+      background-color: @light-blue;
+      background-size: 292px;
+    }
+  }
+
+  &--tourists::before {
+    position: absolute;
+    top: -33px;
+    left: -50px;
+
+    content: "";
+
+    width: 113px;
+    height: 132px;
+    border-radius: @tablet-radius;
+    background-color: @bg-blue2;
+
+    z-index: -2;
+  }
+
+  &--price-list {
+    padding: @mobile-gap;
   }
 }
 
 .section__wrapper {
-  position: relative;
-
-  width: 220px;
   padding: @mobile-gap;
-  margin: 0 auto;
-
-  &--address {
-    width: 270px;
-  }
 }
 
 .section__title {
@@ -103,9 +135,11 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 222px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 24px;
   margin: @mobile-gap auto;
+  margin-bottom: 0;
   text-align: left;
 
   font-size: 18px;
@@ -113,7 +147,7 @@
   text-transform: none;
   color: @blue;
 
-  border-radius: 10px;
+  border-radius: @mobile-radius;
 
   &--service {
     display: none;
@@ -123,27 +157,41 @@
     .link-reset();
     border: 3px solid @light-blue;
     font-weight: 700;
+    &:hover {
+      color: @white;
+      background-color: @light-blue;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
+}
+
+.section__btn-icon {
+  fill: currentColor;
 }
 
 @media (min-width: @tablet-width) {
   .section {
-    padding: 20px 2 * @tablet-gap;
+    .bg-border__tablet();
+    padding-top: 135px;
+    padding-bottom: 85px;
 
     &--service {
       padding-top: 75px;
+      margin-top: 0;
 
-      background: url("../../img/about-tablet@1x.png") no-repeat;
-      background-position: calc(50% + 190px) 125px;
+      &::before {
+        top: 43px;
+        right: 50%;
+        margin-right: -344px;
 
-      @media (min-resolution: @retina-dppx) {
-        background-image: url("../../img/about-tablet@2x.png");
-        background-size: 376px;
+        width: 688px;
+        height: 213px;
       }
     }
 
     &--countries {
-      padding-top: 30px;
       background: url("../../img/flags-back@1x.png") no-repeat;
       background-position: calc(50% + 200px) 80px;
       background-color: @light-grey;
@@ -155,7 +203,7 @@
     }
 
     &--tourists {
-      padding-top: 95px;
+      padding-top: 200px;
 
       background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-desktop@1x.png");
       background-repeat: no-repeat;
@@ -167,14 +215,37 @@
       }
     }
 
-    &--price-list {
-      background-position: calc(50% + 250px) 410px;
+    &--address {
+      padding-top: 110px;
+    }
+  }
+
+  .section__container {
+    width: @tablet-wrapper;
+    box-sizing: border-box;
+    padding: @tablet-gap;
+
+    &--service {
+      background: url("../../img/about-tablet@1x.png") no-repeat;
+      background-position: calc(50% + 190px) 125px;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../../img/about-tablet@2x.png");
+        background-size: 376px;
+      }
+    }
+
+    &--tourists::before {
+      top: -63px;
+      left: -35px;
+
+      width: 213px;
+      height: 213px;
     }
   }
 
   .section__wrapper {
-    width: 618px;
-    padding: 35px;
+    padding: 0;
   }
 
   .section__title {
@@ -211,15 +282,12 @@
   }
 
   .section__btn {
-    width: 618px;
-    box-sizing: border-box;
     padding: 30px;
-
 
     font-size: 24px;
     line-height: 24px;
 
-    border-radius: 20px;
+    border-radius: @tablet-radius;
 
     &--service {
       display: flex;
@@ -230,11 +298,6 @@
 
     &--countries {
       margin-top: 45px;
-      margin-bottom: 55px;
-    }
-
-    &--tourists {
-      margin-bottom: 65px;
     }
 
     &--address {
@@ -245,28 +308,21 @@
 
 @media (min-width: @desktop-width) {
   .section {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
     &--service {
-      padding-top: 155px;
-      padding-bottom: 115px;
+      padding-top: 135px;
+      padding-bottom: 160px;
 
-      background: url("../../img/about-desktop@1x.png") no-repeat;
-      background-position: calc(50% + 345px) 110px;
-      @media (min-resolution: @retina-dppx) {
-        background: url("../../img/about-desktop@2x.png") no-repeat;
-        background-position: calc(50% + 345px) 110px;
-        background-size: 630px;
+      &::before {
+        top: 72px;
+        right: calc(50% + 780px);
+        width: 213px;
+        height: 213px;
       }
     }
 
     &--countries {
-      padding-top: 155px;
-      padding-bottom: 120px;
+      padding-top: 210px;
+      padding-bottom: 135px;
 
       flex-direction: row-reverse;
 
@@ -275,52 +331,75 @@
     }
 
     &--tourists {
-      padding-top: 135px;
-      padding-bottom: 55px;
+      padding-top: 190px;
+      padding-bottom: 130px;
 
       background-position: calc(50% - 100px) 140px, calc(50% - 385px) 390px;
     }
 
     &--price-list {
-      padding-top: 65px;
-      padding-bottom: 130px;
+      padding-top: 160px;
+      padding-bottom: 160px;
+    }
 
-      background-position: calc(50% + 490px) 280px;
-      background-size: 198px;
+    &--address {
+      padding-top: 115px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .section__container {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: @desktop-wrapper;
+    box-sizing: border-box;
+    padding: 0;
+
+    &--service {
+      display: block;
+      padding: 0 70px;
+
+      background: url("../../img/about-desktop@1x.png") no-repeat;
+      background-position: calc(50% + 345px) 110px;
+
+      @media (min-resolution: @retina-dppx) {
+        background: url("../../img/about-desktop@2x.png") no-repeat;
+        background-position: calc(50% + 345px) 110px;
+        background-size: 630px;
+      }
+    }
+
+    &--countries {
+      flex-direction: row-reverse;
+    }
+
+    &--price-list {
+      padding-left: 70px;
+    }
+
+    &--address {
+      align-items: center;
+      padding-left: 210px;
+      padding-right: 70px;
     }
   }
 
   .section__wrapper {
-
-    &--service {
-      width: 1180px;
-      padding: 0 65px;
-      padding-bottom: 150px;
-      margin: 0 auto;
-    }
+    width: 630px;
+    box-sizing: border-box;
+    margin: 0;
 
     &--countries {
-      width: 360px;
-      padding: 10px 50px;
-      padding-right: 85px;
-      margin: 0;
-      margin-left: 60px;
+      padding-left: 115px;
     }
 
     &--tourists {
-      width: 490px;
-      padding: 0 70px;
-      margin: 0;
-
-    }
-    &--price-list {
-      width: 1200px;
-      margin: 0 auto;
-    }
-    &--address {
-      display: flex;
-      width: 1035px;
-      padding-left: 165px;
+      padding-left: 70px;
     }
   }
 
@@ -348,7 +427,7 @@
     padding: @desktop-gap;
 
     &--service {
-      bottom: 15px;
+      position: static;
     }
 
     &--countries {
@@ -366,6 +445,7 @@
     &--address {
       position: static;
       width: 318px;
+      margin: 0;
     }
   }
 }

@@ -1,40 +1,48 @@
 .transports__list {
   .ul-reset();
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .transports__item {
   position: relative;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 35px;
   height: 35px;
-  text-align: center;
 
-  fill: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.15);
+
+  &--active {
+    color: @blue;
+  }
 
   &--bg {
     width: 33px;
     height: 33px;
-    text-align: center;
 
     border-radius: 50%;
 
     background-color: @light-grey;
   }
-
-  &--active {
-    fill: @blue;
-  }
 }
 
 .transports__icon {
-  margin-top: 8px;
+  fill: currentColor;
 }
 
 .transports__text {
   position: absolute;
-  left: -20px;
-  top: 30px;
+
+  margin: 0;
+  bottom: -170%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 
   display: none;
 
@@ -47,6 +55,15 @@
   background-color: @blue2;
 
   z-index: 5;
+
+  &::before {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    margin-left: -16px;
+    content: "";
+    border: 16px solid transparent; border-bottom: 8px solid @blue2;
+  }
 }
 
 .transports__item:hover .transports__text {

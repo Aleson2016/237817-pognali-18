@@ -10,7 +10,7 @@
     <header class="header">
       <div class="header__container">
 
-        <nav class="main-navigation main-navigation--closed main-navigation--no-js main-navigation--inner-page">
+        <nav class="main-navigation main-navigation--inner-page main-navigation--closed main-navigation--no-js">
           <a class="main-navigation__logo-link" href="index.html">
             <picture>
               <source type= "image/webp" media="(min-width: 1380px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
@@ -50,12 +50,12 @@
               <a class="main-navigation__log-in-btn button" href="#">Авторизация</a>
             </div>
             <div class="main-navigation__contacts contacts">
-              <a class="contacts__link contacts__link--yellow" href="tel:88005558628">
-                <svg class="contacts__icon contacts__icon--yellow" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-phone-icon"></use></svg>
+              <a class="contacts__link contacts__link--blue" href="tel:88005558628">
+                <svg class="contacts__icon" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-phone-icon"></use></svg>
                 8 800 555-86-28
               </a>
-              <a class="contacts__link contacts__link--yellow" href="mailto:mail@htmlacademy.ru">
-                <svg class="contacts__icon contacts__icon--yellow" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-mail-icon"></use></svg>
+              <a class="contacts__link contacts__link--blue" href="mailto:mail@htmlacademy.ru">
+                <svg class="contacts__icon" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-mail-icon"></use></svg>
                 mail@htmlacademy.ru
               </a>
             </div>
@@ -83,22 +83,20 @@
             </div>
           </div>
 
-          <div class="main-navigation__user-block contacts">
-            <a class="main-navigation__user-block-link main-navigation__user-block-link--tel contacts__link" href="tel:88005558628">
-              <svg class="contacts__icon contacts__icon--blue" width="18" height="18"><use xlink:href="img/sprite.svg#topmenu-phone-icon"></use></svg>
+          <div class="main-navigation__user-block">
+            <a class="main-navigation__user-block-link main-navigation__user-block-link--tel" href="tel:88005558628">
+              <svg class="main-navigation__user-block-icon" width="18" height="18"><use xlink:href="img/sprite.svg#topmenu-phone-icon"></use></svg>
               <span class="visually-hidden">8 800 555-86-28</span>
             </a>
-            <a class="main-navigation__user-block-link main-navigation__user-block-link--mail contacts__link" href="mailto:mail@htmlacademy.ru">
-              <svg class="contacts__icon contacts__icon--blue" width="18" height="18"><use xlink:href="img/sprite.svg#topmenu-mail-icon"></use></svg>
-              <span class="visually-hidden">mail@htmlacademy.ru</span>
-            </a>
-            <a class="main-navigation__user-block-btn contacts__btn button" href="#">Авторизация</a>
+            <a class="main-navigation__user-block-link main-navigation__user-block-link--mail" href="mailto:mail@htmlacademy.ru">
+              <svg class="main-navigation__user-block-icon" width="18" height="18"><use xlink:href="img/sprite.svg#topmenu-mail-icon"></use></svg>
+              <span class="visually-hidden">mail@htmlacademy.ru</span></a>
+            <a class="main-navigation__user-block-btn button" href="#">Авторизация</a>
           </div>
 
         </nav>
       </div>
     </header>
-
 
     <main class="main inner-page">
 
@@ -116,30 +114,31 @@
             <span class="profile__level-text profile__level-text--title">level</span>
             <svg class="profile__level-icon" width="100" height="100" viewbox="0 0 34 34" stroke-dasharray="80 100" role="presentation" aria-hidden="true"><circle r="15.92" cx="17" cy="17" stroke></circle></svg>
           </div>
-          <picture>
-            <source type="image/webp" media="(min-width: 1380px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+          <div class="profile__photo">
+            <picture>
+              <source type="image/webp" media="(min-width: 1380px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1380px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-            <img class="profile__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Фото попутчика">
-          </picture>
+              <source media="(min-width: 1380px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <img class="profile__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Фото попутчика">
+            </picture>
+          </div>
 
           <a class="profile__photo-btn"><span class="profile__photo-text">Сменить</span>фото</a>
 
           <fieldset class="profile__block profile__block--tags">
             <div class="profile__block-wrapper">
               <legend class="profile__title profile__title--tags">
-                Тэги
+                <span class="profile__title-text">Тэги</span>
               </legend>
               <textarea class="profile__tags" name="tags" id="tags" rows="1" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
           </fieldset>
           <fieldset class="profile__block profile__block--transport">
             <div class="profile__block-wrapper">
-              <legend class="profile__title">
-                Транспорт
+              <legend class="profile__title"><span class="profile__title-text">Транспорт</span>
               </legend>
               <ul class="profile__transport-list">
                 <li class="profile__transport-item">
@@ -191,17 +190,6 @@
                 </p>
                 <a class="plans__link" href="#">изменить</a>
               </div>
-
-              <!-- <div class="plans__info">
-                <input class="plans__input" type="number" id="companion" min="1" max="10" step="1" value="3">
-                <label class="plans__label" for="companion">попутчика</label>
-              </div>
-              <div class="plans__info">
-                <input class="plans__input" type="number" id="trip__start" min="1" max="31" step="1" value="26">
-                <label class="plans__label" for="trip__start">мар</label>
-                <input class="plans__input" type="number" id="trip__end" min="1" max="31" step="1" value="29">
-                <label class="plans__label" for="trip__end">мар</label>
-              </div> -->
             </li>
 
             <li class="plans__item">
@@ -264,7 +252,7 @@
                       <span class="visually-hidden">Меньше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--minus" width="14" height="2"><use xlink:href="img/sprite.svg#qty-minus-icon"></use></svg>
                     </button>
-                    <input class="new-plans__input" type="number" id="companions__number" min="1" step="1" value="2">
+                    <input class="new-plans__input" type="text" pattern="^[1-9]\d*$" id="companions__number" min="1" step="1" value="2">
                     <button class="new-plans__input-btn new-plans__input-btn--plus" type="button">
                       <span class="visually-hidden">Больше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--plus" width="14" height="14"><use xlink:href="img/sprite.svg#qty-plus-icon"></use></svg>
@@ -282,7 +270,7 @@
                       <span class="visually-hidden">Меньше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--minus" width="14" height="2"><use xlink:href="img/sprite.svg#qty-minus-icon"></use></svg>
                     </button>
-                    <input class="new-plans__input" type="number" id="duration" min="1" step="1" value="2">
+                    <input class="new-plans__input" type="text" pattern="^[1-9]\d*$" id="duration" min="1" step="1" value="2">
                     <button class="new-plans__input-btn new-plans__input-btn--plus" type="button">
                       <span class="visually-hidden">Больше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--plus" width="14" height="14"><use xlink:href="img/sprite.svg#qty-plus-icon"></use></svg>
@@ -424,7 +412,7 @@
                       <td class="calendar__number calendar__number--prev">
                         25
                       </td>
-                      <td class="calendar__number calendar__number--active calendar__number--current">
+                      <td class="calendar__number calendar__number--active">
                         26<span class="calendar__text calendar__text--note">Заезд</span>
                       </td>
                       <td class="calendar__number calendar__number--active">
@@ -498,6 +486,9 @@
                       Чехия
                     </option>
                   </select>
+                  <button class="new-plans__select-btn">
+                    <svg class="new-plans__select-icon new-plans__select-icon--dropdown" width="12" height="7"><use xlink:href="img/sprite.svg#dropdown-form-icon"></use></svg>
+                  </button>
                   <svg class="new-plans__icon-flag new-plans__icon-flag--border" width="35" height="24"><use xlink:href="img/sprite.svg#flag-bosnia-icon"></use></svg>
                   <button class="new-plans__select-delete">
                     <span class="visually-hidden">Удалить</span>
@@ -518,6 +509,9 @@
                       Чехия
                     </option>
                   </select>
+                  <button class="new-plans__select-btn">
+                    <svg class="new-plans__select-icon new-plans__select-icon--dropdown" width="12" height="7"><use xlink:href="img/sprite.svg#dropdown-form-icon"></use></svg>
+                  </button>
                   <svg class="new-plans__icon-flag new-plans__icon-flag--border" width="35" height="24"><use xlink:href="img/sprite.svg#flag-czech-icon"></use></svg>
                   <button class="new-plans__select-delete">
                     <span class="visually-hidden">Удалить</span>
@@ -530,7 +524,7 @@
                   <button class="new-plans__btn new-plans__btn--popup" type="button">
                     Выберите страну
                     <svg class="new-plans__select-icon new-plans__select-icon--dropdown" width="12" height="7"><use xlink:href="img/sprite.svg#dropdown-form-icon"></use></svg>
-                    <svg class="new-plans__select-icon new-plans__select-icon--delete" width="9" height="9"><use xlink:href="img/sprite.svg#small-cross-icon"></use></svg>
+                    <svg class="new-plans__select-icon new-plans__select-icon--close" width="9" height="9"><use xlink:href="img/sprite.svg#small-cross-icon"></use></svg>
                   </button>
                   <button class="new-plans__select-delete">
                     <span class="visually-hidden">Удалить</span>
@@ -542,7 +536,7 @@
                     <ol class="new-plans__letters-list">
                       <div class="new-plans__letters-row">
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn new-plans__letters-btn--active">А</button>
+                          <button class="new-plans__letters-btn new-plans__letters-btn--active" type="button">А</button>
                           <ol class="new-plans__countries-list">
                             <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Афганистан</button></li>
                             <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Албания</button></li>
@@ -556,84 +550,84 @@
                           </ol>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Б</button>
+                          <button class="new-plans__letters-btn" type="button">Б</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">В</button>
+                          <button class="new-plans__letters-btn" type="button">В</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Г</button>
+                          <button class="new-plans__letters-btn" type="button">Г</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Д</button>
-                        </li>
-                      </div>
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Е</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">З</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">И</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">К</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Л</button>
+                          <button class="new-plans__letters-btn" type="button">Д</button>
                         </li>
                       </div>
                       <div class="new-plans__letters-row">
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">М</button>
+                          <button class="new-plans__letters-btn" type="button">Е</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Н</button>
+                          <button class="new-plans__letters-btn" type="button">З</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">О</button>
+                          <button class="new-plans__letters-btn" type="button">И</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">П</button>
+                          <button class="new-plans__letters-btn" type="button">К</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Р</button>
-                        </li>
-                      </div>
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">С</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Т</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">У</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Ф</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Х</button>
+                          <button class="new-plans__letters-btn" type="button">Л</button>
                         </li>
                       </div>
                       <div class="new-plans__letters-row">
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Ч</button>
+                          <button class="new-plans__letters-btn" type="button">М</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Ш</button>
+                          <button class="new-plans__letters-btn" type="button">Н</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Э</button>
+                          <button class="new-plans__letters-btn" type="button">О</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Ю</button>
+                          <button class="new-plans__letters-btn" type="button">П</button>
                         </li>
                         <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn">Я</button>
+                          <button class="new-plans__letters-btn" type="button">Р</button>
+                        </li>
+                      </div>
+                      <div class="new-plans__letters-row">
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">С</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Т</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">У</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Ф</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Х</button>
+                        </li>
+                      </div>
+                      <div class="new-plans__letters-row">
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Ч</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Ш</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Э</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Ю</button>
+                        </li>
+                        <li class="new-plans__letters-item">
+                          <button class="new-plans__letters-btn" type="button">Я</button>
                         </li>
                       </div>
                     </ol>
@@ -707,7 +701,7 @@
 
     <footer class="footer">
       <div class="footer__container">
-        <a class="footer__logo-link" href="index.html">
+        <a class="footer__logo-link">
           <picture>
             <source type= "image/webp" media="(min-width: 1380px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type= "image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -743,9 +737,9 @@
         </div>
 
         <div class="copyright">
-          <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__logo" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy-icon"></use></svg>
+            <span class="copyright__text">Разработано</span>
+            <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy-icon"></use></svg>
           </a>
         </div>
 

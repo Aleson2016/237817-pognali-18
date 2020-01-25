@@ -1,7 +1,12 @@
 .for-users {
-  padding-top: @mobile-gap;
+  .bg-border__mobile();
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 30px;
   color: @white;
   background-color: @light-blue;
+
+  z-index: 5;
 }
 
 .for-users__wrapper {
@@ -33,10 +38,6 @@
   text-align: center;
 }
 
-.for-users__link {
-  color: @yellow-gold;
-}
-
 .for-users__field {
   flex-grow: 1;
   width: 162px;
@@ -51,6 +52,18 @@
   font-weight: 700;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
+  &:hover {
+    background-color: @light-grey;
+  }
+  &:active {
+    padding: 20px;
+    border: 4px solid @white;
+    color: @white;
+    background-color: @light-blue;
+  }
+  &--error {
+    background-color: @red-error;
+  }
 }
 
 .for-users__btn {
@@ -67,7 +80,27 @@
   text-align: center;
 }
 
+.for-users__link {
+  color: @yellow-gold;
+  &:hover {
+    color: @dark-yellow;
+  }
+  &:active {
+    color: rgba(255, 189, 48, 0.3);
+  }
+}
+
+.for-users__link-icon {
+  fill: currentColor;
+}
+
 @media (min-width: @tablet-width) {
+  .for-users {
+    .bg-border__tablet();
+    padding-top: 135px;
+    padding-bottom: 60px;
+  }
+
   .for-users__wrapper {
     width: 618px;
     padding: 35px;
@@ -108,6 +141,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .for-users {
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+
   .for-users__wrapper {
     min-width: 1174px;
     padding: 73px;
@@ -144,7 +182,7 @@
     justify-content: center;
   }
 
-  .for-users__link--contacts {
+  .for-users__link {
     margin-right: 100px;
   }
 

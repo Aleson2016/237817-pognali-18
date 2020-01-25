@@ -3,15 +3,16 @@
   font-weight: 700;
   line-height: 22px;
   text-transform: uppercase;
-  color: @light-blue;
-  background-color: @dark-lilac;
 }
 
 .location__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .location__wrapper {
+  .bg-border__mobile--inner-page();
   position: relative;
 
   display: flex;
@@ -19,9 +20,12 @@
   align-items: center;
   flex-wrap: wrap;
 
-  width: 270px;
-  padding: 0 25px;
-  margin: 0 auto;
+  width: @mobile-wrapper;
+  padding: 45px @mobile-gap 15px;
+  margin: -20px auto @mobile-gap;
+
+  color: @light-blue;
+  background-color: @dark-lilac;
 }
 
 .location__icon-filter {
@@ -34,6 +38,12 @@
 
 .location__popup-btn {
   .btn-reset();
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .location__btn-text {
@@ -45,7 +55,14 @@
   display: block;
   margin-top: 40px;
   margin-bottom: 10px;
-  margin-left: 25px;
+  margin-left: @mobile-gap;
+
+  .location__wrapper--closed-popup & {
+    display: none;
+  }
+  .location__wrapper--opened-popup & {
+    display: block;
+  }
 }
 
 .location__continents-item input[type="radio"] {
@@ -66,68 +83,60 @@
 
 .location__label {
   opacity: 0.3;
-
   cursor: pointer;
-}
 
-.location__label:hover {
-  opacity: 0.6;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.location__continents-item input[type="radio"]:checked + .location__label {
-  opacity: 1;
+  .location__continents-item input[type="radio"]:checked + & {
+    opacity: 1;
+  }
 }
 
 .location__popup {
   display: block;
 
   position: absolute;
-  top: 150px;
+  top: 160px;
   left: 0;
 
   width: 100%;
   box-sizing: border-box;
-  padding: 25px;
+  padding: @mobile-gap;
 
   border-bottom-left-radius:@mobile-gap;
   border-bottom-right-radius: @mobile-gap;
   background-color: @dark-lilac;
 
   z-index: 5;
-}
 
-.location__wrapper--closed-popup .location__continents-list {
-  display: none;
-}
-
-.location__wrapper--closed-popup .location__btn-title {
-  &--opened {
+  .location__wrapper--closed-popup & {
     display: none;
   }
-  &--closed {
+  .location__wrapper--opened-popup & {
     display: block;
   }
 }
 
-.location__wrapper--closed-popup .location__popup {
-  display: none;
-}
-
-.location__wrapper--opened-popup .location__continents-list {
-  display: block;
-}
-
-.location__wrapper--opened-popup .location__btn-title {
-  &--opened {
-    display: block;
+.location__btn-title {
+  .location__wrapper--closed-popup & {
+    &--opened {
+      display: none;
+    }
+    &--closed {
+      display: block;
+    }
   }
-  &--closed {
-    display: none;
-  }
-}
 
-.location__wrapper--opened-popup .location__popup {
-  display: block;
+  .location__wrapper--opened-popup & {
+    &--opened {
+      display: block;
+    }
+    &--closed {
+      display: none;
+    }
+  }
 }
 
 .location__letters-list {
@@ -217,9 +226,17 @@
   background-color: @violet-lilac;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: @violet-hover;
+  }
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .location__icon-close--down {
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -230,8 +247,10 @@
   }
 
   .location__wrapper {
+    .bg-border__tablet();
     width: 618px;
-    padding: 35px;
+    padding: 90px 75px 60px;
+    margin-bottom: 45px;
     flex-direction: row-reverse;
   }
 
@@ -251,6 +270,17 @@
   .location__btn-title {
     display: flex;
     align-items: center;
+
+    .location__wrapper--closed-popup & {
+      &--closed {
+        display: flex;
+      }
+    }
+    .location__wrapper--opened-popup & {
+      &--opened {
+        display: flex;
+      }
+    }
   }
 
   .location__btn-text {
@@ -278,6 +308,13 @@
   .location__continents-list {
     display: flex;
     margin: 0;
+
+    .location__wrapper--closed-popup & {
+      display: flex;
+    }
+    .location__wrapper--opened-popup & {
+      display: flex;
+    }
   }
 
   .location__continents-item {
@@ -289,29 +326,9 @@
   }
 
   .location__popup {
-    top: 75px;
-    padding: 35px;
+    top: 120px;
+    padding: 35px 65px;
     padding-bottom: 70px;
-  }
-
-  .location__wrapper--closed-popup .location__continents-list {
-    display: flex;
-  }
-
-  .location__wrapper--opened-popup .location__continents-list {
-    display: flex;
-  }
-
-  .location__wrapper--closed-popup .location__btn-title {
-    &--closed {
-      display: flex;
-    }
-  }
-
-  .location__wrapper--opened-popup .location__btn-title {
-    &--opened {
-      display: flex;
-    }
   }
 
   .location__letters-list {
@@ -341,7 +358,7 @@
     &--active {
       top: 40px;
       bottom: auto;
-      right: 40px;
+      right: 85px;
 
       width: 180px;
       height: auto;//надо подумать
@@ -365,13 +382,20 @@
 
 @media(min-width: @desktop-width) {
   .location__wrapper {
-    width: 1250px;
+    width: 1440px; //popup в потоке
+    padding: 90px 0px 60px;
+    margin-bottom: 75px;
     flex-direction: row;
+
+    &--opened-popup {
+      background-color: @light-grey;
+    }
   }
 
   .location__title {
     display: flex;
     align-items: center;
+    margin-left: 75px;
     margin-right: 35px;
   }
 
@@ -385,9 +409,9 @@
   }
 
   .location__popup-btn {
+    margin-right: 130px;
     order: 2;
   }
-
 
   .location__continents-list {
     flex-grow: 1;
@@ -397,7 +421,11 @@
   .location__popup {
     position: static;
 
-    padding: 40px 0;
+    width: 1440px;
+    padding: 40px 75px;
+
+    background-color: @light-grey;
+
     order: 3;
   }
 

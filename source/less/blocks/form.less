@@ -1,5 +1,5 @@
 .form {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
 
   font-weight: 400;
@@ -9,14 +9,14 @@
 .form__plans {
   position: relative;
 
-  padding: 25px;
+  padding: @mobile-gap;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 
 @media(min-width: @tablet-width) {
   .form {
-    width: 768px;
+    width: @tablet-width;
   }
 
   .form__plans {
@@ -26,7 +26,7 @@
 
 @media(min-width: @desktop-width) {
   .form {
-    width: 1440px;
+    width: @desktop-width;
   }
 
   .form__plans {
