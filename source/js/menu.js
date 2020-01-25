@@ -2,7 +2,7 @@
 
 var navMenu = document.querySelector(".main-navigation");
 var navToggle = navMenu.querySelector(".main-navigation__toggle");
-var header = document.querySelector(".header__container");
+
 
 navMenu.classList.remove("main-navigation--no-js");
 
@@ -29,9 +29,9 @@ window.addEventListener("keydown", function(evt) {
 });
 
 window.addEventListener("scroll", function() {
-  if (window.pageYOffset > 0 && !header.classList.contains("header__container--scroll")) {
-    header.classList.add("header__container--scroll");
+  if (window.pageYOffset > 0 && !navMenu.classList.contains("main-navigation--scroll")) {
+    navMenu.classList.add("main-navigation--scroll");
   } else if(window.pageYOffset <= 0){
-    header.classList.remove("header__container--scroll");
+    navMenu.classList.remove("main-navigation--scroll");
   }
 });
