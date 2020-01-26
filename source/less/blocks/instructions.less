@@ -79,21 +79,23 @@
   .instructions__item {
     flex-wrap: wrap;
 
-    width: 230px;
-    padding: 34px;
-    padding-right: 80px;
-    padding-bottom: 20px;
+    box-sizing: border-box;
+    padding: 30px 34px;
+    padding-bottom: 23px;
     margin-top: 0;
 
     font-size: 24px;
     line-height: 24px;
 
     &--1 {
+      width: 364px;
       padding-right: 100px;
       border-top-left-radius: @tablet-radius;
       border-top-right-radius: 0;
     }
     &--2 {
+      width: 344px;
+      padding-right: 80px;
       margin-left: -@tablet-radius;
       border-top-left-radius: @tablet-radius;
       border-top-right-radius: @tablet-radius;
@@ -101,12 +103,15 @@
       border-bottom-right-radius: 0;
     }
     &--3 {
+      width: 364px;
       padding-right: 100px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: @tablet-radius;
     }
     &--4 {
+      width: 344px;
+      padding-right: 100px;
       margin-left: -@tablet-radius;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -134,33 +139,34 @@
 
   .instructions__item {
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: nowrap;
 
     padding: 30px 35px;
-    padding-right: 55px;
     margin-left: -@tablet-radius;
 
     &--1 {
+      width: 335px;
+      padding-right: 55px;
       margin-left: 0;
 
       border-bottom-left-radius: @tablet-radius;
     }
     &--2 {
-      flex-grow: 1;
-
+      width: 365px;
+      padding-right: 55px;
       border-top-right-radius: 0;
       border-top-left-radius: @tablet-radius;
       border-bottom-left-radius: @tablet-radius;
       border-bottom-right-radius: 0px;
     }
     &--3 {
-      flex-grow: 1;
-
+      width: 365px;
+      padding-right: 55px;
       border-top-left-radius: @tablet-radius;
     }
     &--4 {
-      width: 200px;
-      padding-right: 35px;
+      width: 315px;
       border-radius: @tablet-radius;
     }
 

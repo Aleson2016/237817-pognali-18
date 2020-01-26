@@ -1,7 +1,7 @@
 .footer {
   .bg-border__mobile--footer();
   position: relative;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 15px;
 
   background-color: @white;
@@ -11,6 +11,7 @@
   width: @mobile-width;
   box-sizing: border-box;
   padding: @mobile-gap;
+  padding-bottom: 0;
   margin: 0 auto;
 }
 
@@ -18,7 +19,7 @@
   display: block;
   width: 96px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .footer__logo {
@@ -35,7 +36,7 @@
 @media (min-width: @tablet-width) {
   .footer {
     .bg-border__tablet--footer();
-    padding-top: 60px;
+    padding-top: 5px;
   }
 
   .footer__container {
@@ -61,10 +62,14 @@
 @media (min-width: @desktop-width) {
   .footer__container {
     width: @desktop-width;
-    padding: 40px 60px;
+    padding: 45px 60px 40px;
   }
 
   .footer__logo-link {
     width: 198px;
+  }
+
+  .footer__social {
+    padding-right: 45px;
   }
 }

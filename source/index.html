@@ -108,7 +108,7 @@
             с крутыми попутчиками!</b>
 
             <blockquote class="feedback">
-              <p class="feedback__comment">"Лучшее приложение, что я видел в жизни!"</p>
+              <p class="feedback__comment">"Лучшее приложение,<br> что я видел в жизни!"</p>
               <cite class="feedback__author">
                 Мурат Эльтазин<br>
                 главный редактор газеты "гаджетлайф"
@@ -141,7 +141,7 @@
           <div class="section__container section__container--service">
             <h2 class="section__title">О сервисе</h2>
             <p class="section__description section__description--service">Любое путешествие веселее
-            с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+            <span class="section__solid-text">с попутчиками</span>, которые на одной волне с тобой! Делитесь своими идеями путешествий <span class="section__solid-text">и черпайте</span> вдохновение в чужих.</p>
             <p class="section__description section__description--service section__description--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
             <a class="section__btn section__btn--service button" href="#">
               Подробнее
@@ -247,7 +247,7 @@
         <section class="section section--tourists">
           <div class="section__container section__container--tourists">
             <div class="section__wrapper section__wrapper--tourists">
-              <h2 class="section__title">Попутчики</h2>
+              <h2 class="section__title section__title--tourists">Попутчики</h2>
               <p class="section__description section__description--tourists">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
               <p class="section__description section__description--tourists section__description--bold">Теперь можно легко найти единомышленников!</p>
             </div>
@@ -383,15 +383,15 @@
             </b>
             <table class="price-list__table price-list__table--page">
               <tr class="price-list__line">
-                <td class="price-list__position price-list__position--1">Базовое размещение</td>
+                <td class="price-list__position price-list__position--page price-list__position--1">Базовое размещение</td>
                 <td class="price-list__price">Бесплатно</td>
               </tr>
               <tr class="price-list__line">
-                <td class="price-list__position price-list__position--2">Вывод на первых позициях</td>
+                <td class="price-list__position price-list__position--page price-list__position--2">Вывод на первых позициях</td>
                 <td class="price-list__price">99 руб./мес</td>
               </tr>
               <tr class="price-list__line">
-                <td class="price-list__position price-list__position--3">Кастомный цвет карточки</td>
+                <td class="price-list__position price-list__position--page price-list__position--3">Кастомный цвет карточки</td>
                 <td class="price-list__price">59 руб./мес</td>
               </tr>
             </table>
@@ -406,15 +406,15 @@
             <table class="price-list__table price-list__table--popup">
               <tr class="price-list__line price-list__line--popup">
                 <td class="price-list__position">Реклама у блоггера</td>
-                <td class="price-list__price">300 000 руб./пост</td>
+                <td class="price-list__price price-list__price--popup">300 000 руб./пост</td>
               </tr>
               <tr class="price-list__line price-list__line--popup">
                 <td class="price-list__position">Накрутка подписчиков</td>
-                <td class="price-list__price">от 1 руб./шт.</td>
+                <td class="price-list__price price-list__price--popup">от 1 руб./шт.</td>
               </tr>
               <tr class="price-list__line price-list__line--popup">
                 <td class="price-list__position">Лайки от ботов</td>
-                <td class="price-list__price">от 20 коп./лайк</td>
+                <td class="price-list__price price-list__price--popup">от 20 коп./лайк</td>
               </tr>
               <tr class="price-list__line price-list__line--popup">
                 <td class="price-list__position">Ваш продакт-плейсмент</td>
@@ -430,7 +430,7 @@
             <b class="section__title for-users__title">Заинтересовались?</b>
             <div class="for-users__log-in">
               <form class="for-users__form" action="http://echo.htmlacademy.ru" method="post">
-                <label class="for-users__label" for="log-in__email">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="for-users__link" href="#">авторизуйтесь</a>.</label>
+                <label class="for-users__label" for="log-in__email">Зарегистрируйтесь, <span class="for-users__solid-text">это быстро и бесплатно!</span><span class="for-users__solid-text">Уже зарегистрированы?</span> Тогда скорее <a class="for-users__link for-users__link--log-in" href="#">авторизуйтесь</a>.</label>
                 <input class="for-users__field" type="email" id="log-in__email" name="lod-in_-email" placeholder="E-mail" required>
                 <button class="for-users__btn section__btn button" type="submit">
                   <span class="for-users__btn-name">Регистрация</span>
@@ -440,15 +440,15 @@
             </div>
 
             <p class="section__description for-users__description">
-              Остались вопросы?
-              Мы с радостью на них ответим!
+              <span class="for-users__solid-text">Остались вопросы?</span><span class="for-users__solid-text">Мы с радостью на них ответим!</span>
+
             </p>
             <div class="for-users__contacts contacts">
-              <a class="for-users__link contacts__link contacts__link--yellow" href="tel:88005558628">
+              <a class="for-users__link for-users__link--contacts contacts__link contacts__link--yellow" href="tel:88005558628">
                 <svg class="for-users__link-icon contacts__icon contacts__icon--yellow" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-phone"></use></svg>
                 8 800 555-86-28
               </a>
-              <a class="for-users__link contacts__link contacts__link--yellow" href="mailto:mail@htmlacademy.ru">
+              <a class="for-users__link for-users__link--contacts contacts__link contacts__link--yellow" href="mailto:mail@htmlacademy.ru">
                 <svg class="for-users__link-icon contacts__icon contacts__icon--yellow" width="18" height="18"><use xlink:href="img/sprite.svg#contacts-mail"></use></svg>
                 mail@htmlacademy.ru
               </a>
@@ -458,7 +458,7 @@
 
         <section class="section section--address contacts">
           <div class="section__container section__container--address">
-            <span class="contacts__link contacts__link--blue">
+            <span class="contacts__link contacts__link--blue contacts__link--location">
               <svg class="contacts__icon contacts__icon--location" width="14" height="22"><use xlink:href="img/sprite.svg#contacts-location"></use></svg>
               ул. Большая Конюшенная, 19/8
             </span>
@@ -513,7 +513,7 @@
           </ul>
         </div>
 
-        <div class="copyright">
+        <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
             <svg class="copyright__icon" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>

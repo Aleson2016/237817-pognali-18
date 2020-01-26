@@ -150,7 +150,7 @@
 
 .main-navigation__user-block {
   position: absolute;
-  top: 470px;
+  top: 455px;
   right: 50%;
   margin-right: -135px;
 
@@ -159,6 +159,9 @@
   align-items: center;
   width: @mobile-wrapper;
 
+  .main-navigation--scroll & {
+    top: 395px;
+  }
   .main-navigation--no-js & {
     top: 830px;
   }
@@ -366,6 +369,7 @@
   .main-navigation {
     width: @desktop-width;
     padding: 60px;
+    padding-bottom: 0;
 
     &--scroll {
       left: calc(50% - 720px);
@@ -424,7 +428,7 @@
       content: "";
 
       display: block;
-      margin-right: 40px;
+      margin-right: 45px;
 
       width: 60px;
       height: 2px;
@@ -438,7 +442,7 @@
   }
 
   .main-navigation__menu-link {
-    margin-right: 35px;
+    margin-right: 40px;
     font-size: 20px;
     line-height: @desktop-gap;
     color: @white;

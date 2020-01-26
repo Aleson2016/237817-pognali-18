@@ -5,8 +5,8 @@
   padding-bottom: 30px;
 
   &--service {
-    padding-top: 35px;
-    padding-bottom: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     color: @white;
     background-color: @light-blue;
@@ -30,6 +30,7 @@
   }
 
   &--countries {
+    padding-top: 75px;
     color: @dark-grey;
     background-color: @light-grey;
 
@@ -37,10 +38,11 @@
   }
 
   &--tourists {
+    padding-top: 75px;
     color: @white;
     background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: calc(50% + 63px) 35px, calc(50% - 135px) 310px;
+    background-position: calc(50% + 63px) 70px, calc(50% - 135px) 343px;
     background-color: @light-blue;
 
     @media (min-resolution: @retina-dppx) {
@@ -51,7 +53,7 @@
   }
 
   &--price-list {
-    padding-top: 60px;
+    padding-top: 55px;
 
     color: @dark-grey;
     background-color: @light-grey;
@@ -61,6 +63,7 @@
 
   &--address {
     padding-top: 60px;
+    padding-bottom: 35px;
     color: @light-blue;
     background-color: @yellow-gold;
 
@@ -74,10 +77,11 @@
   box-sizing: border-box;
   margin: 0 auto;
   &--service {
-    padding: @mobile-gap;
+    width: @mobile-width;
+    padding: 30px 2 * @mobile-gap 33px;
 
     background: url("../../img/about-mobile@1x.png") no-repeat;
-    background-position: center;
+    background-position: center 0;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../../img/about-mobile@2x.png") no-repeat;
@@ -89,8 +93,8 @@
 
   &--tourists::before {
     position: absolute;
-    top: -33px;
-    left: -50px;
+    top: -30px;
+    left: -25px;
 
     content: "";
 
@@ -104,15 +108,21 @@
 
   &--price-list {
     padding: @mobile-gap;
+    padding-bottom: 5px;
   }
 }
 
 .section__wrapper {
   padding: @mobile-gap;
+
+  &--tourists {
+    padding-bottom: 10px;
+  }
 }
 
 .section__title {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
@@ -125,9 +135,15 @@
   line-height: 22px;
 
   &--bold {
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-right: 35px;
+    margin-bottom: 50px;
     font-weight: 700;
   }
+}
+
+.section__solid-text {
+  display: inline-block;
 }
 
 .section__btn {
@@ -137,7 +153,7 @@
 
   width: 100%;
   box-sizing: border-box;
-  padding: 24px;
+  padding: 20px 24px;
   margin: @mobile-gap auto;
   margin-bottom: 0;
   text-align: left;
@@ -155,6 +171,8 @@
 
   &--address {
     .link-reset();
+    padding: 19px 20px;
+    margin-top: 33px;
     border: 3px solid @light-blue;
     font-weight: 700;
     &:hover {
@@ -178,11 +196,12 @@
     padding-bottom: 85px;
 
     &--service {
-      padding-top: 75px;
+      padding-top: 45px;
+      padding-bottom: 25px;
       margin-top: 0;
 
       &::before {
-        top: 43px;
+        top: 53px;
         right: 50%;
         margin-right: -344px;
 
@@ -192,8 +211,10 @@
     }
 
     &--countries {
+      padding-top: 85px;
+      padding-bottom: 48px;
       background: url("../../img/flags-back@1x.png") no-repeat;
-      background-position: calc(50% + 200px) 80px;
+      background-position: calc(50% + 200px) 140px;
       background-color: @light-grey;
 
       @media (min-resolution: @retina-dppx) {
@@ -203,11 +224,12 @@
     }
 
     &--tourists {
-      padding-top: 200px;
+      padding-top: 150px;
+      padding-bottom: 55px;
 
       background-image: url("../../img/smolov-back-desktop@1x.png"),  url("../../img/rogovaya-back-desktop@1x.png");
       background-repeat: no-repeat;
-      background-position: calc(50% - 273px) 425px, calc(50% + 170px) 80px;
+      background-position: calc(50% - 273px) 425px, calc(50% + 170px) 140px;
 
       @media (min-resolution: @retina-dppx) {
         background-image: url("../../img/smolov-back-desktop@2x.png"),  url("../../img/rogovaya-back-desktop@2x.png");
@@ -215,8 +237,14 @@
       }
     }
 
+    &--price-list {
+      padding-top: 85px;
+      padding-bottom: 50px;
+    }
+
     &--address {
-      padding-top: 110px;
+      padding-top: 75px;
+      padding-bottom: 50px;
     }
   }
 
@@ -227,7 +255,7 @@
 
     &--service {
       background: url("../../img/about-tablet@1x.png") no-repeat;
-      background-position: calc(50% + 190px) 125px;
+      background-position: calc(50% + 190px) 55px;
 
       @media (min-resolution: @retina-dppx) {
         background-image: url("../../img/about-tablet@2x.png");
@@ -236,8 +264,8 @@
     }
 
     &--tourists::before {
-      top: -63px;
-      left: -35px;
+      top: -10px;
+      left: 0;
 
       width: 213px;
       height: 213px;
@@ -253,19 +281,16 @@
     margin-bottom: 40px;
     font-size: 45px;
     line-height: 45px;
+
+    &--tourists {
+      margin-bottom: 60px;
+    }
   }
 
   .section__description {
     font-size: 28px;
     line-height: 33px;
 
-    &--bold {
-      padding-top: 0;
-      padding-bottom: 20px;
-
-      font-size: 21px;
-      line-height: 25px;
-    }
     &--service {
       width: 300px;
       margin-bottom: 30px;
@@ -273,16 +298,24 @@
     &--countries {
       width: 340px;
       margin-top: 55px;
-      margin-bottom: 55px;
+      margin-bottom: 110px;
     }
     &--tourists {
       width: 470px;
-      margin-top: 55px;
+      margin-bottom: 40px;
+    }
+    &--bold {
+      width: 270px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      font-size: 21px;
+      line-height: 25px;
     }
   }
 
   .section__btn {
-    padding: 30px;
+    padding: 27px 33px;
 
     font-size: 24px;
     line-height: 24px;
@@ -293,11 +326,12 @@
       display: flex;
       width: 274px;
       margin:0;
+      margin-top: 55px;
       margin-bottom: 30px;
     }
 
     &--countries {
-      margin-top: 45px;
+      margin-top: 47px;
     }
 
     &--address {
@@ -309,12 +343,12 @@
 @media (min-width: @desktop-width) {
   .section {
     &--service {
-      padding-top: 135px;
-      padding-bottom: 160px;
+      padding-top: 60px;
+      padding-bottom: 0;
 
       &::before {
         top: 72px;
-        right: calc(50% + 780px);
+        right: calc(50% + 790px);
         width: 213px;
         height: 213px;
       }
@@ -326,25 +360,25 @@
 
       flex-direction: row-reverse;
 
-      background-position: calc(50% + 520px) 90px;
+      background-position: calc(50% + 520px) 150px;
       background-color: @light-grey;
     }
 
     &--tourists {
       padding-top: 190px;
-      padding-bottom: 130px;
+      padding-bottom: 90px;
 
-      background-position: calc(50% - 100px) 140px, calc(50% - 385px) 390px;
+      background-position: calc(50% - 100px) 195px, calc(50% - 385px) 450px;
     }
 
     &--price-list {
       padding-top: 160px;
-      padding-bottom: 160px;
+      padding-bottom: 190px;
     }
 
     &--address {
       padding-top: 115px;
-      padding-bottom: 60px;
+      padding-bottom: 55px;
     }
   }
 
@@ -362,10 +396,10 @@
 
     &--service {
       display: block;
-      padding: 0 70px;
+      padding: 70px 70px 130px;
 
       background: url("../../img/about-desktop@1x.png") no-repeat;
-      background-position: calc(50% + 345px) 110px;
+      background-position: calc(50% + 345px) 30px;
 
       @media (min-resolution: @retina-dppx) {
         background: url("../../img/about-desktop@2x.png") no-repeat;
@@ -378,14 +412,18 @@
       flex-direction: row-reverse;
     }
 
+    &--tourists::before {
+      top: -60px;
+    }
+
     &--price-list {
       padding-left: 70px;
     }
 
     &--address {
       align-items: center;
-      padding-left: 210px;
-      padding-right: 70px;
+      padding-left: 225px;
+      padding-right: 75px;
     }
   }
 
@@ -395,6 +433,7 @@
     margin: 0;
 
     &--countries {
+      padding-top: 10px;
       padding-left: 115px;
     }
 
@@ -418,25 +457,30 @@
     &--countries {
       width: 340px;
     }
+
+    &--bold {
+      width: 400px;
+    }
   }
 
   .section__btn {
     position: absolute;
 
     width: 274px;
-    padding: @desktop-gap;
+    padding: 30px 35px;
 
     &--service {
       position: static;
+      margin-top: 85px;
     }
 
     &--countries {
-      bottom: 65px;
+      bottom: 0;
       left: 50%;
       margin-left: 143px;
     }
     &--tourists {
-      bottom: 65px;
+      bottom: 45px;
       left: 50%;
 
       width: 280px;
@@ -444,7 +488,8 @@
     }
     &--address {
       position: static;
-      width: 318px;
+      width: 324px;
+      padding: 27px 33px;
       margin: 0;
     }
   }
