@@ -10,7 +10,7 @@
 }
 
 .for-users__wrapper {
-  width: 270px;
+  width: @mobile-wrapper;
   margin: 0 auto;
 }
 
@@ -32,16 +32,19 @@
 
 .for-users__label {
   display: block;
-  width: 198px;
-  margin-bottom: @mobile-gap;
-
+  padding: 0 @mobile-gap;
+  margin-bottom: 40px;
   text-align: center;
+}
+
+.for-users__solid-text {
+  display: inline-block;
 }
 
 .for-users__field {
   flex-grow: 1;
   width: 162px;
-  padding: 24px;
+  padding: 20px 24px;
 
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -77,6 +80,8 @@
 }
 
 .for-users__description {
+  margin-top: @mobile-gap;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -97,8 +102,8 @@
 @media (min-width: @tablet-width) {
   .for-users {
     .bg-border__tablet();
-    padding-top: 135px;
-    padding-bottom: 60px;
+    padding-top: 85px;
+    padding-bottom: 25px;
   }
 
   .for-users__wrapper {
@@ -109,6 +114,7 @@
   .for-users__label {
     width: 100%;
     box-sizing: border-box;
+    padding: 0;
     margin-top: 20px;
     margin-bottom: 65px;
 
@@ -142,8 +148,8 @@
 
 @media (min-width: @desktop-width) {
   .for-users {
-    padding-top: 160px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 30px;
   }
 
   .for-users__wrapper {
@@ -154,36 +160,38 @@
   .for-users__label {
     width: 630px;
     margin: 0 200px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     text-align: center;
   }
 
   .for-users__field {
-    padding: 25px 30px;
+    padding: 25px 35px;
   }
 
   .for-users__btn {
     position: static;
     width: auto;
-    padding: 30px 45px;
+    padding: 30px 35px;
   }
 
   .for-users__btn-name {
     display: block;
-    margin-right: 100px;
+    margin-right: 120px;
   }
 
   .for-users__description {
-    margin-bottom: 50px;
+    margin-top: 65px;
+    margin-bottom: 45px;
   }
 
   .for-users__contacts {
     display: flex;
     justify-content: center;
+    padding-left: 100px;
   }
 
-  .for-users__link {
-    margin-right: 100px;
+  .for-users__link--contacts {
+    margin-right: 130px;
   }
 
 

@@ -5,25 +5,26 @@
 .price-list__title {
   display: block;
   width: 120px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   &--popup {
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 30px;
     text-align: center;
   }
 }
 
 .price-list__table {
   position: relative;
-  width: 200px;
-
   border-collapse: collapse;
 
   &--page {
+    width: 200px;
+    margin-bottom: 10px;
     &::before {
       position: absolute;
-      bottom: calc(100% + 20px);
+      bottom: calc(100% + 25px);
       right: -45px;
 
       content: "";
@@ -41,13 +42,17 @@
     }
   }
 
+  &--popup {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .price-list__line {
   display: flex;
   flex-direction: column;
 
-  padding: 10px 0;
+  padding: 11px 0;
 
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -56,27 +61,25 @@
   }
 
   &--popup {
+    padding: 12px 0;
     margin: 0 @mobile-gap;
   }
 }
 
 .price-list__position {
   position: relative;
-}
 
-.price-list__position::after {
-  position: absolute;
-  top: 0;
-  right: -45px;
+  &--page::after {
+    position: absolute;
+    top: -5px;
+    right: -45px;
 
-  padding: 7px 13px;
-  text-align: right;
-  border-radius: 50%;
+    padding: 7px 13px;
+    text-align: right;
+    border-radius: 50%;
 
-  color: @white;
-}
-
-.price-list__position {
+    color: @white;
+  }
   &--1::after {
     content: "1";
     background-color: @light-orange;
@@ -93,6 +96,7 @@
 
 .price-list__btn {
   padding: @mobile-gap 0;
+  padding-bottom: 0;
   margin: 0;
   text-align: left;
 
@@ -117,7 +121,7 @@
 
   &--popup {
     width: 100%;
-
+    padding: 20px 0;
     text-align: center;
     text-transform: uppercase;
     color: @blue;
@@ -144,12 +148,12 @@
   display: none;
 
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 50%;
   margin-right: -135px;
 
   width: 270px;
-  padding-top: @mobile-gap;
+  padding-top: 30px;
 
   border-radius: 20px;
   background-color: @white;
@@ -166,29 +170,33 @@
   .price-list__title {
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     text-align: center;
+
+    &--popup {
+      margin-bottom: 50px;
+    }
   }
 
   .price-list__table {
     position: relative;
-
-    font-size: 28px;
-    line-height: 33px;
 
     &--page {
       width: 565px;
       margin-left: 55px;
       margin-bottom: @tablet-gap;
 
+      font-size: 28px;
+      line-height: 33px;
+
       &::before {
-        bottom: -120px;
-        right: 0;
+        bottom: -117px;
+        right: 12px;
       }
       &::after {
         position: absolute;
         top: -43px;
-        right: -30px;
+        right: -35px;
 
         content: "";
         width: 198px;
@@ -203,22 +211,33 @@
     &--popup {
       width: 510px;
       margin: 0 auto;
+      margin-bottom: 50px;
+
+      font-size: 22px;
+      line-height: 28px;
     }
   }
 
   .price-list__line {
     display: table-row;
+    &--popup {
+      padding: 5px 0;
+    }
   }
 
-  .price-list__position::after {
+  .price-list__position--page::after {
+    top: 0;
     left: -90px;
     right: auto;
     padding: 16px 26px;
   }
 
   .price-list__price {
-    padding: 15px 0;
+    padding: 16px 0;
     text-align: right;
+    &--popup {
+      padding: 13px 0;
+    }
   }
 
   .price-list__btn {
@@ -264,9 +283,13 @@
   }
 
   .price-list__popup {
-    width: 688px;
-    top: 100px;
+    top: 60px;
     margin-right: -344px;
+
+    width: 688px;
+    padding-top: 35px;
+
+    border-radius: 30px;
   }
 }
 
@@ -275,7 +298,7 @@
     margin-bottom: 135px;
 
     &--popup {
-      margin-bottom: 45px;
+      margin-bottom: 20px;
     }
   }
   .price-list__title--popup {
@@ -288,11 +311,13 @@
 
     &--popup {
       width: 630px;
+      margin: 0 auto;
+      margin-bottom: 50px;
     }
 
     &::before {
       bottom: calc(50% - 99px);
-      right: -250px;
+      right: -270px;
       width: 198px;
       height: 198px;
       background-size: 198px;
@@ -308,15 +333,20 @@
   }
 
   .price-list__popup {
-    top: 110px;
+    top: 165px;
+    margin-right: -375px;
 
     width: 750px;
+    padding-top: 20px;
   }
 
   .price-list__btn {
     padding-left: 95px;
     &--open::before {
       left: 0;
+    }
+    &--popup {
+      padding-left: 42px;
     }
   }
 

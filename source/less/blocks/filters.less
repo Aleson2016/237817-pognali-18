@@ -4,7 +4,7 @@
 
 .filters__preferences {
   width: 230px;
-  padding: 20px;
+  padding: 25px 20px 20px;
   margin: 0 auto;
   border-radius: 20px;
 
@@ -17,7 +17,7 @@
 
   width: 200px;
   padding-left: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   font-size: 22.5px;
   font-weight: 700;
@@ -43,8 +43,8 @@
 
   width: 100%;
   box-sizing: border-box;
-  padding-top: 13px;
-  margin-bottom: 13px;
+  padding-top: 12px;
+  margin-bottom: 12px;
   border-top: 1px solid @dark-gold;
 
   cursor: pointer;
@@ -67,6 +67,7 @@
 
 .filters__open-btn {
   .btn-reset();
+  padding: 0;
   color: inherit;
 }
 
@@ -173,6 +174,10 @@
   opacity: 1;
 }
 
+.filters__range {
+  margin-bottom: 5px;
+}
+
 .filters__btn {
   .btn-reset();
   width: 100%;
@@ -229,7 +234,7 @@
 @media(min-width: @tablet-width) {
   .filters__location {
     .bg-border__tablet();
-    padding-top: 80px;
+    padding-top: 85px;
   }
 
   .filters__preferences {
@@ -266,7 +271,13 @@
 
   .filters__item-header {
     width: 120px;
+    padding-top: 10px;
+    margin-bottom: 10px;
     border-top: none;
+
+    &--transport {
+      padding-top: 20px;
+    }
   }
 
   .filters__title {
@@ -283,18 +294,21 @@
   }
 
   .filters__options-item {
-    width: 166px;
+    width: 160px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 0;
 
     &--transport {
       width: 43px;
       height: 43px;
+      padding: 0;
     }
   }
 
   .filters__input-icon {
     top: 6px;
-    left: 6px;
+    left: 8px;
     width: 12px;
     height: 12px;
   }
@@ -351,12 +365,12 @@
     left: 50%;
     margin-left: 375px;
     width: 189px;
-    padding: 48px;
+    padding: 48px 45px;
   }
 
   .filters__preferences-text {
     padding-bottom: 0;
-    margin-bottom: 35px;
+    margin-bottom: 17px;
     border-bottom: none;
   }
 
@@ -372,6 +386,10 @@
   .filters__item-header {
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 0;
+    &--transport {
+      padding-top: 15px;
+    }
   }
 
   .filters__open-btn {
@@ -394,9 +412,12 @@
   .filters__item-wrapper--opened .filters__options-list {
     .ul-reset();
     display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
 
     &--transport {
       display: flex;
+      margin-bottom: 15px;
     }
   }
 
@@ -425,5 +446,9 @@
 
   .filters__label-transport {
     padding-top: 5px;
+  }
+
+  .filters__range {
+    margin-bottom: 10px;
   }
 }

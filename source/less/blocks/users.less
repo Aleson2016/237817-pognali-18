@@ -1,6 +1,6 @@
 .users {
   width: @mobile-wrapper;
-  padding: @mobile-gap;
+  padding: 27px @mobile-gap;
   margin: 0 auto;
 }
 
@@ -79,7 +79,7 @@
 .users__likes {
   .btn-reset();
   position: absolute;
-  left: 65px;
+  left: 60px;
   top: 55px;
 
   display: flex;
@@ -147,7 +147,7 @@
   flex-wrap: wrap;
 
   width: 200px;
-  margin: 10px 0 5px;
+  margin: 12px 0 5px;
 }
 
 .users__hashtags-link {
@@ -183,6 +183,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 7px;
+  margin-bottom: 5px;
 
   &::before,
   &::after {
@@ -201,7 +202,7 @@
   }
 
   &::after {
-    bottom: -15px;
+    bottom: -17px;
   }
 }
 
@@ -302,7 +303,7 @@
 
 .users__paginator {
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 @media (min-width: @tablet-width) {
@@ -313,7 +314,7 @@
 
   .users__card {
     padding: 35px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     margin-bottom: 40px;
   }
 
@@ -344,7 +345,7 @@
   }
 
   .users__likes {
-    left: 404px;
+    left: 398px;
     top: 175px;
 
     font-size: 20px;
@@ -383,7 +384,7 @@
       display: block;
       padding-left: 12px;
       padding-right: 12px;
-      margin-top: 10px;
+      margin-top: 17px;
       margin-left: 35px;
       margin-right: 35px;
 
@@ -488,7 +489,7 @@
   }
 
   .users__paginator {
-    margin-bottom: 60px;
+    margin-bottom: 85px;
   }
 }
 
@@ -526,6 +527,8 @@
   .users__photo {
     width: 285px;
     height: 285px;
+
+    border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
@@ -550,7 +553,7 @@
   }
 
   .users__likes {
-    left: 490px;
+    left: 485px;
     top: 190px;
   }
 
@@ -567,6 +570,7 @@
     display: block;
     width: 245px;
     padding-top: 15px;
+    padding-left: 10px;
     margin-top: 30px;
 
     order: 1;
@@ -605,7 +609,10 @@
 
     &--no-borders {
       position: static;
+      justify-content: flex-start;
       width: 950px;
+      box-sizing: border-box;
+      padding-left: 344px;
       margin-top: 60px;
       margin-bottom: 55px;
     }
