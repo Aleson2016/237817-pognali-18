@@ -3,10 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>HTML Academy: Погнали</title>
+
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
+
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
   </head>
-  <body>
+
+  <body class="page">
+
     <header class="header">
       <div class="main-navigation main-navigation--inner-page main-navigation--closed main-navigation--no-js">
 
@@ -98,7 +108,7 @@
       </div>
     </header>
 
-    <main class="main inner-page">
+    <main class="inner-page">
 
       <div class="inner-page__wrapper">
         <div class="inner-page__intro">
@@ -128,51 +138,47 @@
 
           <a class="profile__photo-btn"><span class="profile__photo-text">Сменить</span>фото</a>
 
-          <fieldset class="profile__block profile__block--tags">
-            <div class="profile__block-wrapper">
-              <legend class="profile__title profile__title--tags">
-                <span class="profile__title-text">Тэги</span>
-              </legend>
-              <textarea class="profile__tags" name="tags" id="tags" rows="1" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
-            </div>
-          </fieldset>
-          <fieldset class="profile__block profile__block--transport">
-            <div class="profile__block-wrapper">
-              <legend class="profile__title"><span class="profile__title-text">Транспорт</span>
-              </legend>
-              <ul class="profile__transport-list">
-                <li class="profile__transport-item">
-                  <input class="profile__transport-input" type="checkbox" name="transport" id="transport-plane" value="plane" checked>
-                  <label class="profile__transport-label" for="transport-plane">
-                    <span class="visually-hidden">Самолет</span>
-                    <svg class="profile__transport-icon profile__transport-icon--plane" width="14" height="16"><use xlink:href="img/sprite.svg#plane"></use></svg>
-                  </label>
-                </li>
-                <li class="profile__transport-item">
-                  <input class="profile__transport-input" type="checkbox" name="transport" id="transport-bus" value="bus" checked>
-                  <label class="profile__transport-label" for="transport-bus">
-                    <span class="visually-hidden">Автобус</span>
-                    <svg class="profile__transport-icon profile__transport-icon--bus" width="13" height="16"><use xlink:href="img/sprite.svg#bus"></use></svg>
-                  </label>
-                </li>
-                <li class="profile__transport-item">
-                  <input class="profile__transport-input" type="checkbox" name="transport" id="transport-bike" value="bike">
-                  <label class="profile__transport-label" for="transport-bike">
-                    <span class="visually-hidden">Велосипед</span>
-                    <svg class="profile__transport-icon profile__transport-icon--bike" width="19" height="17"><use xlink:href="img/sprite.svg#bike"></use></svg>
-                  </label>
-                </li>
-                <li class="profile__transport-item">
-                  <input class="profile__transport-input" type="checkbox" name="transport" id="transport-on-foot" value="on-foot" checked>
-                  <label class="profile__transport-label" for="transport-on-foot">
-                    <span class="visually-hidden">Пешком</span>
-                    <svg class="profile__transport-icon profile__transport-icon--on-foot" width="15" height="17"><use xlink:href="img/sprite.svg#run"></use></svg>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
+          <div class="profile__block profile__block--tags">
+            <h2 class="profile__title profile__title--tags">
+              <span class="profile__title-text">Тэги</span>
+            </h2>
+            <textarea class="profile__tags" name="tags" id="tags" rows="1" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+          </div>
 
+          <div class="profile__block profile__block--transport">
+            <h2 class="profile__title"><span class="profile__title-text">Транспорт</span>
+            </h2>
+            <ul class="profile__transport-list">
+              <li class="profile__transport-item">
+                <input class="profile__transport-input" type="checkbox" name="transport" id="transport-plane" value="plane" checked>
+                <label class="profile__transport-label" for="transport-plane">
+                  <span class="visually-hidden">Самолет</span>
+                  <svg class="profile__transport-icon profile__transport-icon--plane" width="14" height="16"><use xlink:href="img/sprite.svg#plane"></use></svg>
+                </label>
+              </li>
+              <li class="profile__transport-item">
+                <input class="profile__transport-input" type="checkbox" name="transport" id="transport-bus" value="bus" checked>
+                <label class="profile__transport-label" for="transport-bus">
+                  <span class="visually-hidden">Автобус</span>
+                  <svg class="profile__transport-icon profile__transport-icon--bus" width="13" height="16"><use xlink:href="img/sprite.svg#bus"></use></svg>
+                </label>
+              </li>
+              <li class="profile__transport-item">
+                <input class="profile__transport-input" type="checkbox" name="transport" id="transport-bike" value="bike">
+                <label class="profile__transport-label" for="transport-bike">
+                  <span class="visually-hidden">Велосипед</span>
+                  <svg class="profile__transport-icon profile__transport-icon--bike" width="19" height="17"><use xlink:href="img/sprite.svg#bike"></use></svg>
+                </label>
+              </li>
+              <li class="profile__transport-item">
+                <input class="profile__transport-input" type="checkbox" name="transport" id="transport-on-foot" value="on-foot" checked>
+                <label class="profile__transport-label" for="transport-on-foot">
+                  <span class="visually-hidden">Пешком</span>
+                  <svg class="profile__transport-icon profile__transport-icon--on-foot" width="15" height="17"><use xlink:href="img/sprite.svg#run"></use></svg>
+                </label>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section class="form__plans plans">
@@ -252,7 +258,7 @@
                       <span class="visually-hidden">Меньше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--minus" width="14" height="2"><use xlink:href="img/sprite.svg#qty-minus"></use></svg>
                     </button>
-                    <input class="new-plans__input" type="text" pattern="^[1-9]\d*$" id="companions__number" min="1" step="1" value="2">
+                    <input class="new-plans__input" type="text" pattern="^[1-9]\d*$" id="companions__number" value="2">
                     <button class="new-plans__input-btn new-plans__input-btn--plus" type="button">
                       <span class="visually-hidden">Больше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--plus" width="14" height="14"><use xlink:href="img/sprite.svg#qty-plus"></use></svg>
@@ -270,7 +276,7 @@
                       <span class="visually-hidden">Меньше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--minus" width="14" height="2"><use xlink:href="img/sprite.svg#qty-minus"></use></svg>
                     </button>
-                    <input class="new-plans__input" type="text" pattern="^[1-9]\d*$" id="duration" min="1" step="1" value="2">
+                    <input class="new-plans__input" type="text" pattern="^[1-9]\d*$" id="duration" value="2">
                     <button class="new-plans__input-btn new-plans__input-btn--plus" type="button">
                       <span class="visually-hidden">Больше</span>
                       <svg class="new-plans__input-icon new-plans__input-icon--plus" width="14" height="14"><use xlink:href="img/sprite.svg#qty-plus"></use></svg>
@@ -534,102 +540,92 @@
 
                   <div class="new-plans__popup-block">
                     <ol class="new-plans__letters-list">
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn new-plans__letters-btn--active" type="button">А</button>
-                          <ol class="new-plans__countries-list">
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Афганистан</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Албания</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Алжир</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Андорра</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Аргентина</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Армения</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Австралия</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Австрия</button></li>
-                            <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Азербайджан</button></li>
-                          </ol>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Б</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">В</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Г</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Д</button>
-                        </li>
-                      </div>
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Е</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">З</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">И</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">К</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Л</button>
-                        </li>
-                      </div>
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">М</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Н</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">О</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">П</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Р</button>
-                        </li>
-                      </div>
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">С</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Т</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">У</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Ф</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Х</button>
-                        </li>
-                      </div>
-                      <div class="new-plans__letters-row">
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Ч</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Ш</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Э</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Ю</button>
-                        </li>
-                        <li class="new-plans__letters-item">
-                          <button class="new-plans__letters-btn" type="button">Я</button>
-                        </li>
-                      </div>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn new-plans__letters-btn--active" type="button">А</button>
+                        <ol class="new-plans__countries-list">
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Афганистан</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Албания</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Алжир</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Андорра</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Аргентина</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Армения</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Австралия</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Австрия</button></li>
+                          <li class="new-plans__countries-item"><button class="new-plans__countries-btn" type="button">Азербайджан</button></li>
+                        </ol>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Б</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">В</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Г</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Д</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Е</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">З</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">И</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">К</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Л</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">М</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Н</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">О</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">П</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Р</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">С</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Т</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">У</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Ф</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Х</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Ч</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Ш</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Э</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Ю</button>
+                      </li>
+                      <li class="new-plans__letters-item">
+                        <button class="new-plans__letters-btn" type="button">Я</button>
+                      </li>
                     </ol>
                   </div>
                 </div>

@@ -40,6 +40,7 @@
   .link-reset();
   flex-grow: 1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   margin-left: 15px;
@@ -330,7 +331,9 @@
   .users__name-link {
     justify-content: flex-start;
     align-items: center;
+    flex-grow: 0;
 
+    width: 280px;
     margin-left: 35px;
 
     font-size: 30px;
@@ -538,6 +541,8 @@
   .users__name-link {
     flex-direction: row-reverse;
     justify-content: flex-end;
+
+    width: 310px;
     padding-top: 15px;
     margin-top: 30px;
 
@@ -570,7 +575,7 @@
     display: block;
     width: 245px;
     padding-top: 15px;
-    padding-left: 10px;
+    padding-left: 40px;
     margin-top: 30px;
 
     order: 1;
