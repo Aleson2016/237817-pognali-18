@@ -22,6 +22,7 @@
   &--page {
     width: 200px;
     margin-bottom: 10px;
+
     &::before {
       position: absolute;
       bottom: calc(100% + 25px);
@@ -80,14 +81,17 @@
 
     color: @white;
   }
+
   &--1::after {
     content: "1";
     background-color: @light-orange;
   }
+
   &--2::after {
     content: "2";
     background-color: @dark-yellow;
   }
+
   &--3::after {
     content: "3";
     background-color: @yellow-gold;
@@ -134,6 +138,7 @@
   &--popup:hover {
     background-color: @light-grey;
   }
+
   &--popup:active {
     color: rgba(29, 46, 91, 0.3);
     background-color: @light-grey;
@@ -161,6 +166,7 @@
   &--closed {
     display: none;
   }
+
   &--opened {
     display: block;
   }
@@ -193,6 +199,7 @@
         bottom: -117px;
         right: 12px;
       }
+
       &::after {
         position: absolute;
         top: -43px;
@@ -220,6 +227,7 @@
 
   .price-list__line {
     display: table-row;
+
     &--popup {
       padding: 5px 0;
     }
@@ -235,6 +243,7 @@
   .price-list__price {
     padding: 16px 0;
     text-align: right;
+
     &--popup {
       padding: 13px 0;
     }
@@ -298,11 +307,9 @@
     margin-bottom: 135px;
 
     &--popup {
+      padding: @desktop-gap;
       margin-bottom: 20px;
     }
-  }
-  .price-list__title--popup {
-    padding: @desktop-gap;
   }
 
   .price-list__table {
@@ -342,9 +349,11 @@
 
   .price-list__btn {
     padding-left: 95px;
+
     &--open::before {
       left: 0;
     }
+
     &--popup {
       padding-left: 42px;
     }

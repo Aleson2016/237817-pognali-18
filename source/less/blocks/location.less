@@ -40,9 +40,11 @@
 
 .location__popup-btn {
   .btn-reset();
+
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -62,6 +64,7 @@
   .location__wrapper--closed-popup & {
     display: none;
   }
+
   .location__wrapper--opened-popup & {
     display: block;
   }
@@ -107,7 +110,7 @@
   box-sizing: border-box;
   padding: @mobile-gap;
 
-  border-bottom-left-radius:@mobile-gap;
+  border-bottom-left-radius: @mobile-gap;
   border-bottom-right-radius: @mobile-gap;
   background-color: @dark-lilac;
 
@@ -116,6 +119,7 @@
   .location__wrapper--closed-popup & {
     display: none;
   }
+
   .location__wrapper--opened-popup & {
     display: block;
   }
@@ -126,6 +130,7 @@
     &--opened {
       display: none;
     }
+
     &--closed {
       display: block;
     }
@@ -135,6 +140,7 @@
     &--opened {
       display: block;
     }
+
     &--closed {
       display: none;
     }
@@ -149,7 +155,7 @@
   align-items: center;
 
   width: 220px;
-  margin-left: 25px;;
+  margin-left: 25px;
   margin-bottom: 282px;
 
   border: 0.5px solid @grey-lilac;
@@ -226,6 +232,7 @@
   &:hover {
     background-color: @violet-hover;
   }
+
   &:active {
     color: rgba(29, 46, 91, 0.3);
   }
@@ -236,7 +243,7 @@
   margin-right: 10px;
 }
 
-@media(min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
   .location {
     font-size: 20px;
     line-height: 24px;
@@ -274,6 +281,7 @@
         display: flex;
       }
     }
+
     .location__wrapper--opened-popup & {
       &--opened {
         display: flex;
@@ -295,9 +303,11 @@
   .location__icon-close {
     width: 19px;
     height: 19px;
+
     &--up {
       margin-left: 64px;
     }
+
     &--down {
       margin-right: 20px;
     }
@@ -310,6 +320,7 @@
     .location__wrapper--closed-popup & {
       display: flex;
     }
+
     .location__wrapper--opened-popup & {
       display: flex;
     }
@@ -379,10 +390,10 @@
   }
 }
 
-@media(min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
   .location__wrapper {
     width: 1440px; //popup в потоке
-    padding: 90px 0px 60px;
+    padding: 90px 0 60px;
     margin-bottom: 75px;
     flex-direction: row;
 

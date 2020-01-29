@@ -38,8 +38,9 @@
 
 .main-navigation--scroll .main-navigation__logo-link .main-navigation__logo {
   &--white {
-  display: none;
+    display: none;
   }
+
   &--blue {
     display: block;
   }
@@ -68,6 +69,7 @@
       background-color: @white;
     }
   }
+
   .main-navigation--opened &,
   .main-navigation--scroll & {
     &::before,
@@ -75,16 +77,20 @@
       background-color: @grey-c;
     }
   }
+
   .main-navigation--closed &::before {
     margin-bottom: 5px;
   }
+
   .main-navigation--opened &::before {
     transform: rotate(45deg);
   }
+
   .main-navigation--opened &::after {
     margin-top: -3px;
     transform: rotate(-45deg);
   }
+
   .main-navigation--no-js & {
     display: none;
   }
@@ -96,7 +102,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 5;
 
   width: 100%;
   box-sizing: border-box;
@@ -162,9 +167,11 @@
   .main-navigation--scroll & {
     top: 395px;
   }
+
   .main-navigation--no-js & {
     top: 830px;
   }
+
   .main-navigation--inner-page & {
     display: none;
   }
@@ -188,6 +195,7 @@
 
   &--tel {
     background-color: @dark-orange;
+
     &:hover {
       background-color: @orange-ter;
     }
@@ -195,6 +203,7 @@
 
   &--mail {
     background-color: @dark-yellow;
+
     &:hover {
       background-color: @dark-orange;
     }
@@ -276,7 +285,7 @@
 
   .main-navigation__contacts {
     width: 400px;
-    padding-top:0;
+    padding-top: 0;
     margin: 0;
     margin-bottom: 140px;
   }
@@ -294,12 +303,13 @@
     margin-right: 0; //был -135px
 
     .main-navigation--no-js & {
+      top: 0;
       // position: static;
       //
       // width: auto;
       // margin-right: 0; //был -135px
-      top: 0;
     }
+
     .main-navigation--inner-page & {
       display: block;
     }
@@ -319,7 +329,7 @@
   .main-navigation {
     &--opened,
     &--no-js {
-    background-color: @white;
+      background-color: @white;
     }
   }
 
@@ -327,6 +337,7 @@
     .main-navigation--closed & {
       display: none;
     }
+
     .main-navigation--no-js & {
       display: block;
       position: static;
@@ -340,6 +351,7 @@
       &--blue {
         display: none;
       }
+
       &-white {
         display: block;
       }
@@ -349,6 +361,7 @@
       &--white {
         display: none;
       }
+
       &--blue {
         display: block;
       }
@@ -358,6 +371,7 @@
       &--white {
         display: none;
       }
+
       &--blue {
         display: block;
       }
@@ -454,6 +468,7 @@
     &:hover {
       color: @yellow-gold;
     }
+
     &:active {
       color: @light-gold;
     }

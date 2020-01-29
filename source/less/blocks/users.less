@@ -51,7 +51,7 @@
   color: @blue;
 
   &::after {
-    content:"";
+    content: "";
 
     display: block;
     width: 6px;
@@ -59,6 +59,7 @@
     border-radius: 50%;
     background-color: @coral;
   }
+
   &--active::after {
     background-color: @green;
   }
@@ -110,6 +111,7 @@
   &--active::before {
     background-color: @pink;
   }
+
   &--active:hover::before {
     background-color: @pink-hover;
   }
@@ -125,6 +127,7 @@
   .users__likes:hover & {
     opacity: 0.5;
   }
+
   .users__likes:active & {
     opacity: 0.1;
   }
@@ -136,6 +139,7 @@
     .users__likes--active:hover & {
       opacity: 1;
     }
+
     .users__likes--active:active & {
       opacity: 0.3;
     }
@@ -372,7 +376,6 @@
     top: 70px;
 
     width: 250px;
-
   }
 
   .users__hashtags-link {
@@ -471,7 +474,7 @@
     top: 160px;
 
     width: 148px;
-    padding: 10px 32px;;
+    padding: 10px 32px;
 
     border-radius: 25px;
 
